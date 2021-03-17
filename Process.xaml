@@ -156,10 +156,21 @@
             </ui:InvokeWorkflowFile>
             <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" x:Key="EY_corporate_tax" sap:VirtualizedContainerService.HintSize="379,87" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_5" UnSafe="False" WorkflowFileName="ExeProgram\EYCorporateTax\EYCorporateTaxController.xaml">
               <ui:InvokeWorkflowFile.Arguments>
-                <InArgument x:TypeArguments="x:String" x:Key="in_outputFolderPath">[outputFolderPath]</InArgument>
-                <InArgument x:TypeArguments="x:String" x:Key="in_EY_web">[in_Config("EY_web").ToString]</InArgument>
-                <InArgument x:TypeArguments="x:String" x:Key="in_EYHomePage">[in_config("EYHomePage").ToString]</InArgument>
-                <InArgument x:TypeArguments="x:String" x:Key="in_TaxType">corporate</InArgument>
+                <InArgument x:TypeArguments="x:String" x:Key="in_outputFolderPath">
+                  <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="outputFolderPath" />
+                </InArgument>
+                <InArgument x:TypeArguments="x:String" x:Key="in_EY_web">
+                  <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="in_Config(&quot;EY_web&quot;).ToString" />
+                </InArgument>
+                <InArgument x:TypeArguments="x:String" x:Key="in_EYHomePage">
+                  <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="in_config(&quot;EYHomePage&quot;).ToString" />
+                </InArgument>
+                <InArgument x:TypeArguments="x:String" x:Key="in_TaxType">
+                  <Literal x:TypeArguments="x:String">corporate</Literal>
+                </InArgument>
+                <InArgument x:TypeArguments="x:String" x:Key="in_configFolderPath">
+                  <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="configFileFolderPath" />
+                </InArgument>
               </ui:InvokeWorkflowFile.Arguments>
             </ui:InvokeWorkflowFile>
             <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" x:Key="KPMG_corporate_tax" sap:VirtualizedContainerService.HintSize="379,87" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_6" UnSafe="False" WorkflowFileName="ExeProgram\KPMGCorporateTax\KPMGCroporateTax.xaml">
@@ -265,8 +276,16 @@
                 <InArgument x:TypeArguments="x:String" x:Key="in_configFolderPath">[configFileFolderPath]</InArgument>
               </ui:InvokeWorkflowFile.Arguments>
             </ui:InvokeWorkflowFile>
-            <x:Null x:Key="PwC_Property_tax" />
-            <x:Null x:Key="EY_Property_tax" />
+            <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" x:Key="PwC_Property_tax" sap:VirtualizedContainerService.HintSize="334,87" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_26" UnSafe="False" WorkflowFileName="ExeProgram\PWCProperty\PWCProperty.xaml">
+              <ui:InvokeWorkflowFile.Arguments>
+                <scg:Dictionary x:TypeArguments="x:String, Argument" />
+              </ui:InvokeWorkflowFile.Arguments>
+            </ui:InvokeWorkflowFile>
+            <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" x:Key="EY_Property_tax" sap:VirtualizedContainerService.HintSize="355,87" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_27" UnSafe="False" WorkflowFileName="ExeProgram\EYProperty\EYPropertyController.xaml">
+              <ui:InvokeWorkflowFile.Arguments>
+                <scg:Dictionary x:TypeArguments="x:String, Argument" />
+              </ui:InvokeWorkflowFile.Arguments>
+            </ui:InvokeWorkflowFile>
             <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" x:Key="PwC_Mining_tax" sap:VirtualizedContainerService.HintSize="379,87" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_23" UnSafe="False" WorkflowFileName="ExeProgram\PWCMiningTax\PWCMiningTaxController.xaml">
               <ui:InvokeWorkflowFile.Arguments>
                 <InArgument x:TypeArguments="x:String" x:Key="in_PWCMiningTax">[in_Config("PWCMiningTax").ToString]</InArgument>
@@ -283,11 +302,21 @@
             </ui:InvokeWorkflowFile>
             <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" x:Key="Guidebook_of_Investment" sap:VirtualizedContainerService.HintSize="379,87" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_8" UnSafe="False" WorkflowFileName="ExeProgram\GuideNookofInvestment\GuideNookofInvestmentController.xaml">
               <ui:InvokeWorkflowFile.Arguments>
-                <InArgument x:TypeArguments="scg:List(x:String)" x:Key="in_NeedProcessContryNameList">[in_NeedProcessContryNameList]</InArgument>
-                <InArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)" x:Key="in_config">[in_Config]</InArgument>
-                <InArgument x:TypeArguments="x:String" x:Key="in_outputFolderPath">[outputFolderPath]</InArgument>
-                <InArgument x:TypeArguments="x:String" x:Key="in_Guidebook_of_investment_web">[in_config("Guidebook_of_investment_web").ToString]</InArgument>
-                <InArgument x:TypeArguments="x:String" x:Key="in_configFolderPath">[configFileFolderPath]</InArgument>
+                <InArgument x:TypeArguments="scg:List(x:String)" x:Key="in_NeedProcessContryNameList">
+                  <mva:VisualBasicValue x:TypeArguments="scg:List(x:String)" ExpressionText="in_NeedProcessContryNameList" />
+                </InArgument>
+                <InArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)" x:Key="in_config">
+                  <mva:VisualBasicValue x:TypeArguments="scg:Dictionary(x:String, x:Object)" ExpressionText="in_Config" />
+                </InArgument>
+                <InArgument x:TypeArguments="x:String" x:Key="in_outputFolderPath">
+                  <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="outputFolderPath" />
+                </InArgument>
+                <InArgument x:TypeArguments="x:String" x:Key="in_Guidebook_of_investment_web">
+                  <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="in_config(&quot;Guidebook_of_investment_web&quot;).ToString" />
+                </InArgument>
+                <InArgument x:TypeArguments="x:String" x:Key="in_configFolderPath">
+                  <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="configFileFolderPath" />
+                </InArgument>
               </ui:InvokeWorkflowFile.Arguments>
             </ui:InvokeWorkflowFile>
             <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" x:Key="Guidebook_of_Tax" sap:VirtualizedContainerService.HintSize="379,87" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_7" UnSafe="False" WorkflowFileName="ExeProgram\GuideBookofTax\GuideBookOfTaxController.xaml">
@@ -301,37 +330,19 @@
             </ui:InvokeWorkflowFile>
             <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" x:Key="taxnotes_tax_treaty" sap:VirtualizedContainerService.HintSize="334,87" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_16" UnSafe="False" WorkflowFileName="ExeProgram\TaxNote\TaxNotesController.xaml">
               <ui:InvokeWorkflowFile.Arguments>
-                <InArgument x:TypeArguments="x:String" x:Key="in_LoginWebURL">
-                  <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="in_Config(&quot;TaxNoteHomeURL&quot;).ToString" />
-                </InArgument>
-                <InArgument x:TypeArguments="x:String" x:Key="in_NavtoURL">
-                  <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="in_Config(&quot;TaxNoteProcessURL&quot;).ToString" />
-                </InArgument>
-                <InArgument x:TypeArguments="x:String" x:Key="in_FIlePath">
-                  <Literal x:TypeArguments="x:String">Data\Input\相关参数输入.xlsx</Literal>
-                </InArgument>
-                <InArgument x:TypeArguments="x:String" x:Key="in_outputFolderPath">
-                  <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="outputFolderPath" />
-                </InArgument>
-                <InArgument x:TypeArguments="x:String" x:Key="in_configFolderPath">
-                  <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="configFileFolderPath" />
-                </InArgument>
+                <InArgument x:TypeArguments="x:String" x:Key="in_LoginWebURL">[in_Config("TaxNoteHomeURL").ToString]</InArgument>
+                <InArgument x:TypeArguments="x:String" x:Key="in_NavtoURL">[in_Config("TaxNoteProcessURL").ToString]</InArgument>
+                <InArgument x:TypeArguments="x:String" x:Key="in_FIlePath">Data\Input\相关参数输入.xlsx</InArgument>
+                <InArgument x:TypeArguments="x:String" x:Key="in_outputFolderPath">[outputFolderPath]</InArgument>
+                <InArgument x:TypeArguments="x:String" x:Key="in_configFolderPath">[configFileFolderPath]</InArgument>
               </ui:InvokeWorkflowFile.Arguments>
             </ui:InvokeWorkflowFile>
             <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" x:Key="Bing_download" sap:VirtualizedContainerService.HintSize="379,87" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_9" UnSafe="False" WorkflowFileName="ExeProgram\BingDownload\BingDownloadController.xaml">
               <ui:InvokeWorkflowFile.Arguments>
-                <InArgument x:TypeArguments="x:String" x:Key="in_BingURL">
-                  <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="in_Config(&quot;BingEnSearchPage&quot;).ToString" />
-                </InArgument>
-                <InArgument x:TypeArguments="x:String" x:Key="in_outputPath">
-                  <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="outputFolderPath" />
-                </InArgument>
-                <InArgument x:TypeArguments="x:String" x:Key="in_keyword">
-                  <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="in_Config(&quot;keyword&quot;).ToString" />
-                </InArgument>
-                <InArgument x:TypeArguments="x:String" x:Key="in_configFolderPath">
-                  <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="configFileFolderPath" />
-                </InArgument>
+                <InArgument x:TypeArguments="x:String" x:Key="in_BingURL">[in_Config("BingEnSearchPage").ToString]</InArgument>
+                <InArgument x:TypeArguments="x:String" x:Key="in_outputPath">[outputFolderPath]</InArgument>
+                <InArgument x:TypeArguments="x:String" x:Key="in_keyword">[in_Config("keyword").ToString]</InArgument>
+                <InArgument x:TypeArguments="x:String" x:Key="in_configFolderPath">[configFileFolderPath]</InArgument>
               </ui:InvokeWorkflowFile.Arguments>
             </ui:InvokeWorkflowFile>
           </Switch>
