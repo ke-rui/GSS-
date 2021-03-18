@@ -6,7 +6,7 @@
     "BalaReva.Externals.Activities": "[4.0.3]",
     "Microsoft.AspNet.WebApi.Client": "[5.2.7]",
     "TinyPinyin.Core": "[0.1.0]",
-    "UiPath.Excel.Activities": "[2.9.5]",
+    "UiPath.Excel.Activities": "[2.9.3]",
     "UiPath.Form.Activities": "[1.2.1-preview]",
     "UiPath.Mail.Activities": "[1.4.1]",
     "UiPath.System.Activities": "[20.4.0]",
