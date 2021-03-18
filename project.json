@@ -17,7 +17,7 @@
   "entitiesStores": [],
   "schemaVersion": "4.0",
   "studioVersion": "20.10.3.0",
-  "projectVersion": "1.0.0",
+  "projectVersion": "1.0.2",
   "runtimeOptions": {
     "exceptionHandlerWorkflow": "GlobalHandler.xaml",
     "autoDispose": false,
@@ -56,6 +56,5 @@
   ],
   "isTemplate": false,
   "templateProjectData": {},
-  "publishData": {},
-  "targetFramework": "Legacy"
+  "publishData": {}
 }
