@@ -19,7 +19,6 @@
   "studioVersion": "20.10.3.0",
   "projectVersion": "1.0.2",
   "runtimeOptions": {
-    "exceptionHandlerWorkflow": "GlobalHandler.xaml",
     "autoDispose": false,
     "isPausable": true,
     "requiresUserInteraction": true,
@@ -56,5 +55,6 @@
   ],
   "isTemplate": false,
   "templateProjectData": {},
-  "publishData": {}
+  "publishData": {},
+  "targetFramework": "Legacy"
 }

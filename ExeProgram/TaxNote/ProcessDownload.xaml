@@ -8,11 +8,12 @@
     <x:Property Name="in_IEObj" Type="InArgument(ui:Browser)" />
     <x:Property Name="in_configFolderPath" Type="InArgument(x:String)" />
     <x:Property Name="io_Couter" Type="InOutArgument(x:Int32)" />
+    <x:Property Name="in_logFilePath" Type="InArgument(x:String)" />
   </x:Members>
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1193,827</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1193,921</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ProcessDownload_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -75,7 +76,7 @@
       <AssemblyReference>UiPath.CV</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="ProcessDownload" sap:VirtualizedContainerService.HintSize="606,756" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="ProcessDownload" sap:VirtualizedContainerService.HintSize="606,856" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:Boolean" Name="downloadSuccess" />
     </Sequence.Variables>
@@ -90,6 +91,14 @@
       </Assign.To>
       <Assign.Value>
         <InArgument x:TypeArguments="x:Int32">[io_Couter+1]</InArgument>
+      </Assign.Value>
+    </Assign>
+    <Assign sap:VirtualizedContainerService.HintSize="564,60" sap2010:WorkflowViewState.IdRef="Assign_4">
+      <Assign.To>
+        <OutArgument x:TypeArguments="x:Boolean">[downloadSuccess]</OutArgument>
+      </Assign.To>
+      <Assign.Value>
+        <InArgument x:TypeArguments="x:Boolean">True</InArgument>
       </Assign.Value>
     </Assign>
     <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="564,564" sap2010:WorkflowViewState.IdRef="TryCatch_1">
@@ -134,7 +143,7 @@
             <ActivityAction.Argument>
               <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
             </ActivityAction.Argument>
-            <Sequence sap:VirtualizedContainerService.HintSize="304,152" sap2010:WorkflowViewState.IdRef="Sequence_4">
+            <Sequence sap:VirtualizedContainerService.HintSize="304,149" sap2010:WorkflowViewState.IdRef="Sequence_4">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -153,13 +162,29 @@
         </Catch>
       </TryCatch.Catches>
       <TryCatch.Finally>
-        <Sequence sap:VirtualizedContainerService.HintSize="376,207" sap2010:WorkflowViewState.IdRef="Sequence_3">
+        <Sequence sap:VirtualizedContainerService.HintSize="476,380" sap2010:WorkflowViewState.IdRef="Sequence_3">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <ui:WriteCell Cell="[&quot;V&quot;+  io_Couter.ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="334,115" sap2010:WorkflowViewState.IdRef="WriteCell_1" SheetName="Log" Text="[If ( downloadSuccess, in_country1name+&quot;-&quot;+ in_country2name+ &quot; 根据税种已下载&quot;, &quot;下载出错，请检查异常截图&quot;)]" WorkbookPath="[in_configFolderPath]" />
+          <ui:ExcelApplicationScope Password="{x:Null}" DisplayName="Excel Application Scope" sap:VirtualizedContainerService.HintSize="434,288" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_1" InstanceCachePeriod="3000" WorkbookPath="[in_logFilePath]">
+            <ui:ExcelApplicationScope.Body>
+              <ActivityAction x:TypeArguments="ui:WorkbookApplication">
+                <ActivityAction.Argument>
+                  <DelegateInArgument x:TypeArguments="ui:WorkbookApplication" Name="ExcelWorkbookScope" />
+                </ActivityAction.Argument>
+                <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="376,179" sap2010:WorkflowViewState.IdRef="Sequence_5">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <ui:ExcelWriteCell Cell="[&quot;V&quot;+  io_Couter.ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="334,87" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_1" SheetName="Log" Text="[If ( downloadSuccess, in_country1name+&quot;-&quot;+ in_country2name+ &quot; 根据税种已下载&quot;, &quot;下载出错，请检查异常截图&quot;)]" />
+                </Sequence>
+              </ActivityAction>
+            </ui:ExcelApplicationScope.Body>
+          </ui:ExcelApplicationScope>
         </Sequence>
       </TryCatch.Finally>
     </TryCatch>

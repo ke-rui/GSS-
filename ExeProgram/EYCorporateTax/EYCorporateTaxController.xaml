@@ -5,11 +5,12 @@
     <x:Property Name="in_EYHomePage" Type="InArgument(x:String)" />
     <x:Property Name="in_TaxType" Type="InArgument(x:String)" />
     <x:Property Name="in_configFolderPath" Type="InArgument(x:String)" />
+    <x:Property Name="in_logFilePath" Type="InArgument(x:String)" />
   </x:Members>
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1193,1019</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1193,1171</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>EYCorporateTaxController_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="62">
@@ -82,9 +83,10 @@
       <AssemblyReference>UiPath.Platform</AssemblyReference>
       <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
       <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="EYCorporateTaxController" sap:VirtualizedContainerService.HintSize="661,954" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="EYCorporateTaxController" sap:VirtualizedContainerService.HintSize="737,1106" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:Boolean" Default="True" Name="downloadSuccess" />
     </Sequence.Variables>
@@ -93,7 +95,7 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="619,862" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+    <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="695,1014" sap2010:WorkflowViewState.IdRef="TryCatch_1">
       <TryCatch.Try>
         <ui:OpenBrowser BrowserType="{x:Null}" CommunicationMethod="{x:Null}" Hidden="{x:Null}" NewSession="{x:Null}" Private="{x:Null}" UiBrowser="{x:Null}" DisplayName="Open Browser" sap:VirtualizedContainerService.HintSize="573,1685" sap2010:WorkflowViewState.IdRef="OpenBrowser_1" Url="[in_EY_web]">
           <ui:OpenBrowser.Body>
@@ -521,7 +523,7 @@
         </ui:OpenBrowser>
       </TryCatch.Try>
       <TryCatch.Catches>
-        <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="585,21" sap2010:WorkflowViewState.IdRef="Catch`1_1">
+        <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="661,21" sap2010:WorkflowViewState.IdRef="Catch`1_1">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -544,27 +546,43 @@
         </Catch>
       </TryCatch.Catches>
       <TryCatch.Finally>
-        <Sequence sap:VirtualizedContainerService.HintSize="581,615" sap2010:WorkflowViewState.IdRef="Sequence_10">
+        <Sequence sap:VirtualizedContainerService.HintSize="657,787" sap2010:WorkflowViewState.IdRef="Sequence_10">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <Sequence sap:VirtualizedContainerService.HintSize="539,523" sap2010:WorkflowViewState.IdRef="Sequence_9">
+          <Sequence sap:VirtualizedContainerService.HintSize="615,695" sap2010:WorkflowViewState.IdRef="Sequence_9">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <Switch x:TypeArguments="x:String" DisplayName="Switch" Expression="[in_TaxType]" sap:VirtualizedContainerService.HintSize="497,431" sap2010:WorkflowViewState.IdRef="Switch`1_2">
-              <ui:WriteCell x:Key="individual" Cell="H4" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="334,115" sap2010:WorkflowViewState.IdRef="WriteCell_2" SheetName="Log" Text="[If ( downloadSuccess, &quot;根据税种已下载&quot;, &quot;下载出错，请检查异常截图&quot;)]" WorkbookPath="[in_configFolderPath]" />
-              <ui:WriteCell x:Key="corporate" Cell="D4" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="334,115" sap2010:WorkflowViewState.IdRef="WriteCell_3" SheetName="Log" Text="[If ( downloadSuccess, &quot;根据税种已下载&quot;, &quot;下载出错，请检查异常截图&quot;)]" WorkbookPath="[in_configFolderPath]" />
-              <ui:WriteCell x:Key="VAT" Cell="J" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="334,115" sap2010:WorkflowViewState.IdRef="WriteCell_4" SheetName="Log" Text="[If ( downloadSuccess, &quot;根据税种已下载&quot;, &quot;下载出错，请检查异常截图&quot;)]" WorkbookPath="[in_configFolderPath]" />
-              <ui:WriteCell x:Key="Capital" Cell="L4" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="334,115" sap2010:WorkflowViewState.IdRef="WriteCell_5" SheetName="Log" Text="[If ( downloadSuccess, &quot;根据税种已下载&quot;, &quot;下载出错，请检查异常截图&quot;)]" WorkbookPath="[in_configFolderPath]" />
-              <ui:WriteCell x:Key="RD" Cell="N4" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="334,115" sap2010:WorkflowViewState.IdRef="WriteCell_6" SheetName="Log" Text="[If ( downloadSuccess, &quot;根据税种已下载&quot;, &quot;下载出错，请检查异常截图&quot;)]" WorkbookPath="[in_configFolderPath]" />
-              <ui:WriteCell x:Key="OilGas" Cell="O4" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="334,115" sap2010:WorkflowViewState.IdRef="WriteCell_7" SheetName="Log" Text="[If ( downloadSuccess, &quot;根据税种已下载&quot;, &quot;下载出错，请检查异常截图&quot;)]" WorkbookPath="[in_configFolderPath]" />
-              <ui:WriteCell x:Key="Property" Cell="Q4" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="334,115" sap2010:WorkflowViewState.IdRef="WriteCell_8" SheetName="Log" Text="[If ( downloadSuccess, &quot;根据税种已下载&quot;, &quot;下载出错，请检查异常截图&quot;)]" WorkbookPath="[in_configFolderPath]" />
-            </Switch>
+            <ui:ExcelApplicationScope Password="{x:Null}" DisplayName="Excel Application Scope" sap:VirtualizedContainerService.HintSize="573,603" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_1" InstanceCachePeriod="3000" WorkbookPath="[in_logFilePath]">
+              <ui:ExcelApplicationScope.Body>
+                <ActivityAction x:TypeArguments="ui:WorkbookApplication">
+                  <ActivityAction.Argument>
+                    <DelegateInArgument x:TypeArguments="ui:WorkbookApplication" Name="ExcelWorkbookScope" />
+                  </ActivityAction.Argument>
+                  <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="539,494" sap2010:WorkflowViewState.IdRef="Sequence_11">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <Switch x:TypeArguments="x:String" DisplayName="Switch" Expression="[in_TaxType]" sap:VirtualizedContainerService.HintSize="497,402" sap2010:WorkflowViewState.IdRef="Switch`1_2">
+                      <ui:ExcelWriteCell x:Key="individual" Cell="H4" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="334,87" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_2" SheetName="Log" Text="[If ( downloadSuccess, &quot;根据税种已下载&quot;, &quot;下载出错，请检查异常截图&quot;)]" />
+                      <ui:ExcelWriteCell x:Key="corporate" Cell="D4" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="334,87" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_3" SheetName="Log" Text="[If ( downloadSuccess, &quot;根据税种已下载&quot;, &quot;下载出错，请检查异常截图&quot;)]" />
+                      <ui:ExcelWriteCell x:Key="VAT" Cell="J4" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="334,87" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_4" SheetName="Log" Text="[If ( downloadSuccess, &quot;根据税种已下载&quot;, &quot;下载出错，请检查异常截图&quot;)]" />
+                      <ui:ExcelWriteCell x:Key="Capital" Cell="L4" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="334,87" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_5" SheetName="Log" Text="[If ( downloadSuccess, &quot;根据税种已下载&quot;, &quot;下载出错，请检查异常截图&quot;)]" />
+                      <ui:ExcelWriteCell x:Key="RD" Cell="N4" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="334,87" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_6" SheetName="Log" Text="[If ( downloadSuccess, &quot;根据税种已下载&quot;, &quot;下载出错，请检查异常截图&quot;)]" />
+                      <ui:ExcelWriteCell x:Key="OilGas" Cell="O4" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="334,87" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_7" SheetName="Log" Text="[If ( downloadSuccess, &quot;根据税种已下载&quot;, &quot;下载出错，请检查异常截图&quot;)]" />
+                      <ui:ExcelWriteCell x:Key="Property" Cell="Q4" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="334,87" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_8" SheetName="Log" Text="[If ( downloadSuccess, &quot;根据税种已下载&quot;, &quot;下载出错，请检查异常截图&quot;)]" />
+                    </Switch>
+                  </Sequence>
+                </ActivityAction>
+              </ui:ExcelApplicationScope.Body>
+            </ui:ExcelApplicationScope>
           </Sequence>
         </Sequence>
       </TryCatch.Finally>

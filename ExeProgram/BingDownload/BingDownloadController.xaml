@@ -4,11 +4,12 @@
     <x:Property Name="in_outputPath" Type="InArgument(x:String)" />
     <x:Property Name="in_keyword" Type="InArgument(x:String)" />
     <x:Property Name="in_configFolderPath" Type="InArgument(x:String)" />
+    <x:Property Name="in_logFilePath" Type="InArgument(x:String)" />
   </x:Members>
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1193,1675</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1193,2704</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>BingDownloadController_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="54">
@@ -72,12 +73,11 @@
       <AssemblyReference>UiPath.CV</AssemblyReference>
       <AssemblyReference>System.ServiceModel</AssemblyReference>
       <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
-      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
       <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
       <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="BingDownloadController" sap:VirtualizedContainerService.HintSize="572,1610" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="BingDownloadController" sap:VirtualizedContainerService.HintSize="648,2639" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="keyword" />
       <Variable x:TypeArguments="sd:DataTable" Name="ExtractDataTable" />
@@ -91,8 +91,8 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:KillProcess Process="{x:Null}" ContinueOnError="True" DisplayName="Kill Process" sap:VirtualizedContainerService.HintSize="530,132" sap2010:WorkflowViewState.IdRef="KillProcess_1" ProcessName="iexplore" />
-    <ui:OpenBrowser BrowserType="{x:Null}" CommunicationMethod="{x:Null}" Hidden="{x:Null}" NewSession="{x:Null}" Private="{x:Null}" DisplayName="Open Browser" sap:VirtualizedContainerService.HintSize="530,535" sap2010:WorkflowViewState.IdRef="OpenBrowser_1" UiBrowser="[browerObj]" Url="[in_BingURL]">
+    <ui:KillProcess Process="{x:Null}" ContinueOnError="True" DisplayName="Kill Process" sap:VirtualizedContainerService.HintSize="606,132" sap2010:WorkflowViewState.IdRef="KillProcess_1" ProcessName="iexplore" />
+    <ui:OpenBrowser BrowserType="{x:Null}" CommunicationMethod="{x:Null}" Hidden="{x:Null}" NewSession="{x:Null}" Private="{x:Null}" DisplayName="Open Browser" sap:VirtualizedContainerService.HintSize="606,535" sap2010:WorkflowViewState.IdRef="OpenBrowser_1" UiBrowser="[browerObj]" Url="[in_BingURL]">
       <ui:OpenBrowser.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
@@ -144,7 +144,7 @@
         </ActivityAction>
       </ui:OpenBrowser.Body>
     </ui:OpenBrowser>
-    <Delay mva:VisualBasic.Settings="{x:Null}" DisplayName="Delay 5 seconds" Duration="00:00:02" sap:VirtualizedContainerService.HintSize="530,22" sap2010:WorkflowViewState.IdRef="Delay_1">
+    <Delay mva:VisualBasic.Settings="{x:Null}" DisplayName="Delay 5 seconds" Duration="00:00:02" sap:VirtualizedContainerService.HintSize="606,22" sap2010:WorkflowViewState.IdRef="Delay_1">
       <TextExpression.Namespaces>
         <sco:Collection x:TypeArguments="x:String">
           <x:String>System.Activities</x:String>
@@ -190,32 +190,36 @@
         </sap2010:ViewStateManager>
       </sap2010:WorkflowViewState.ViewStateManager>
     </Delay>
-    <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke Workflow File" sap:VirtualizedContainerService.HintSize="530,87" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_4" UnSafe="False" WorkflowFileName="ExeProgram\BingDownload\GetRearchResult.xaml">
+    <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke Workflow File" sap:VirtualizedContainerService.HintSize="606,87" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_4" UnSafe="False" WorkflowFileName="ExeProgram\BingDownload\GetRearchResult.xaml">
       <ui:InvokeWorkflowFile.Arguments>
         <OutArgument x:TypeArguments="sd:DataTable" x:Key="out_ExtractDataTable">[ExtractDataTable]</OutArgument>
         <InArgument x:TypeArguments="ui:Browser" x:Key="in_IEObj">[browerObj]</InArgument>
       </ui:InvokeWorkflowFile.Arguments>
     </ui:InvokeWorkflowFile>
-    <ui:ForEachRow CurrentIndex="{x:Null}" DataTable="[ExtractDataTable]" DisplayName="For Each Row" sap:VirtualizedContainerService.HintSize="530,582" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
+    <ui:ForEachRow CurrentIndex="{x:Null}" DataTable="[ExtractDataTable]" DisplayName="For Each Row" sap:VirtualizedContainerService.HintSize="606,1611" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
       <ui:ForEachRow.Body>
         <ActivityAction x:TypeArguments="sd:DataRow">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="sd:DataRow" Name="row" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="480,434" sap2010:WorkflowViewState.IdRef="Sequence_6">
+          <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="556,1463" sap2010:WorkflowViewState.IdRef="Sequence_6">
             <Sequence.Variables>
-              <Variable x:TypeArguments="x:Int32" Name="counter">
-                <Variable.Default>
-                  <Literal x:TypeArguments="x:Int32" />
-                </Variable.Default>
-              </Variable>
+              <Variable x:TypeArguments="x:Int32" Default="0" Name="counter" />
             </Sequence.Variables>
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="438,342" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+            <Assign sap:VirtualizedContainerService.HintSize="514,60" sap2010:WorkflowViewState.IdRef="Assign_6">
+              <Assign.To>
+                <OutArgument x:TypeArguments="x:Boolean">[downloadSuccess]</OutArgument>
+              </Assign.To>
+              <Assign.Value>
+                <InArgument x:TypeArguments="x:Boolean">True</InArgument>
+              </Assign.Value>
+            </Assign>
+            <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="514,1271" sap2010:WorkflowViewState.IdRef="TryCatch_1">
               <TryCatch.Try>
                 <Sequence sap:VirtualizedContainerService.HintSize="376,1044" sap2010:WorkflowViewState.IdRef="Sequence_7">
                   <sap:WorkflowViewStateService.ViewState>
@@ -498,7 +502,7 @@
                 </Sequence>
               </TryCatch.Try>
               <TryCatch.Catches>
-                <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="404,21" sap2010:WorkflowViewState.IdRef="Catch`1_1">
+                <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="480,21" sap2010:WorkflowViewState.IdRef="Catch`1_1">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -521,7 +525,30 @@
                 </Catch>
               </TryCatch.Catches>
               <TryCatch.Finally>
-                <ui:WriteCell Cell="[&quot;W&quot;+  (counter+3).ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="334,115" sap2010:WorkflowViewState.IdRef="WriteCell_1" SheetName="Log" Text="[If ( downloadSuccess, &quot;网页&quot;+ counter.ToString+ &quot;. 已下载&quot;, &quot;下载出错，请检查异常截图&quot;)]" WorkbookPath="[in_configFolderPath]" />
+                <Sequence sap:VirtualizedContainerService.HintSize="476,380" sap2010:WorkflowViewState.IdRef="Sequence_9">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <ui:ExcelApplicationScope Password="{x:Null}" DisplayName="Excel Application Scope" sap:VirtualizedContainerService.HintSize="434,288" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_1" InstanceCachePeriod="3000" WorkbookPath="[in_logFilePath]">
+                    <ui:ExcelApplicationScope.Body>
+                      <ActivityAction x:TypeArguments="ui:WorkbookApplication">
+                        <ActivityAction.Argument>
+                          <DelegateInArgument x:TypeArguments="ui:WorkbookApplication" Name="ExcelWorkbookScope" />
+                        </ActivityAction.Argument>
+                        <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="376,179" sap2010:WorkflowViewState.IdRef="Sequence_8">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                          <ui:ExcelWriteCell Cell="[&quot;W&quot;+  (counter+3).ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="334,87" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_1" SheetName="Log" Text="[If ( downloadSuccess, &quot;网页&quot;+ counter.ToString+ &quot;. 已下载&quot;, &quot;下载出错，请检查异常截图&quot;)]" />
+                        </Sequence>
+                      </ActivityAction>
+                    </ui:ExcelApplicationScope.Body>
+                  </ui:ExcelApplicationScope>
+                </Sequence>
               </TryCatch.Finally>
             </TryCatch>
           </Sequence>

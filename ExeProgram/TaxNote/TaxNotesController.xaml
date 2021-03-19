@@ -5,11 +5,12 @@
     <x:Property Name="in_FIlePath" Type="InArgument(x:String)" />
     <x:Property Name="in_outputFolderPath" Type="InArgument(x:String)" />
     <x:Property Name="in_configFolderPath" Type="InArgument(x:String)" />
+    <x:Property Name="in_logFilePath" Type="InArgument(x:String)" />
   </x:Members>
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1193,4369</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1193,2899</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>TaxNotesController_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="31">
@@ -90,11 +91,7 @@
       <Variable x:TypeArguments="ui:Browser" Name="IEObj" />
       <Variable x:TypeArguments="x:Boolean" Name="finded" />
       <Variable x:TypeArguments="x:Int32" Name="counter" />
-      <Variable x:TypeArguments="x:Boolean" Name="downloadSuccess">
-        <Variable.Default>
-          <Literal x:TypeArguments="x:Boolean" Value="True" />
-        </Variable.Default>
-      </Variable>
+      <Variable x:TypeArguments="x:Boolean" Default="True" Name="downloadSuccess" />
     </Sequence.Variables>
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -193,6 +190,9 @@
                       <InOutArgument x:TypeArguments="x:Int32" x:Key="io_Couter">
                         <mva:VisualBasicReference x:TypeArguments="x:Int32" ExpressionText="counter" />
                       </InOutArgument>
+                      <InArgument x:TypeArguments="x:String" x:Key="in_logFilePath">
+                        <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="in_logFilePath" />
+                      </InArgument>
                     </ui:InvokeWorkflowFile.Arguments>
                   </ui:InvokeWorkflowFile>
                 </ActivityAction>
@@ -228,14 +228,33 @@
                 </ActivityAction.Argument>
                 <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke Workflow File" sap:VirtualizedContainerService.HintSize="334,87" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_16" UnSafe="False" WorkflowFileName="ExeProgram\TaxNote\ProcessDownload.xaml">
                   <ui:InvokeWorkflowFile.Arguments>
-                    <InArgument x:TypeArguments="x:String" x:Key="in_country1name">[country1name]</InArgument>
-                    <InArgument x:TypeArguments="x:String" x:Key="in_country2name">[country2name]</InArgument>
-                    <InArgument x:TypeArguments="x:String" x:Key="in_outputFolderPath">[in_outputFolderPath]</InArgument>
-                    <InArgument x:TypeArguments="x:String" x:Key="in_NavtoURL">[in_NavtoURL]</InArgument>
-                    <OutArgument x:TypeArguments="x:Boolean" x:Key="out_finded">[finded]</OutArgument>
-                    <InArgument x:TypeArguments="ui:Browser" x:Key="in_IEObj">[IEObj]</InArgument>
-                    <InArgument x:TypeArguments="x:String" x:Key="in_configFolderPath">[in_configFolderPath]</InArgument>
-                    <InOutArgument x:TypeArguments="x:Int32" x:Key="io_Couter">[counter]</InOutArgument>
+                    <InArgument x:TypeArguments="x:String" x:Key="in_country1name">
+                      <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="country1name" />
+                    </InArgument>
+                    <InArgument x:TypeArguments="x:String" x:Key="in_country2name">
+                      <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="country2name" />
+                    </InArgument>
+                    <InArgument x:TypeArguments="x:String" x:Key="in_outputFolderPath">
+                      <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="in_outputFolderPath" />
+                    </InArgument>
+                    <InArgument x:TypeArguments="x:String" x:Key="in_NavtoURL">
+                      <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="in_NavtoURL" />
+                    </InArgument>
+                    <OutArgument x:TypeArguments="x:Boolean" x:Key="out_finded">
+                      <mva:VisualBasicReference x:TypeArguments="x:Boolean" ExpressionText="finded" />
+                    </OutArgument>
+                    <InArgument x:TypeArguments="ui:Browser" x:Key="in_IEObj">
+                      <mva:VisualBasicValue x:TypeArguments="ui:Browser" ExpressionText="IEObj" />
+                    </InArgument>
+                    <InArgument x:TypeArguments="x:String" x:Key="in_configFolderPath">
+                      <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="in_configFolderPath" />
+                    </InArgument>
+                    <InOutArgument x:TypeArguments="x:Int32" x:Key="io_Couter">
+                      <mva:VisualBasicReference x:TypeArguments="x:Int32" ExpressionText="counter" />
+                    </InOutArgument>
+                    <InArgument x:TypeArguments="x:String" x:Key="in_logFilePath">
+                      <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="in_logFilePath" />
+                    </InArgument>
                   </ui:InvokeWorkflowFile.Arguments>
                 </ui:InvokeWorkflowFile>
               </ActivityAction>
@@ -270,14 +289,33 @@
                   </ActivityAction.Argument>
                   <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke Workflow File" sap:VirtualizedContainerService.HintSize="334,87" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_17" UnSafe="False" WorkflowFileName="ExeProgram\TaxNote\ProcessDownload.xaml">
                     <ui:InvokeWorkflowFile.Arguments>
-                      <InArgument x:TypeArguments="x:String" x:Key="in_country1name">[country1name]</InArgument>
-                      <InArgument x:TypeArguments="x:String" x:Key="in_country2name">[country2name]</InArgument>
-                      <InArgument x:TypeArguments="x:String" x:Key="in_outputFolderPath">[in_outputFolderPath]</InArgument>
-                      <InArgument x:TypeArguments="x:String" x:Key="in_NavtoURL">[in_NavtoURL]</InArgument>
-                      <OutArgument x:TypeArguments="x:Boolean" x:Key="out_finded">[finded]</OutArgument>
-                      <InArgument x:TypeArguments="ui:Browser" x:Key="in_IEObj">[IEObj]</InArgument>
-                      <InArgument x:TypeArguments="x:String" x:Key="in_configFolderPath">[in_configFolderPath]</InArgument>
-                      <InOutArgument x:TypeArguments="x:Int32" x:Key="io_Couter">[counter]</InOutArgument>
+                      <InArgument x:TypeArguments="x:String" x:Key="in_country1name">
+                        <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="country1name" />
+                      </InArgument>
+                      <InArgument x:TypeArguments="x:String" x:Key="in_country2name">
+                        <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="country2name" />
+                      </InArgument>
+                      <InArgument x:TypeArguments="x:String" x:Key="in_outputFolderPath">
+                        <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="in_outputFolderPath" />
+                      </InArgument>
+                      <InArgument x:TypeArguments="x:String" x:Key="in_NavtoURL">
+                        <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="in_NavtoURL" />
+                      </InArgument>
+                      <OutArgument x:TypeArguments="x:Boolean" x:Key="out_finded">
+                        <mva:VisualBasicReference x:TypeArguments="x:Boolean" ExpressionText="finded" />
+                      </OutArgument>
+                      <InArgument x:TypeArguments="ui:Browser" x:Key="in_IEObj">
+                        <mva:VisualBasicValue x:TypeArguments="ui:Browser" ExpressionText="IEObj" />
+                      </InArgument>
+                      <InArgument x:TypeArguments="x:String" x:Key="in_configFolderPath">
+                        <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="in_configFolderPath" />
+                      </InArgument>
+                      <InOutArgument x:TypeArguments="x:Int32" x:Key="io_Couter">
+                        <mva:VisualBasicReference x:TypeArguments="x:Int32" ExpressionText="counter" />
+                      </InOutArgument>
+                      <InArgument x:TypeArguments="x:String" x:Key="in_logFilePath">
+                        <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="in_logFilePath" />
+                      </InArgument>
                     </ui:InvokeWorkflowFile.Arguments>
                   </ui:InvokeWorkflowFile>
                 </ActivityAction>
@@ -313,14 +351,33 @@
                   </ActivityAction.Argument>
                   <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke Workflow File" sap:VirtualizedContainerService.HintSize="334,87" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_18" UnSafe="False" WorkflowFileName="ExeProgram\TaxNote\ProcessDownload.xaml">
                     <ui:InvokeWorkflowFile.Arguments>
-                      <InArgument x:TypeArguments="x:String" x:Key="in_country1name">[country1name]</InArgument>
-                      <InArgument x:TypeArguments="x:String" x:Key="in_country2name">[country2name]</InArgument>
-                      <InArgument x:TypeArguments="x:String" x:Key="in_outputFolderPath">[in_outputFolderPath]</InArgument>
-                      <InArgument x:TypeArguments="x:String" x:Key="in_NavtoURL">[in_NavtoURL]</InArgument>
-                      <OutArgument x:TypeArguments="x:Boolean" x:Key="out_finded">[finded]</OutArgument>
-                      <InArgument x:TypeArguments="ui:Browser" x:Key="in_IEObj">[IEObj]</InArgument>
-                      <InArgument x:TypeArguments="x:String" x:Key="in_configFolderPath">[in_configFolderPath]</InArgument>
-                      <InOutArgument x:TypeArguments="x:Int32" x:Key="io_Couter">[counter]</InOutArgument>
+                      <InArgument x:TypeArguments="x:String" x:Key="in_country1name">
+                        <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="country1name" />
+                      </InArgument>
+                      <InArgument x:TypeArguments="x:String" x:Key="in_country2name">
+                        <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="country2name" />
+                      </InArgument>
+                      <InArgument x:TypeArguments="x:String" x:Key="in_outputFolderPath">
+                        <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="in_outputFolderPath" />
+                      </InArgument>
+                      <InArgument x:TypeArguments="x:String" x:Key="in_NavtoURL">
+                        <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="in_NavtoURL" />
+                      </InArgument>
+                      <OutArgument x:TypeArguments="x:Boolean" x:Key="out_finded">
+                        <mva:VisualBasicReference x:TypeArguments="x:Boolean" ExpressionText="finded" />
+                      </OutArgument>
+                      <InArgument x:TypeArguments="ui:Browser" x:Key="in_IEObj">
+                        <mva:VisualBasicValue x:TypeArguments="ui:Browser" ExpressionText="IEObj" />
+                      </InArgument>
+                      <InArgument x:TypeArguments="x:String" x:Key="in_configFolderPath">
+                        <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="in_configFolderPath" />
+                      </InArgument>
+                      <InOutArgument x:TypeArguments="x:Int32" x:Key="io_Couter">
+                        <mva:VisualBasicReference x:TypeArguments="x:Int32" ExpressionText="counter" />
+                      </InOutArgument>
+                      <InArgument x:TypeArguments="x:String" x:Key="in_logFilePath">
+                        <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="in_logFilePath" />
+                      </InArgument>
                     </ui:InvokeWorkflowFile.Arguments>
                   </ui:InvokeWorkflowFile>
                 </ActivityAction>

@@ -1,11 +1,11 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="GetHighlightIndex" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="GetHighlightIndex" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <x:Members>
     <x:Property Name="out_HighlightIndexDict" Type="OutArgument(scg:Dictionary(x:String, x:Object))" />
   </x:Members>
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1150,1854</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1193,1135</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>GetHighlightIndex_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="30">
@@ -42,7 +42,7 @@
     </scg:List>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
-    <scg:List x:TypeArguments="AssemblyReference" Capacity="28">
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="56">
       <AssemblyReference>System.Activities</AssemblyReference>
       <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
       <AssemblyReference>mscorlib</AssemblyReference>
@@ -71,103 +71,26 @@
       <AssemblyReference>System.ServiceModel</AssemblyReference>
       <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
       <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>UiPath.CV</AssemblyReference>
+      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="GetHighlightIndex" sap:VirtualizedContainerService.HintSize="518,1689" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="GetHighlightIndex" sap:VirtualizedContainerService.HintSize="518,1070" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:Int32" Default="1" Name="HighlightIndex" />
       <Variable x:TypeArguments="sd:DataTable" Default="[New System.Data.DataTable]" Name="ExtractDataTable" />
       <Variable x:TypeArguments="x:Boolean" Name="exist" />
+      <Variable x:TypeArguments="x:Int32" Name="counter">
+        <Variable.Default>
+          <Literal x:TypeArguments="x:Int32" Value="1" />
+        </Variable.Default>
+      </Variable>
     </Sequence.Variables>
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <Delay mva:VisualBasic.Settings="{x:Null}" DisplayName="Delay 5 seconds" Duration="00:00:05" sap:VirtualizedContainerService.HintSize="476,22" sap2010:WorkflowViewState.IdRef="Delay_1">
-      <TextExpression.Namespaces>
-        <sco:Collection x:TypeArguments="x:String">
-          <x:String>System.Activities</x:String>
-          <x:String>System.Activities.Statements</x:String>
-          <x:String>System.Activities.Expressions</x:String>
-          <x:String>System.Activities.Validation</x:String>
-          <x:String>System.Activities.XamlIntegration</x:String>
-          <x:String>Microsoft.VisualBasic.Activities</x:String>
-          <x:String>System</x:String>
-          <x:String>System.Collections.Generic</x:String>
-          <x:String>System.Data</x:String>
-          <x:String>System.Diagnostics</x:String>
-          <x:String>System.IO</x:String>
-          <x:String>System.Linq</x:String>
-          <x:String>System.Management.Automation</x:String>
-          <x:String>System.Net.Mail</x:String>
-          <x:String>System.Xml</x:String>
-          <x:String>System.Xml.Linq</x:String>
-          <x:String>UiPath.Library</x:String>
-          <x:String>System.Windows.Markup</x:String>
-        </sco:Collection>
-      </TextExpression.Namespaces>
-      <TextExpression.References>
-        <sco:Collection x:TypeArguments="AssemblyReference">
-          <AssemblyReference>System.Activities</AssemblyReference>
-          <AssemblyReference>mscorlib</AssemblyReference>
-          <AssemblyReference>System.Data</AssemblyReference>
-          <AssemblyReference>System</AssemblyReference>
-          <AssemblyReference>System.Core</AssemblyReference>
-          <AssemblyReference>System.Management.Automation</AssemblyReference>
-          <AssemblyReference>System.Xml</AssemblyReference>
-          <AssemblyReference>System.Xml.Linq</AssemblyReference>
-          <AssemblyReference>UiPath.Library</AssemblyReference>
-          <AssemblyReference>PresentationFramework</AssemblyReference>
-          <AssemblyReference>WindowsBase</AssemblyReference>
-          <AssemblyReference>PresentationCore</AssemblyReference>
-          <AssemblyReference>System.Xaml</AssemblyReference>
-        </sco:Collection>
-      </TextExpression.References>
-      <sap2010:WorkflowViewState.ViewStateManager>
-        <sap2010:ViewStateManager>
-          <sap2010:ViewStateData sap:VirtualizedContainerService.HintSize="200,22" Id="Delay_1" />
-        </sap2010:ViewStateManager>
-      </sap2010:WorkflowViewState.ViewStateManager>
-    </Delay>
-    <ui:UiElementExists DisplayName="Element Exists 'DIV'" Exists="[exist]" sap:VirtualizedContainerService.HintSize="476,106" sap2010:WorkflowViewState.IdRef="UiElementExists_1">
-      <ui:UiElementExists.Target>
-        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="5a981492-da9f-432a-a98d-8c7fcff1c975" InformativeScreenshot="353b1a4c264e3e0556fa53a00e130220" Selector="&lt;html title='*' /&gt;&lt;webctrl aaname='Tax guides and highlights' parentid='taxGuides' tag='DIV' /&gt;">
-          <ui:Target.TimeoutMS>
-            <InArgument x:TypeArguments="x:Int32" />
-          </ui:Target.TimeoutMS>
-          <ui:Target.WaitForReady>
-            <InArgument x:TypeArguments="ui:WaitForReady" />
-          </ui:Target.WaitForReady>
-        </ui:Target>
-      </ui:UiElementExists.Target>
-    </ui:UiElementExists>
-    <ui:InterruptibleDoWhile DisplayName="Do While" sap:VirtualizedContainerService.HintSize="476,367" sap2010:WorkflowViewState.IdRef="InterruptibleDoWhile_1">
-      <ui:InterruptibleDoWhile.Body>
-        <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="376,198" sap2010:WorkflowViewState.IdRef="Sequence_9">
-          <sap:WorkflowViewStateService.ViewState>
-            <scg:Dictionary x:TypeArguments="x:String, x:Object">
-              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-            </scg:Dictionary>
-          </sap:WorkflowViewStateService.ViewState>
-          <ui:UiElementExists DisplayName="Element Exists 'DIV'" Exists="[exist]" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="UiElementExists_2">
-            <ui:UiElementExists.Target>
-              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="5a981492-da9f-432a-a98d-8c7fcff1c975" InformativeScreenshot="353b1a4c264e3e0556fa53a00e130220" Selector="&lt;html title='*' /&gt;&lt;webctrl aaname='Tax guides and highlights' parentid='taxGuides' tag='DIV' /&gt;">
-                <ui:Target.TimeoutMS>
-                  <InArgument x:TypeArguments="x:Int32" />
-                </ui:Target.TimeoutMS>
-                <ui:Target.WaitForReady>
-                  <InArgument x:TypeArguments="ui:WaitForReady" />
-                </ui:Target.WaitForReady>
-              </ui:Target>
-            </ui:UiElementExists.Target>
-          </ui:UiElementExists>
-        </Sequence>
-      </ui:InterruptibleDoWhile.Body>
-      <ui:InterruptibleDoWhile.Condition>
-        <mva:VisualBasicValue x:TypeArguments="x:Boolean" ExpressionText="not exist" />
-      </ui:InterruptibleDoWhile.Condition>
-    </ui:InterruptibleDoWhile>
     <Sequence DisplayName="Data Scraping" sap:VirtualizedContainerService.HintSize="476,436" sap2010:WorkflowViewState.IdRef="Sequence_8">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -200,7 +123,7 @@
         </ui:BrowserScope.Body>
       </ui:BrowserScope>
     </Sequence>
-    <Assign sap:VirtualizedContainerService.HintSize="476,61" sap2010:WorkflowViewState.IdRef="Assign_3">
+    <Assign sap:VirtualizedContainerService.HintSize="476,60" sap2010:WorkflowViewState.IdRef="Assign_3">
       <Assign.To>
         <OutArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)">[out_HighlightIndexDict]</OutArgument>
       </Assign.To>
@@ -208,7 +131,7 @@
         <InArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)">[new Dictionary(Of string, Object)]</InArgument>
       </Assign.Value>
     </Assign>
-    <ui:ForEachRow CurrentIndex="{x:Null}" DataTable="[ExtractDataTable]" DisplayName="For Each Row" sap:VirtualizedContainerService.HintSize="476,405" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
+    <ui:ForEachRow CurrentIndex="{x:Null}" DataTable="[ExtractDataTable]" DisplayName="For Each Row" sap:VirtualizedContainerService.HintSize="476,402" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
       <ui:ForEachRow.Body>
         <ActivityAction x:TypeArguments="sd:DataRow">
           <ActivityAction.Argument>
