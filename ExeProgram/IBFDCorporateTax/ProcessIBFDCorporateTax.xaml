@@ -10,7 +10,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>824,5206.4</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>931.2,5356</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ProcessIBFDCorporateTax_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="64">
@@ -91,7 +91,7 @@
       <x:Boolean x:Key="ShouldExpandAll">True</x:Boolean>
     </scg:Dictionary>
   </sap:WorkflowViewStateService.ViewState>
-  <Sequence DisplayName="ProcessIBFDCorporateTax" sap:VirtualizedContainerService.HintSize="674.4,5041.6" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="ProcessIBFDCorporateTax" sap:VirtualizedContainerService.HintSize="941.6,5191.2" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="ui:Browser" Name="IBDF_UiBrowserObj" />
       <Variable x:TypeArguments="x:Int32" Default="1" Name="counter" />
@@ -108,7 +108,7 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <Assign sap:VirtualizedContainerService.HintSize="632.8,60" sap2010:WorkflowViewState.IdRef="Assign_17">
+    <Assign sap:VirtualizedContainerService.HintSize="900,60" sap2010:WorkflowViewState.IdRef="Assign_17">
       <Assign.To>
         <OutArgument x:TypeArguments="x:String">[in_TaxType]</OutArgument>
       </Assign.To>
@@ -116,20 +116,20 @@
         <InArgument x:TypeArguments="x:String">[if(in_TaxType="individual","Individual","Corporate")]</InArgument>
       </Assign.Value>
     </Assign>
-    <ui:KillProcess Process="{x:Null}" ContinueOnError="True" DisplayName="Kill Process" sap:VirtualizedContainerService.HintSize="632.8,22.4" sap2010:WorkflowViewState.IdRef="KillProcess_2" ProcessName="iexplore" />
-    <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke Workflow File" sap:VirtualizedContainerService.HintSize="632.8,88" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="ExeProgram\IBFDCorporateTax\LoginIBFDWebsite.xaml">
+    <ui:KillProcess Process="{x:Null}" ContinueOnError="True" DisplayName="Kill Process" sap:VirtualizedContainerService.HintSize="900,22.4" sap2010:WorkflowViewState.IdRef="KillProcess_2" ProcessName="iexplore" />
+    <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke Workflow File" sap:VirtualizedContainerService.HintSize="900,88" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="ExeProgram\IBFDCorporateTax\LoginIBFDWebsite.xaml">
       <ui:InvokeWorkflowFile.Arguments>
         <InArgument x:TypeArguments="x:String" x:Key="in_IBFDWebBeforeLogin">[in_IBFDWebBeforeLogin]</InArgument>
         <OutArgument x:TypeArguments="ui:Browser" x:Key="out_IBDF_UiBrowserObj">[IBDF_UiBrowserObj]</OutArgument>
       </ui:InvokeWorkflowFile.Arguments>
     </ui:InvokeWorkflowFile>
-    <ui:ForEach x:TypeArguments="x:String" CurrentIndex="{x:Null}" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="632.8,4658.4" sap2010:WorkflowViewState.IdRef="ForEach`1_2" Values="[in_NeedProcessContryNameList]">
+    <ui:ForEach x:TypeArguments="x:String" CurrentIndex="{x:Null}" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="900,4808" sap2010:WorkflowViewState.IdRef="ForEach`1_2" Values="[in_NeedProcessContryNameList]">
       <ui:ForEach.Body>
         <ActivityAction x:TypeArguments="x:String">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:String" Name="countryName" />
           </ActivityAction.Argument>
-          <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="597.6,4524" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+          <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="864.8,4673.6" sap2010:WorkflowViewState.IdRef="TryCatch_1">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -548,7 +548,7 @@
               </Sequence>
             </TryCatch.Try>
             <TryCatch.Catches>
-              <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="564,130.4" sap2010:WorkflowViewState.IdRef="Catch`1_1">
+              <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="831.2,130.4" sap2010:WorkflowViewState.IdRef="Catch`1_1">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -571,31 +571,38 @@
               </Catch>
             </TryCatch.Catches>
             <TryCatch.Finally>
-              <Sequence sap:VirtualizedContainerService.HintSize="475.2,611.2" sap2010:WorkflowViewState.IdRef="Sequence_28">
+              <Sequence sap:VirtualizedContainerService.HintSize="828,760.8" sap2010:WorkflowViewState.IdRef="Sequence_28">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
-                <ui:ExcelApplicationScope Password="{x:Null}" DisplayName="Excel Application Scope" sap:VirtualizedContainerService.HintSize="433.6,418.4" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_1" InstanceCachePeriod="3000" Visible="False" WorkbookPath="[in_logFilePath]">
+                <ui:ExcelApplicationScope Password="{x:Null}" DisplayName="Excel Application Scope" sap:VirtualizedContainerService.HintSize="786.4,568" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_1" InstanceCachePeriod="3000" Visible="False" WorkbookPath="[in_logFilePath]">
                   <ui:ExcelApplicationScope.Body>
                     <ActivityAction x:TypeArguments="ui:WorkbookApplication">
                       <ActivityAction.Argument>
                         <DelegateInArgument x:TypeArguments="ui:WorkbookApplication" Name="ExcelWorkbookScope" />
                       </ActivityAction.Argument>
-                      <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="375.2,308.8" sap2010:WorkflowViewState.IdRef="Sequence_33">
+                      <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="752.8,458.4" sap2010:WorkflowViewState.IdRef="Sequence_33">
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
-                        <ui:ExcelWriteCell Cell="[&quot;A&quot; + counterTask.ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="333.6,88" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_1" SheetName="Log" Text="[countryName]" />
-                        <ui:ExcelWriteCell Cell="[&quot;F&quot; + counterTask.ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="333.6,88" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_2" SheetName="Log" Text="[If ( downloadSuccess, &quot;√&quot;, &quot;X&quot;)]" />
+                        <ui:ExcelWriteCell Cell="[&quot;A&quot; + counterTask.ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="711.2,88" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_1" SheetName="Log" Text="[countryName]" />
+                        <If Condition="[in_TaxType=&quot;Individual&quot;]" sap:VirtualizedContainerService.HintSize="711.2,237.6" sap2010:WorkflowViewState.IdRef="If_7">
+                          <If.Then>
+                            <ui:ExcelWriteCell Cell="[&quot;I&quot; + counterTask.ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="333.6,88" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_3" SheetName="Log" Text="[If ( downloadSuccess, &quot;√&quot;, &quot;X&quot;)]" />
+                          </If.Then>
+                          <If.Else>
+                            <ui:ExcelWriteCell Cell="[&quot;F&quot; + counterTask.ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="333.6,88" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_2" SheetName="Log" Text="[If ( downloadSuccess, &quot;√&quot;, &quot;X&quot;)]" />
+                          </If.Else>
+                        </If>
                       </Sequence>
                     </ActivityAction>
                   </ui:ExcelApplicationScope.Body>
                 </ui:ExcelApplicationScope>
-                <Assign sap:VirtualizedContainerService.HintSize="433.6,60" sap2010:WorkflowViewState.IdRef="Assign_11">
+                <Assign sap:VirtualizedContainerService.HintSize="786.4,60" sap2010:WorkflowViewState.IdRef="Assign_11">
                   <Assign.To>
                     <OutArgument x:TypeArguments="x:Int32">[counterTask]</OutArgument>
                   </Assign.To>
