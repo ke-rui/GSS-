@@ -132,10 +132,7 @@
                 </ui:CursorPosition>
               </ui:Click.CursorPosition>
               <ui:Click.Target>
-                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="f243d00c-aba5-45d1-a7e4-224d0dde25b1" InformativeScreenshot="bae85996dcf9b4d614084a3bac7229fb" Selector="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;span' idx='1' isleaf='1' tag='SPAN' /&gt;">
-                  <ui:Target.TimeoutMS>
-                    <InArgument x:TypeArguments="x:Int32" />
-                  </ui:Target.TimeoutMS>
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="f243d00c-aba5-45d1-a7e4-224d0dde25b1" InformativeScreenshot="bae85996dcf9b4d614084a3bac7229fb" Selector="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;span' idx='1' isleaf='1' tag='SPAN' /&gt;" TimeoutMS="2000">
                   <ui:Target.WaitForReady>
                     <InArgument x:TypeArguments="ui:WaitForReady" />
                   </ui:Target.WaitForReady>

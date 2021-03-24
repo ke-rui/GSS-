@@ -403,10 +403,18 @@
                 <If.Then>
                   <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke Workflow File" sap:VirtualizedContainerService.HintSize="333.6,88" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_25" UnSafe="False" WorkflowFileName="Process.xaml">
                     <ui:InvokeWorkflowFile.Arguments>
-                      <InArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)" x:Key="in_Config">[in_Config]</InArgument>
-                      <InArgument x:TypeArguments="sd:DataTable" x:Key="in_TaskItemDT">[in_TaskItemDT]</InArgument>
-                      <InArgument x:TypeArguments="x:Int32" x:Key="in_TransactionNumber">[in_TransactionNumber]</InArgument>
-                      <InArgument x:TypeArguments="scg:List(x:String)" x:Key="in_NeedProcessContryNameList">[in_NeedProcessContryNameList]</InArgument>
+                      <InArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)" x:Key="in_Config">
+                        <mva:VisualBasicValue x:TypeArguments="scg:Dictionary(x:String, x:Object)" ExpressionText="in_Config" />
+                      </InArgument>
+                      <InArgument x:TypeArguments="sd:DataTable" x:Key="in_TaskItemDT">
+                        <mva:VisualBasicValue x:TypeArguments="sd:DataTable" ExpressionText="in_TaskItemDT" />
+                      </InArgument>
+                      <InArgument x:TypeArguments="x:Int32" x:Key="in_TransactionNumber">
+                        <mva:VisualBasicValue x:TypeArguments="x:Int32" ExpressionText="in_TransactionNumber" />
+                      </InArgument>
+                      <InArgument x:TypeArguments="scg:List(x:String)" x:Key="in_NeedProcessContryNameList">
+                        <mva:VisualBasicValue x:TypeArguments="scg:List(x:String)" ExpressionText="in_NeedProcessContryNameList" />
+                      </InArgument>
                     </ui:InvokeWorkflowFile.Arguments>
                   </ui:InvokeWorkflowFile>
                 </If.Then>
