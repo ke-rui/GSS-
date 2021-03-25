@@ -6,7 +6,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1150,2909</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>824,2744.8</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>IE_SaveAsPdf_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="26">
@@ -70,88 +70,119 @@
       <AssemblyReference>UiPath.CV</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap:VirtualizedContainerService.HintSize="766,2744" sap2010:WorkflowViewState.IdRef="Sequence_9">
+  <Sequence sap:VirtualizedContainerService.HintSize="686.4,2580" sap2010:WorkflowViewState.IdRef="Sequence_9">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="724,2652" sap2010:WorkflowViewState.IdRef="CommentOut_1">
-      <ui:CommentOut.Body>
-        <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="688,2574" sap2010:WorkflowViewState.IdRef="Sequence_8">
-          <sap:WorkflowViewStateService.ViewState>
-            <scg:Dictionary x:TypeArguments="x:String, x:Object">
-              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-            </scg:Dictionary>
-          </sap:WorkflowViewStateService.ViewState>
-          <Sequence sap:VirtualizedContainerService.HintSize="646,2482" sap2010:WorkflowViewState.IdRef="Sequence_7">
-            <sap:WorkflowViewStateService.ViewState>
-              <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-              </scg:Dictionary>
-            </sap:WorkflowViewStateService.ViewState>
-            <Delay mva:VisualBasic.Settings="{x:Null}" DisplayName="Delay 3 seconds" Duration="00:00:03" sap:VirtualizedContainerService.HintSize="604,22" sap2010:WorkflowViewState.IdRef="Delay_1">
-              <TextExpression.Namespaces>
-                <sco:Collection x:TypeArguments="x:String">
-                  <x:String>System.Activities</x:String>
-                  <x:String>System.Activities.Statements</x:String>
-                  <x:String>System.Activities.Expressions</x:String>
-                  <x:String>System.Activities.Validation</x:String>
-                  <x:String>System.Activities.XamlIntegration</x:String>
-                  <x:String>Microsoft.VisualBasic.Activities</x:String>
-                  <x:String>System</x:String>
-                  <x:String>System.Collections.Generic</x:String>
-                  <x:String>System.Data</x:String>
-                  <x:String>System.Diagnostics</x:String>
-                  <x:String>System.IO</x:String>
-                  <x:String>System.Linq</x:String>
-                  <x:String>System.Management.Automation</x:String>
-                  <x:String>System.Net.Mail</x:String>
-                  <x:String>System.Xml</x:String>
-                  <x:String>System.Xml.Linq</x:String>
-                  <x:String>UiPath.Library</x:String>
-                  <x:String>System.Windows.Markup</x:String>
-                </sco:Collection>
-              </TextExpression.Namespaces>
-              <TextExpression.References>
-                <sco:Collection x:TypeArguments="AssemblyReference">
-                  <AssemblyReference>System.Activities</AssemblyReference>
-                  <AssemblyReference>mscorlib</AssemblyReference>
-                  <AssemblyReference>System.Data</AssemblyReference>
-                  <AssemblyReference>System</AssemblyReference>
-                  <AssemblyReference>System.Core</AssemblyReference>
-                  <AssemblyReference>System.Management.Automation</AssemblyReference>
-                  <AssemblyReference>System.Xml</AssemblyReference>
-                  <AssemblyReference>System.Xml.Linq</AssemblyReference>
-                  <AssemblyReference>UiPath.Library</AssemblyReference>
-                  <AssemblyReference>PresentationFramework</AssemblyReference>
-                  <AssemblyReference>WindowsBase</AssemblyReference>
-                  <AssemblyReference>PresentationCore</AssemblyReference>
-                  <AssemblyReference>System.Xaml</AssemblyReference>
-                </sco:Collection>
-              </TextExpression.References>
-              <sap2010:WorkflowViewState.ViewStateManager>
-                <sap2010:ViewStateManager>
-                  <sap2010:ViewStateData sap:VirtualizedContainerService.HintSize="200,22" Id="Delay_1" />
-                </sap2010:ViewStateManager>
-              </sap2010:WorkflowViewState.ViewStateManager>
-            </Delay>
-            <Sequence DisplayName="IE_SaveAsPdf" sap:VirtualizedContainerService.HintSize="604,2328" sap2010:WorkflowViewState.IdRef="Sequence_1">
-              <Sequence.Variables>
-                <Variable x:TypeArguments="x:Boolean" Name="showSaveAsBtn" />
-                <Variable x:TypeArguments="x:String" Name="res" />
-                <Variable x:TypeArguments="x:Boolean" Name="exist" />
-                <Variable x:TypeArguments="x:Boolean" Name="completed" />
-                <Variable x:TypeArguments="x:Int32" Default="1" Name="counter" />
-                <Variable x:TypeArguments="x:Boolean" Name="resume_exit" />
-              </Sequence.Variables>
+    <Sequence sap:VirtualizedContainerService.HintSize="644.8,2487.2" sap2010:WorkflowViewState.IdRef="Sequence_7">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+      <Delay mva:VisualBasic.Settings="{x:Null}" DisplayName="Delay 3 seconds" Duration="00:00:03" sap:VirtualizedContainerService.HintSize="603.2,22.4" sap2010:WorkflowViewState.IdRef="Delay_1">
+        <TextExpression.Namespaces>
+          <sco:Collection x:TypeArguments="x:String">
+            <x:String>System.Activities</x:String>
+            <x:String>System.Activities.Statements</x:String>
+            <x:String>System.Activities.Expressions</x:String>
+            <x:String>System.Activities.Validation</x:String>
+            <x:String>System.Activities.XamlIntegration</x:String>
+            <x:String>Microsoft.VisualBasic.Activities</x:String>
+            <x:String>System</x:String>
+            <x:String>System.Collections.Generic</x:String>
+            <x:String>System.Data</x:String>
+            <x:String>System.Diagnostics</x:String>
+            <x:String>System.IO</x:String>
+            <x:String>System.Linq</x:String>
+            <x:String>System.Management.Automation</x:String>
+            <x:String>System.Net.Mail</x:String>
+            <x:String>System.Xml</x:String>
+            <x:String>System.Xml.Linq</x:String>
+            <x:String>UiPath.Library</x:String>
+            <x:String>System.Windows.Markup</x:String>
+          </sco:Collection>
+        </TextExpression.Namespaces>
+        <TextExpression.References>
+          <sco:Collection x:TypeArguments="AssemblyReference">
+            <AssemblyReference>System.Activities</AssemblyReference>
+            <AssemblyReference>mscorlib</AssemblyReference>
+            <AssemblyReference>System.Data</AssemblyReference>
+            <AssemblyReference>System</AssemblyReference>
+            <AssemblyReference>System.Core</AssemblyReference>
+            <AssemblyReference>System.Management.Automation</AssemblyReference>
+            <AssemblyReference>System.Xml</AssemblyReference>
+            <AssemblyReference>System.Xml.Linq</AssemblyReference>
+            <AssemblyReference>UiPath.Library</AssemblyReference>
+            <AssemblyReference>PresentationFramework</AssemblyReference>
+            <AssemblyReference>WindowsBase</AssemblyReference>
+            <AssemblyReference>PresentationCore</AssemblyReference>
+            <AssemblyReference>System.Xaml</AssemblyReference>
+          </sco:Collection>
+        </TextExpression.References>
+        <sap2010:WorkflowViewState.ViewStateManager>
+          <sap2010:ViewStateManager>
+            <sap2010:ViewStateData sap:VirtualizedContainerService.HintSize="200,22" Id="Delay_1" />
+          </sap2010:ViewStateManager>
+        </sap2010:WorkflowViewState.ViewStateManager>
+      </Delay>
+      <Sequence DisplayName="IE_SaveAsPdf" sap:VirtualizedContainerService.HintSize="603.2,2332" sap2010:WorkflowViewState.IdRef="Sequence_1">
+        <Sequence.Variables>
+          <Variable x:TypeArguments="x:Boolean" Name="showSaveAsBtn" />
+          <Variable x:TypeArguments="x:String" Name="res" />
+          <Variable x:TypeArguments="x:Boolean" Name="exist" />
+          <Variable x:TypeArguments="x:Boolean" Name="completed" />
+          <Variable x:TypeArguments="x:Int32" Default="1" Name="counter" />
+          <Variable x:TypeArguments="x:Boolean" Name="resume_exit" />
+        </Sequence.Variables>
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+        <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'drop down button  6'" sap:VirtualizedContainerService.HintSize="561.6,107.2" sap2010:WorkflowViewState.IdRef="Click_1" KeyModifiers="None" MouseButton="BTN_LEFT" SimulateClick="True">
+          <ui:Click.CursorPosition>
+            <ui:CursorPosition Position="Center">
+              <ui:CursorPosition.OffsetX>
+                <InArgument x:TypeArguments="x:Int32" />
+              </ui:CursorPosition.OffsetX>
+              <ui:CursorPosition.OffsetY>
+                <InArgument x:TypeArguments="x:Int32" />
+              </ui:CursorPosition.OffsetY>
+            </ui:CursorPosition>
+          </ui:Click.CursorPosition>
+          <ui:Click.Target>
+            <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="c692be80-c555-4ad1-8c88-06c01ae6a88a" InformativeScreenshot="5a7932e487d484683af3aa2fce43aac9" Selector="&lt;wnd app='iexplore.exe' cls='IEFrame' title='*' /&gt;&lt;wnd aaname='Notification' cls='DirectUIHWND' /&gt;&lt;ctrl automationid='IENotificationBar' /&gt;&lt;ctrl name='Save' role='split button' /&gt;&lt;ctrl name='6' role='drop down button' /&gt;">
+              <ui:Target.TimeoutMS>
+                <InArgument x:TypeArguments="x:Int32" />
+              </ui:Target.TimeoutMS>
+              <ui:Target.WaitForReady>
+                <InArgument x:TypeArguments="ui:WaitForReady" />
+              </ui:Target.WaitForReady>
+            </ui:Target>
+          </ui:Click.Target>
+        </ui:Click>
+        <ui:UiElementExists DisplayName="Element Exists 'menu item  另存为(A)'" Exists="[showSaveAsBtn]" sap:VirtualizedContainerService.HintSize="561.6,107.2" sap2010:WorkflowViewState.IdRef="UiElementExists_1">
+          <ui:UiElementExists.Target>
+            <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="4ab655ae-d502-4a98-b2f7-f1c4a9ffbaa1" InformativeScreenshot="70d3ad1f7e699e1416d498df661636e8" Selector="&lt;wnd app='iexplore.exe' cls='#32768' idx='*' /&gt;&lt;ctrl name='Context' role='popup menu' /&gt;&lt;ctrl automationid='53409' /&gt;" TimeoutMS="500">
+              <ui:Target.WaitForReady>
+                <InArgument x:TypeArguments="ui:WaitForReady" />
+              </ui:Target.WaitForReady>
+            </ui:Target>
+          </ui:UiElementExists.Target>
+        </ui:UiElementExists>
+        <ui:InterruptibleWhile DisplayName="While" sap:VirtualizedContainerService.HintSize="561.6,52.8" sap2010:WorkflowViewState.IdRef="InterruptibleWhile_1">
+          <ui:InterruptibleWhile.Body>
+            <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="376,344" sap2010:WorkflowViewState.IdRef="Sequence_2">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'drop down button  6'" sap:VirtualizedContainerService.HintSize="562,106" sap2010:WorkflowViewState.IdRef="Click_1" KeyModifiers="None" MouseButton="BTN_LEFT" SimulateClick="True">
+              <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'drop down button  6'" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="Click_2" KeyModifiers="None" MouseButton="BTN_LEFT" SimulateClick="True">
                 <ui:Click.CursorPosition>
                   <ui:CursorPosition Position="Center">
                     <ui:CursorPosition.OffsetX>
@@ -173,7 +204,7 @@
                   </ui:Target>
                 </ui:Click.Target>
               </ui:Click>
-              <ui:UiElementExists DisplayName="Element Exists 'menu item  另存为(A)'" Exists="[showSaveAsBtn]" sap:VirtualizedContainerService.HintSize="562,106" sap2010:WorkflowViewState.IdRef="UiElementExists_1">
+              <ui:UiElementExists DisplayName="Element Exists 'menu item  另存为(A)'" Exists="[showSaveAsBtn]" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="UiElementExists_2">
                 <ui:UiElementExists.Target>
                   <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="4ab655ae-d502-4a98-b2f7-f1c4a9ffbaa1" InformativeScreenshot="70d3ad1f7e699e1416d498df661636e8" Selector="&lt;wnd app='iexplore.exe' cls='#32768' idx='*' /&gt;&lt;ctrl name='Context' role='popup menu' /&gt;&lt;ctrl automationid='53409' /&gt;" TimeoutMS="500">
                     <ui:Target.WaitForReady>
@@ -182,58 +213,67 @@
                   </ui:Target>
                 </ui:UiElementExists.Target>
               </ui:UiElementExists>
-              <ui:InterruptibleWhile DisplayName="While" sap:VirtualizedContainerService.HintSize="562,53" sap2010:WorkflowViewState.IdRef="InterruptibleWhile_1">
-                <ui:InterruptibleWhile.Body>
-                  <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="376,344" sap2010:WorkflowViewState.IdRef="Sequence_2">
-                    <sap:WorkflowViewStateService.ViewState>
-                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                      </scg:Dictionary>
-                    </sap:WorkflowViewStateService.ViewState>
-                    <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'drop down button  6'" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="Click_2" KeyModifiers="None" MouseButton="BTN_LEFT" SimulateClick="True">
-                      <ui:Click.CursorPosition>
-                        <ui:CursorPosition Position="Center">
-                          <ui:CursorPosition.OffsetX>
-                            <InArgument x:TypeArguments="x:Int32" />
-                          </ui:CursorPosition.OffsetX>
-                          <ui:CursorPosition.OffsetY>
-                            <InArgument x:TypeArguments="x:Int32" />
-                          </ui:CursorPosition.OffsetY>
-                        </ui:CursorPosition>
-                      </ui:Click.CursorPosition>
-                      <ui:Click.Target>
-                        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="c692be80-c555-4ad1-8c88-06c01ae6a88a" InformativeScreenshot="5a7932e487d484683af3aa2fce43aac9" Selector="&lt;wnd app='iexplore.exe' cls='IEFrame' title='*' /&gt;&lt;wnd aaname='Notification' cls='DirectUIHWND' /&gt;&lt;ctrl automationid='IENotificationBar' /&gt;&lt;ctrl name='Save' role='split button' /&gt;&lt;ctrl name='6' role='drop down button' /&gt;">
-                          <ui:Target.TimeoutMS>
-                            <InArgument x:TypeArguments="x:Int32" />
-                          </ui:Target.TimeoutMS>
-                          <ui:Target.WaitForReady>
-                            <InArgument x:TypeArguments="ui:WaitForReady" />
-                          </ui:Target.WaitForReady>
-                        </ui:Target>
-                      </ui:Click.Target>
-                    </ui:Click>
-                    <ui:UiElementExists DisplayName="Element Exists 'menu item  另存为(A)'" Exists="[showSaveAsBtn]" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="UiElementExists_2">
-                      <ui:UiElementExists.Target>
-                        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="4ab655ae-d502-4a98-b2f7-f1c4a9ffbaa1" InformativeScreenshot="70d3ad1f7e699e1416d498df661636e8" Selector="&lt;wnd app='iexplore.exe' cls='#32768' idx='*' /&gt;&lt;ctrl name='Context' role='popup menu' /&gt;&lt;ctrl automationid='53409' /&gt;" TimeoutMS="500">
-                          <ui:Target.WaitForReady>
-                            <InArgument x:TypeArguments="ui:WaitForReady" />
-                          </ui:Target.WaitForReady>
-                        </ui:Target>
-                      </ui:UiElementExists.Target>
-                    </ui:UiElementExists>
-                  </Sequence>
-                </ui:InterruptibleWhile.Body>
-                <ui:InterruptibleWhile.Condition>
-                  <mva:VisualBasicValue x:TypeArguments="x:Boolean" ExpressionText="not showSaveAsBtn" sap2010:WorkflowViewState.IdRef="VisualBasicValue`1_1" />
-                </ui:InterruptibleWhile.Condition>
-                <sap:WorkflowViewStateService.ViewState>
-                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                    <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                  </scg:Dictionary>
-                </sap:WorkflowViewStateService.ViewState>
-              </ui:InterruptibleWhile>
-              <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'menu item  另存为(A)'" sap:VirtualizedContainerService.HintSize="562,106" sap2010:WorkflowViewState.IdRef="Click_3" KeyModifiers="None" MouseButton="BTN_LEFT" SimulateClick="True">
+            </Sequence>
+          </ui:InterruptibleWhile.Body>
+          <ui:InterruptibleWhile.Condition>
+            <mva:VisualBasicValue x:TypeArguments="x:Boolean" ExpressionText="not showSaveAsBtn" sap2010:WorkflowViewState.IdRef="VisualBasicValue`1_1" />
+          </ui:InterruptibleWhile.Condition>
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+        </ui:InterruptibleWhile>
+        <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'menu item  另存为(A)'" sap:VirtualizedContainerService.HintSize="561.6,107.2" sap2010:WorkflowViewState.IdRef="Click_3" KeyModifiers="None" MouseButton="BTN_LEFT" SimulateClick="True">
+          <ui:Click.CursorPosition>
+            <ui:CursorPosition Position="Center">
+              <ui:CursorPosition.OffsetX>
+                <InArgument x:TypeArguments="x:Int32" />
+              </ui:CursorPosition.OffsetX>
+              <ui:CursorPosition.OffsetY>
+                <InArgument x:TypeArguments="x:Int32" />
+              </ui:CursorPosition.OffsetY>
+            </ui:CursorPosition>
+          </ui:Click.CursorPosition>
+          <ui:Click.Target>
+            <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="9bb2c6db-925c-445a-9302-08db1ea19a46" InformativeScreenshot="70d3ad1f7e699e1416d498df661636e8" Selector="&lt;wnd app='iexplore.exe' cls='#32768' idx='*' /&gt;&lt;ctrl name='Context' role='popup menu' /&gt;&lt;ctrl automationid='53409' /&gt;">
+              <ui:Target.TimeoutMS>
+                <InArgument x:TypeArguments="x:Int32" />
+              </ui:Target.TimeoutMS>
+              <ui:Target.WaitForReady>
+                <InArgument x:TypeArguments="ui:WaitForReady" />
+              </ui:Target.WaitForReady>
+            </ui:Target>
+          </ui:Click.Target>
+        </ui:Click>
+        <If Condition="[in_isSimulateType]" sap:VirtualizedContainerService.HintSize="562,53" sap2010:WorkflowViewState.IdRef="If_1">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <If.Then>
+            <Sequence sap:VirtualizedContainerService.HintSize="376,372" sap2010:WorkflowViewState.IdRef="Sequence_3">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" Activate="True" DelayBetweenKeys="1000" DisplayName="Type Into 'Edit'" EmptyField="True" sap:VirtualizedContainerService.HintSize="334,134" sap2010:WorkflowViewState.IdRef="TypeInto_1" SimulateType="True" Text="[in_filePath]">
+                <ui:TypeInto.Target>
+                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="628abb4b-959a-4a5f-b66d-239c3fc388d8" InformativeScreenshot="8358f69f40bf6f3a51ad8dae590b86c1" Selector="&lt;wnd app='iexplore.exe' cls='#32770' title='Save As' /&gt;&lt;wnd aaname='Explorer Pane' cls='DirectUIHWND' /&gt;&lt;wnd aaname='File name:' cls='ComboBox' /&gt;&lt;wnd ctrlid='1001' /&gt;">
+                    <ui:Target.TimeoutMS>
+                      <InArgument x:TypeArguments="x:Int32" />
+                    </ui:Target.TimeoutMS>
+                    <ui:Target.WaitForReady>
+                      <InArgument x:TypeArguments="ui:WaitForReady" />
+                    </ui:Target.WaitForReady>
+                  </ui:Target>
+                </ui:TypeInto.Target>
+              </ui:TypeInto>
+              <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'Button'" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="Click_4" KeyModifiers="None" MouseButton="BTN_LEFT" SimulateClick="True">
                 <ui:Click.CursorPosition>
                   <ui:CursorPosition Position="Center">
                     <ui:CursorPosition.OffsetX>
@@ -245,7 +285,7 @@
                   </ui:CursorPosition>
                 </ui:Click.CursorPosition>
                 <ui:Click.Target>
-                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="9bb2c6db-925c-445a-9302-08db1ea19a46" InformativeScreenshot="70d3ad1f7e699e1416d498df661636e8" Selector="&lt;wnd app='iexplore.exe' cls='#32768' idx='*' /&gt;&lt;ctrl name='Context' role='popup menu' /&gt;&lt;ctrl automationid='53409' /&gt;">
+                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="324ae905-dae5-4bfb-becf-df44d04052ff" InformativeScreenshot="fedb81b88a5db3134a2f34131d6efda6" Selector="&lt;wnd app='iexplore.exe' cls='#32770' title='Save As' /&gt;&lt;wnd ctrlid='1' title='&amp;amp;Save' /&gt;">
                     <ui:Target.TimeoutMS>
                       <InArgument x:TypeArguments="x:Int32" />
                     </ui:Target.TimeoutMS>
@@ -255,112 +295,116 @@
                   </ui:Target>
                 </ui:Click.Target>
               </ui:Click>
-              <If Condition="[in_isSimulateType]" sap:VirtualizedContainerService.HintSize="562,53" sap2010:WorkflowViewState.IdRef="If_1">
-                <sap:WorkflowViewStateService.ViewState>
-                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                    <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                  </scg:Dictionary>
-                </sap:WorkflowViewStateService.ViewState>
-                <If.Then>
-                  <Sequence sap:VirtualizedContainerService.HintSize="376,372" sap2010:WorkflowViewState.IdRef="Sequence_3">
-                    <sap:WorkflowViewStateService.ViewState>
-                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                      </scg:Dictionary>
-                    </sap:WorkflowViewStateService.ViewState>
-                    <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" Activate="True" DelayBetweenKeys="1000" DisplayName="Type Into 'Edit'" EmptyField="True" sap:VirtualizedContainerService.HintSize="334,134" sap2010:WorkflowViewState.IdRef="TypeInto_1" SimulateType="True" Text="[in_filePath]">
-                      <ui:TypeInto.Target>
-                        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="628abb4b-959a-4a5f-b66d-239c3fc388d8" InformativeScreenshot="8358f69f40bf6f3a51ad8dae590b86c1" Selector="&lt;wnd app='iexplore.exe' cls='#32770' title='Save As' /&gt;&lt;wnd aaname='Explorer Pane' cls='DirectUIHWND' /&gt;&lt;wnd aaname='File name:' cls='ComboBox' /&gt;&lt;wnd ctrlid='1001' /&gt;">
-                          <ui:Target.TimeoutMS>
-                            <InArgument x:TypeArguments="x:Int32" />
-                          </ui:Target.TimeoutMS>
-                          <ui:Target.WaitForReady>
-                            <InArgument x:TypeArguments="ui:WaitForReady" />
-                          </ui:Target.WaitForReady>
-                        </ui:Target>
-                      </ui:TypeInto.Target>
-                    </ui:TypeInto>
-                    <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'Button'" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="Click_4" KeyModifiers="None" MouseButton="BTN_LEFT" SimulateClick="True">
-                      <ui:Click.CursorPosition>
-                        <ui:CursorPosition Position="Center">
-                          <ui:CursorPosition.OffsetX>
-                            <InArgument x:TypeArguments="x:Int32" />
-                          </ui:CursorPosition.OffsetX>
-                          <ui:CursorPosition.OffsetY>
-                            <InArgument x:TypeArguments="x:Int32" />
-                          </ui:CursorPosition.OffsetY>
-                        </ui:CursorPosition>
-                      </ui:Click.CursorPosition>
-                      <ui:Click.Target>
-                        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="324ae905-dae5-4bfb-becf-df44d04052ff" InformativeScreenshot="fedb81b88a5db3134a2f34131d6efda6" Selector="&lt;wnd app='iexplore.exe' cls='#32770' title='Save As' /&gt;&lt;wnd ctrlid='1' title='&amp;amp;Save' /&gt;">
-                          <ui:Target.TimeoutMS>
-                            <InArgument x:TypeArguments="x:Int32" />
-                          </ui:Target.TimeoutMS>
-                          <ui:Target.WaitForReady>
-                            <InArgument x:TypeArguments="ui:WaitForReady" />
-                          </ui:Target.WaitForReady>
-                        </ui:Target>
-                      </ui:Click.Target>
-                    </ui:Click>
-                  </Sequence>
-                </If.Then>
-                <If.Else>
-                  <Sequence sap:VirtualizedContainerService.HintSize="376,372" sap2010:WorkflowViewState.IdRef="Sequence_4">
-                    <sap:WorkflowViewStateService.ViewState>
-                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                      </scg:Dictionary>
-                    </sap:WorkflowViewStateService.ViewState>
-                    <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" DisplayName="Type Into 'Edit'" EmptyField="True" sap:VirtualizedContainerService.HintSize="334,134" sap2010:WorkflowViewState.IdRef="TypeInto_2" Text="[in_filePath]">
-                      <ui:TypeInto.Target>
-                        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="628abb4b-959a-4a5f-b66d-239c3fc388d8" InformativeScreenshot="8358f69f40bf6f3a51ad8dae590b86c1" Selector="&lt;wnd app='iexplore.exe' cls='#32770' title='Save As' /&gt;&lt;wnd aaname='Explorer Pane' cls='DirectUIHWND' /&gt;&lt;wnd aaname='File name:' cls='ComboBox' /&gt;&lt;wnd ctrlid='1001' /&gt;">
-                          <ui:Target.TimeoutMS>
-                            <InArgument x:TypeArguments="x:Int32" />
-                          </ui:Target.TimeoutMS>
-                          <ui:Target.WaitForReady>
-                            <InArgument x:TypeArguments="ui:WaitForReady" />
-                          </ui:Target.WaitForReady>
-                        </ui:Target>
-                      </ui:TypeInto.Target>
-                    </ui:TypeInto>
-                    <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'Button'" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="Click_5" KeyModifiers="None" MouseButton="BTN_LEFT">
-                      <ui:Click.CursorPosition>
-                        <ui:CursorPosition Position="Center">
-                          <ui:CursorPosition.OffsetX>
-                            <InArgument x:TypeArguments="x:Int32" />
-                          </ui:CursorPosition.OffsetX>
-                          <ui:CursorPosition.OffsetY>
-                            <InArgument x:TypeArguments="x:Int32" />
-                          </ui:CursorPosition.OffsetY>
-                        </ui:CursorPosition>
-                      </ui:Click.CursorPosition>
-                      <ui:Click.Target>
-                        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="324ae905-dae5-4bfb-becf-df44d04052ff" InformativeScreenshot="fedb81b88a5db3134a2f34131d6efda6" Selector="&lt;wnd app='iexplore.exe' cls='#32770' title='Save As' /&gt;&lt;wnd ctrlid='1' title='&amp;amp;Save' /&gt;">
-                          <ui:Target.TimeoutMS>
-                            <InArgument x:TypeArguments="x:Int32" />
-                          </ui:Target.TimeoutMS>
-                          <ui:Target.WaitForReady>
-                            <InArgument x:TypeArguments="ui:WaitForReady" />
-                          </ui:Target.WaitForReady>
-                        </ui:Target>
-                      </ui:Click.Target>
-                    </ui:Click>
-                  </Sequence>
-                </If.Else>
-              </If>
-              <ui:UiElementExists DisplayName="Element Exists 'Button'" Exists="[exist]" sap:VirtualizedContainerService.HintSize="562,106" sap2010:WorkflowViewState.IdRef="UiElementExists_3">
+            </Sequence>
+          </If.Then>
+          <If.Else>
+            <Sequence sap:VirtualizedContainerService.HintSize="376,372" sap2010:WorkflowViewState.IdRef="Sequence_4">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" DisplayName="Type Into 'Edit'" EmptyField="True" sap:VirtualizedContainerService.HintSize="334,134" sap2010:WorkflowViewState.IdRef="TypeInto_2" Text="[in_filePath]">
+                <ui:TypeInto.Target>
+                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="628abb4b-959a-4a5f-b66d-239c3fc388d8" InformativeScreenshot="8358f69f40bf6f3a51ad8dae590b86c1" Selector="&lt;wnd app='iexplore.exe' cls='#32770' title='Save As' /&gt;&lt;wnd aaname='Explorer Pane' cls='DirectUIHWND' /&gt;&lt;wnd aaname='File name:' cls='ComboBox' /&gt;&lt;wnd ctrlid='1001' /&gt;">
+                    <ui:Target.TimeoutMS>
+                      <InArgument x:TypeArguments="x:Int32" />
+                    </ui:Target.TimeoutMS>
+                    <ui:Target.WaitForReady>
+                      <InArgument x:TypeArguments="ui:WaitForReady" />
+                    </ui:Target.WaitForReady>
+                  </ui:Target>
+                </ui:TypeInto.Target>
+              </ui:TypeInto>
+              <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'Button'" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="Click_5" KeyModifiers="None" MouseButton="BTN_LEFT">
+                <ui:Click.CursorPosition>
+                  <ui:CursorPosition Position="Center">
+                    <ui:CursorPosition.OffsetX>
+                      <InArgument x:TypeArguments="x:Int32" />
+                    </ui:CursorPosition.OffsetX>
+                    <ui:CursorPosition.OffsetY>
+                      <InArgument x:TypeArguments="x:Int32" />
+                    </ui:CursorPosition.OffsetY>
+                  </ui:CursorPosition>
+                </ui:Click.CursorPosition>
+                <ui:Click.Target>
+                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="324ae905-dae5-4bfb-becf-df44d04052ff" InformativeScreenshot="fedb81b88a5db3134a2f34131d6efda6" Selector="&lt;wnd app='iexplore.exe' cls='#32770' title='Save As' /&gt;&lt;wnd ctrlid='1' title='&amp;amp;Save' /&gt;">
+                    <ui:Target.TimeoutMS>
+                      <InArgument x:TypeArguments="x:Int32" />
+                    </ui:Target.TimeoutMS>
+                    <ui:Target.WaitForReady>
+                      <InArgument x:TypeArguments="ui:WaitForReady" />
+                    </ui:Target.WaitForReady>
+                  </ui:Target>
+                </ui:Click.Target>
+              </ui:Click>
+            </Sequence>
+          </If.Else>
+        </If>
+        <ui:UiElementExists DisplayName="Element Exists 'Button'" Exists="[exist]" sap:VirtualizedContainerService.HintSize="562,106" sap2010:WorkflowViewState.IdRef="UiElementExists_3">
+          <ui:UiElementExists.Target>
+            <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="76c4e450-f75a-4fb2-8e1d-355a25ee2358" InformativeScreenshot="5151f2a9f30a1a9dde43def0f020c2e9" Selector="&lt;wnd app='iexplore.exe' cls='#32770' title='Confirm Save As' /&gt;&lt;wnd aaname='Confirm Save As' cls='DirectUIHWND' /&gt;&lt;wnd aaname='Yes' cls='Button' title='&amp;amp;Yes' /&gt;" TimeoutMS="1000">
+              <ui:Target.WaitForReady>
+                <InArgument x:TypeArguments="ui:WaitForReady" />
+              </ui:Target.WaitForReady>
+            </ui:Target>
+          </ui:UiElementExists.Target>
+        </ui:UiElementExists>
+        <If Condition="[exist]" sap:VirtualizedContainerService.HintSize="562,254" sap2010:WorkflowViewState.IdRef="If_2">
+          <If.Then>
+            <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'Button'" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="Click_6" KeyModifiers="None" MouseButton="BTN_LEFT" SimulateClick="True">
+              <ui:Click.CursorPosition>
+                <ui:CursorPosition Position="Center">
+                  <ui:CursorPosition.OffsetX>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:CursorPosition.OffsetX>
+                  <ui:CursorPosition.OffsetY>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:CursorPosition.OffsetY>
+                </ui:CursorPosition>
+              </ui:Click.CursorPosition>
+              <ui:Click.Target>
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="9423d5f8-58a8-4950-94e6-e8479e1e8c79" InformativeScreenshot="74127374c2bca9076465d022130de2c4" Selector="&lt;wnd app='iexplore.exe' cls='#32770' title='Confirm Save As' /&gt;&lt;wnd aaname='Confirm Save As' cls='DirectUIHWND' /&gt;&lt;wnd aaname='Yes' cls='Button' title='&amp;amp;Yes' /&gt;">
+                  <ui:Target.TimeoutMS>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:Target.TimeoutMS>
+                  <ui:Target.WaitForReady>
+                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                  </ui:Target.WaitForReady>
+                </ui:Target>
+              </ui:Click.Target>
+            </ui:Click>
+          </If.Then>
+        </If>
+        <ui:UiElementExists DisplayName="Element Exists 'push button  打开文件夹'" Exists="[completed]" sap:VirtualizedContainerService.HintSize="562,106" sap2010:WorkflowViewState.IdRef="UiElementExists_4">
+          <ui:UiElementExists.Target>
+            <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="5c590848-21a3-4022-9505-5d421651d048" InformativeScreenshot="f3701c59dd03f44d5593cc6fe4f1bd8c" Selector="&lt;wnd app='iexplore.exe' cls='IEFrame' title='*' /&gt;&lt;wnd aaname='Notification' cls='DirectUIHWND' /&gt;&lt;ctrl automationid='IENotificationBar' /&gt;&lt;ctrl name='Open folder' role='push button' /&gt;" TimeoutMS="1000">
+              <ui:Target.WaitForReady>
+                <InArgument x:TypeArguments="ui:WaitForReady" />
+              </ui:Target.WaitForReady>
+            </ui:Target>
+          </ui:UiElementExists.Target>
+        </ui:UiElementExists>
+        <ui:InterruptibleWhile Condition="[not completed and counter&lt;100]" DisplayName="While" sap:VirtualizedContainerService.HintSize="562,964" sap2010:WorkflowViewState.IdRef="InterruptibleWhile_2">
+          <ui:InterruptibleWhile.Body>
+            <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="526,799" sap2010:WorkflowViewState.IdRef="Sequence_5">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <ui:UiElementExists DisplayName="Element Exists 'push button  Resume'" Exists="[resume_exit]" sap:VirtualizedContainerService.HintSize="484,106" sap2010:WorkflowViewState.IdRef="UiElementExists_6">
                 <ui:UiElementExists.Target>
-                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="76c4e450-f75a-4fb2-8e1d-355a25ee2358" InformativeScreenshot="5151f2a9f30a1a9dde43def0f020c2e9" Selector="&lt;wnd app='iexplore.exe' cls='#32770' title='Confirm Save As' /&gt;&lt;wnd aaname='Confirm Save As' cls='DirectUIHWND' /&gt;&lt;wnd aaname='Yes' cls='Button' title='&amp;amp;Yes' /&gt;" TimeoutMS="1000">
+                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="95ead1d7-d05e-401e-a6e8-d85b71a0d7d6" InformativeScreenshot="559a206e27c1e3f0a1adc63d7609bc7c" Selector="&lt;wnd app='iexplore.exe' cls='IEFrame' omit:title='Worldwide Capital and Fixed Assets Guide 2020 | EY - Global - In*' /&gt;&lt;wnd aaname='Notification' omit:cls='DirectUIHWND' /&gt;&lt;ctrl automationid='IENotificationBar' /&gt;&lt;ctrl name='Resume' role='push button' /&gt;" TimeoutMS="1000">
                     <ui:Target.WaitForReady>
                       <InArgument x:TypeArguments="ui:WaitForReady" />
                     </ui:Target.WaitForReady>
                   </ui:Target>
                 </ui:UiElementExists.Target>
               </ui:UiElementExists>
-              <If Condition="[exist]" sap:VirtualizedContainerService.HintSize="562,254" sap2010:WorkflowViewState.IdRef="If_2">
+              <If Condition="[resume_exit=True]" sap:VirtualizedContainerService.HintSize="484,253" sap2010:WorkflowViewState.IdRef="If_3">
                 <If.Then>
-                  <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'Button'" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="Click_6" KeyModifiers="None" MouseButton="BTN_LEFT" SimulateClick="True">
+                  <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'push button  Resume'" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="Click_7" KeyModifiers="None" MouseButton="BTN_LEFT">
                     <ui:Click.CursorPosition>
                       <ui:CursorPosition Position="Center">
                         <ui:CursorPosition.OffsetX>
@@ -372,7 +416,7 @@
                       </ui:CursorPosition>
                     </ui:Click.CursorPosition>
                     <ui:Click.Target>
-                      <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="9423d5f8-58a8-4950-94e6-e8479e1e8c79" InformativeScreenshot="74127374c2bca9076465d022130de2c4" Selector="&lt;wnd app='iexplore.exe' cls='#32770' title='Confirm Save As' /&gt;&lt;wnd aaname='Confirm Save As' cls='DirectUIHWND' /&gt;&lt;wnd aaname='Yes' cls='Button' title='&amp;amp;Yes' /&gt;">
+                      <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="52c544fc-cd62-44e2-84f2-5c5905cdfa1d" InformativeScreenshot="8d55562a0b31afc8a4892962366b0cb8" Selector="&lt;wnd app='iexplore.exe' cls='IEFrame' omit:title='Worldwide Capital and Fixed Assets Guide 2020 | EY - Global - In*' /&gt;&lt;wnd aaname='Notification' omit:cls='DirectUIHWND' /&gt;&lt;ctrl automationid='IENotificationBar' /&gt;&lt;ctrl name='Resume' role='push button' /&gt;">
                         <ui:Target.TimeoutMS>
                           <InArgument x:TypeArguments="x:Int32" />
                         </ui:Target.TimeoutMS>
@@ -384,129 +428,74 @@
                   </ui:Click>
                 </If.Then>
               </If>
-              <ui:UiElementExists DisplayName="Element Exists 'push button  打开文件夹'" Exists="[completed]" sap:VirtualizedContainerService.HintSize="562,106" sap2010:WorkflowViewState.IdRef="UiElementExists_4">
+              <ui:UiElementExists DisplayName="Element Exists 'push button  打开文件夹'" Exists="[completed]" sap:VirtualizedContainerService.HintSize="484,106" sap2010:WorkflowViewState.IdRef="UiElementExists_5">
                 <ui:UiElementExists.Target>
-                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="5c590848-21a3-4022-9505-5d421651d048" InformativeScreenshot="f3701c59dd03f44d5593cc6fe4f1bd8c" Selector="&lt;wnd app='iexplore.exe' cls='IEFrame' title='*' /&gt;&lt;wnd aaname='Notification' cls='DirectUIHWND' /&gt;&lt;ctrl automationid='IENotificationBar' /&gt;&lt;ctrl name='Open folder' role='push button' /&gt;" TimeoutMS="1000">
+                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="5c590848-21a3-4022-9505-5d421651d048" InformativeScreenshot="f3701c59dd03f44d5593cc6fe4f1bd8c" Selector="&lt;wnd app='iexplore.exe' cls='IEFrame' omit:title='Worldwide Corporate Tax Guide 2020 | EY - Global - Internet Expl*' /&gt;&lt;wnd aaname='Notification' cls='DirectUIHWND' /&gt;&lt;ctrl automationid='IENotificationBar' /&gt;&lt;ctrl name='Open folder' role='push button' /&gt;" TimeoutMS="1000">
                     <ui:Target.WaitForReady>
                       <InArgument x:TypeArguments="ui:WaitForReady" />
                     </ui:Target.WaitForReady>
                   </ui:Target>
                 </ui:UiElementExists.Target>
               </ui:UiElementExists>
-              <ui:InterruptibleWhile Condition="[not completed and counter&lt;100]" DisplayName="While" sap:VirtualizedContainerService.HintSize="562,964" sap2010:WorkflowViewState.IdRef="InterruptibleWhile_2">
-                <ui:InterruptibleWhile.Body>
-                  <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="526,799" sap2010:WorkflowViewState.IdRef="Sequence_5">
-                    <sap:WorkflowViewStateService.ViewState>
-                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                      </scg:Dictionary>
-                    </sap:WorkflowViewStateService.ViewState>
-                    <ui:UiElementExists DisplayName="Element Exists 'push button  Resume'" Exists="[resume_exit]" sap:VirtualizedContainerService.HintSize="484,106" sap2010:WorkflowViewState.IdRef="UiElementExists_6">
-                      <ui:UiElementExists.Target>
-                        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="95ead1d7-d05e-401e-a6e8-d85b71a0d7d6" InformativeScreenshot="559a206e27c1e3f0a1adc63d7609bc7c" Selector="&lt;wnd app='iexplore.exe' cls='IEFrame' omit:title='Worldwide Capital and Fixed Assets Guide 2020 | EY - Global - In*' /&gt;&lt;wnd aaname='Notification' omit:cls='DirectUIHWND' /&gt;&lt;ctrl automationid='IENotificationBar' /&gt;&lt;ctrl name='Resume' role='push button' /&gt;" TimeoutMS="1000">
-                          <ui:Target.WaitForReady>
-                            <InArgument x:TypeArguments="ui:WaitForReady" />
-                          </ui:Target.WaitForReady>
-                        </ui:Target>
-                      </ui:UiElementExists.Target>
-                    </ui:UiElementExists>
-                    <If Condition="[resume_exit=True]" sap:VirtualizedContainerService.HintSize="484,253" sap2010:WorkflowViewState.IdRef="If_3">
-                      <If.Then>
-                        <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'push button  Resume'" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="Click_7" KeyModifiers="None" MouseButton="BTN_LEFT">
-                          <ui:Click.CursorPosition>
-                            <ui:CursorPosition Position="Center">
-                              <ui:CursorPosition.OffsetX>
-                                <InArgument x:TypeArguments="x:Int32" />
-                              </ui:CursorPosition.OffsetX>
-                              <ui:CursorPosition.OffsetY>
-                                <InArgument x:TypeArguments="x:Int32" />
-                              </ui:CursorPosition.OffsetY>
-                            </ui:CursorPosition>
-                          </ui:Click.CursorPosition>
-                          <ui:Click.Target>
-                            <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="52c544fc-cd62-44e2-84f2-5c5905cdfa1d" InformativeScreenshot="8d55562a0b31afc8a4892962366b0cb8" Selector="&lt;wnd app='iexplore.exe' cls='IEFrame' omit:title='Worldwide Capital and Fixed Assets Guide 2020 | EY - Global - In*' /&gt;&lt;wnd aaname='Notification' omit:cls='DirectUIHWND' /&gt;&lt;ctrl automationid='IENotificationBar' /&gt;&lt;ctrl name='Resume' role='push button' /&gt;">
-                              <ui:Target.TimeoutMS>
-                                <InArgument x:TypeArguments="x:Int32" />
-                              </ui:Target.TimeoutMS>
-                              <ui:Target.WaitForReady>
-                                <InArgument x:TypeArguments="ui:WaitForReady" />
-                              </ui:Target.WaitForReady>
-                            </ui:Target>
-                          </ui:Click.Target>
-                        </ui:Click>
-                      </If.Then>
-                    </If>
-                    <ui:UiElementExists DisplayName="Element Exists 'push button  打开文件夹'" Exists="[completed]" sap:VirtualizedContainerService.HintSize="484,106" sap2010:WorkflowViewState.IdRef="UiElementExists_5">
-                      <ui:UiElementExists.Target>
-                        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="5c590848-21a3-4022-9505-5d421651d048" InformativeScreenshot="f3701c59dd03f44d5593cc6fe4f1bd8c" Selector="&lt;wnd app='iexplore.exe' cls='IEFrame' omit:title='Worldwide Corporate Tax Guide 2020 | EY - Global - Internet Expl*' /&gt;&lt;wnd aaname='Notification' cls='DirectUIHWND' /&gt;&lt;ctrl automationid='IENotificationBar' /&gt;&lt;ctrl name='Open folder' role='push button' /&gt;" TimeoutMS="1000">
-                          <ui:Target.WaitForReady>
-                            <InArgument x:TypeArguments="ui:WaitForReady" />
-                          </ui:Target.WaitForReady>
-                        </ui:Target>
-                      </ui:UiElementExists.Target>
-                    </ui:UiElementExists>
-                    <Delay Duration="00:00:03" sap:VirtualizedContainerService.HintSize="484,22" sap2010:WorkflowViewState.IdRef="Delay_3" />
-                    <Assign sap:VirtualizedContainerService.HintSize="484,60" sap2010:WorkflowViewState.IdRef="Assign_1">
-                      <Assign.To>
-                        <OutArgument x:TypeArguments="x:Int32">[counter]</OutArgument>
-                      </Assign.To>
-                      <Assign.Value>
-                        <InArgument x:TypeArguments="x:Int32">[counter+1]</InArgument>
-                      </Assign.Value>
-                    </Assign>
-                  </Sequence>
-                </ui:InterruptibleWhile.Body>
-              </ui:InterruptibleWhile>
-              <Delay mva:VisualBasic.Settings="{x:Null}" DisplayName="Delay 3 seconds" Duration="00:00:03" sap:VirtualizedContainerService.HintSize="562,22" sap2010:WorkflowViewState.IdRef="Delay_1">
-                <TextExpression.Namespaces>
-                  <sco:Collection x:TypeArguments="x:String">
-                    <x:String>System.Activities</x:String>
-                    <x:String>System.Activities.Statements</x:String>
-                    <x:String>System.Activities.Expressions</x:String>
-                    <x:String>System.Activities.Validation</x:String>
-                    <x:String>System.Activities.XamlIntegration</x:String>
-                    <x:String>Microsoft.VisualBasic.Activities</x:String>
-                    <x:String>System</x:String>
-                    <x:String>System.Collections.Generic</x:String>
-                    <x:String>System.Data</x:String>
-                    <x:String>System.Diagnostics</x:String>
-                    <x:String>System.IO</x:String>
-                    <x:String>System.Linq</x:String>
-                    <x:String>System.Management.Automation</x:String>
-                    <x:String>System.Net.Mail</x:String>
-                    <x:String>System.Xml</x:String>
-                    <x:String>System.Xml.Linq</x:String>
-                    <x:String>UiPath.Library</x:String>
-                    <x:String>System.Windows.Markup</x:String>
-                  </sco:Collection>
-                </TextExpression.Namespaces>
-                <TextExpression.References>
-                  <sco:Collection x:TypeArguments="AssemblyReference">
-                    <AssemblyReference>System.Activities</AssemblyReference>
-                    <AssemblyReference>mscorlib</AssemblyReference>
-                    <AssemblyReference>System.Data</AssemblyReference>
-                    <AssemblyReference>System</AssemblyReference>
-                    <AssemblyReference>System.Core</AssemblyReference>
-                    <AssemblyReference>System.Management.Automation</AssemblyReference>
-                    <AssemblyReference>System.Xml</AssemblyReference>
-                    <AssemblyReference>System.Xml.Linq</AssemblyReference>
-                    <AssemblyReference>UiPath.Library</AssemblyReference>
-                    <AssemblyReference>PresentationFramework</AssemblyReference>
-                    <AssemblyReference>WindowsBase</AssemblyReference>
-                    <AssemblyReference>PresentationCore</AssemblyReference>
-                    <AssemblyReference>System.Xaml</AssemblyReference>
-                  </sco:Collection>
-                </TextExpression.References>
-                <sap2010:WorkflowViewState.ViewStateManager>
-                  <sap2010:ViewStateManager>
-                    <sap2010:ViewStateData sap:VirtualizedContainerService.HintSize="200,22" Id="Delay_1" />
-                  </sap2010:ViewStateManager>
-                </sap2010:WorkflowViewState.ViewStateManager>
-              </Delay>
+              <Delay Duration="00:00:03" sap:VirtualizedContainerService.HintSize="484,22" sap2010:WorkflowViewState.IdRef="Delay_3" />
+              <Assign sap:VirtualizedContainerService.HintSize="484,60" sap2010:WorkflowViewState.IdRef="Assign_1">
+                <Assign.To>
+                  <OutArgument x:TypeArguments="x:Int32">[counter]</OutArgument>
+                </Assign.To>
+                <Assign.Value>
+                  <InArgument x:TypeArguments="x:Int32">[counter+1]</InArgument>
+                </Assign.Value>
+              </Assign>
             </Sequence>
-          </Sequence>
-        </Sequence>
-      </ui:CommentOut.Body>
-    </ui:CommentOut>
+          </ui:InterruptibleWhile.Body>
+        </ui:InterruptibleWhile>
+        <Delay mva:VisualBasic.Settings="{x:Null}" DisplayName="Delay 3 seconds" Duration="00:00:03" sap:VirtualizedContainerService.HintSize="562,22" sap2010:WorkflowViewState.IdRef="Delay_1">
+          <TextExpression.Namespaces>
+            <sco:Collection x:TypeArguments="x:String">
+              <x:String>System.Activities</x:String>
+              <x:String>System.Activities.Statements</x:String>
+              <x:String>System.Activities.Expressions</x:String>
+              <x:String>System.Activities.Validation</x:String>
+              <x:String>System.Activities.XamlIntegration</x:String>
+              <x:String>Microsoft.VisualBasic.Activities</x:String>
+              <x:String>System</x:String>
+              <x:String>System.Collections.Generic</x:String>
+              <x:String>System.Data</x:String>
+              <x:String>System.Diagnostics</x:String>
+              <x:String>System.IO</x:String>
+              <x:String>System.Linq</x:String>
+              <x:String>System.Management.Automation</x:String>
+              <x:String>System.Net.Mail</x:String>
+              <x:String>System.Xml</x:String>
+              <x:String>System.Xml.Linq</x:String>
+              <x:String>UiPath.Library</x:String>
+              <x:String>System.Windows.Markup</x:String>
+            </sco:Collection>
+          </TextExpression.Namespaces>
+          <TextExpression.References>
+            <sco:Collection x:TypeArguments="AssemblyReference">
+              <AssemblyReference>System.Activities</AssemblyReference>
+              <AssemblyReference>mscorlib</AssemblyReference>
+              <AssemblyReference>System.Data</AssemblyReference>
+              <AssemblyReference>System</AssemblyReference>
+              <AssemblyReference>System.Core</AssemblyReference>
+              <AssemblyReference>System.Management.Automation</AssemblyReference>
+              <AssemblyReference>System.Xml</AssemblyReference>
+              <AssemblyReference>System.Xml.Linq</AssemblyReference>
+              <AssemblyReference>UiPath.Library</AssemblyReference>
+              <AssemblyReference>PresentationFramework</AssemblyReference>
+              <AssemblyReference>WindowsBase</AssemblyReference>
+              <AssemblyReference>PresentationCore</AssemblyReference>
+              <AssemblyReference>System.Xaml</AssemblyReference>
+            </sco:Collection>
+          </TextExpression.References>
+          <sap2010:WorkflowViewState.ViewStateManager>
+            <sap2010:ViewStateManager>
+              <sap2010:ViewStateData sap:VirtualizedContainerService.HintSize="200,22" Id="Delay_1" />
+            </sap2010:ViewStateManager>
+          </sap2010:WorkflowViewState.ViewStateManager>
+        </Delay>
+      </Sequence>
+    </Sequence>
   </Sequence>
 </Activity>

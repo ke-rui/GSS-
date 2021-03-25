@@ -6,7 +6,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1008,2411</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>824,2532</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>LoginTaxNote_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="26">
@@ -64,10 +64,9 @@
       <AssemblyReference>UiPath.CV</AssemblyReference>
       <AssemblyReference>System.ServiceModel</AssemblyReference>
       <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
-      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="LoginTaxNote" sap:VirtualizedContainerService.HintSize="717,2346" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="LoginTaxNote" sap:VirtualizedContainerService.HintSize="712.8,2367.2" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:Int32" Name="idxnum" />
       <Variable x:TypeArguments="x:Boolean" Name="sign_in" />
@@ -78,20 +77,20 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:OpenBrowser BrowserType="{x:Null}" CommunicationMethod="{x:Null}" Hidden="{x:Null}" NewSession="{x:Null}" Private="{x:Null}" DisplayName="Open Browser" sap:VirtualizedContainerService.HintSize="675,2254" sap2010:WorkflowViewState.IdRef="OpenBrowser_2" UiBrowser="[out_IEObj]" Url="[in_LoginURL]">
+    <ui:OpenBrowser BrowserType="{x:Null}" CommunicationMethod="{x:Null}" Hidden="{x:Null}" NewSession="{x:Null}" Private="{x:Null}" DisplayName="Open Browser" sap:VirtualizedContainerService.HintSize="671.2,2274.4" sap2010:WorkflowViewState.IdRef="OpenBrowser_2" UiBrowser="[out_IEObj]" Url="[in_LoginURL]">
       <ui:OpenBrowser.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="641,2154" sap2010:WorkflowViewState.IdRef="Sequence_6">
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="637.6,2172" sap2010:WorkflowViewState.IdRef="Sequence_6">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <ui:MaximizeWindow Window="{x:Null}" DisplayName="Maximize Window" sap:VirtualizedContainerService.HintSize="599,22" sap2010:WorkflowViewState.IdRef="MaximizeWindow_1" />
-            <ui:UiElementExists DisplayName="Element Exists 'A  https://www.taxnotes...'" Exists="[taxnotes_web]" sap:VirtualizedContainerService.HintSize="599,106" sap2010:WorkflowViewState.IdRef="UiElementExists_4">
+            <ui:MaximizeWindow Window="{x:Null}" DisplayName="Maximize Window" sap:VirtualizedContainerService.HintSize="596,22.4" sap2010:WorkflowViewState.IdRef="MaximizeWindow_1" />
+            <ui:UiElementExists DisplayName="Element Exists 'A  https://www.taxnotes...'" Exists="[taxnotes_web]" sap:VirtualizedContainerService.HintSize="596,107.2" sap2010:WorkflowViewState.IdRef="UiElementExists_4">
               <ui:UiElementExists.Target>
                 <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="afa90b6b-df8f-407d-b847-8dcf75564901" InformativeScreenshot="de15360ad5269668c80a7194fc732f40" Selector="&lt;webctrl aaname='Tax Notes' parentid='content-wrap' tag='A' /&gt;" TimeoutMS="2000">
                   <ui:Target.WaitForReady>
@@ -100,16 +99,16 @@
                 </ui:Target>
               </ui:UiElementExists.Target>
             </ui:UiElementExists>
-            <ui:InterruptibleWhile DisplayName="While" sap:VirtualizedContainerService.HintSize="599,525" sap2010:WorkflowViewState.IdRef="InterruptibleWhile_2">
+            <ui:InterruptibleWhile DisplayName="While" sap:VirtualizedContainerService.HintSize="596,529.6" sap2010:WorkflowViewState.IdRef="InterruptibleWhile_2">
               <ui:InterruptibleWhile.Body>
-                <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="376,360" sap2010:WorkflowViewState.IdRef="Sequence_8">
+                <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="375.2,362.4" sap2010:WorkflowViewState.IdRef="Sequence_8">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <Delay Duration="00:00:05" sap:VirtualizedContainerService.HintSize="334,22" sap2010:WorkflowViewState.IdRef="Delay_4" />
-                  <Assign sap:VirtualizedContainerService.HintSize="334,60" sap2010:WorkflowViewState.IdRef="Assign_2">
+                  <Delay Duration="00:00:05" sap:VirtualizedContainerService.HintSize="333.6,22.4" sap2010:WorkflowViewState.IdRef="Delay_4" />
+                  <Assign sap:VirtualizedContainerService.HintSize="333.6,60" sap2010:WorkflowViewState.IdRef="Assign_2">
                     <Assign.To>
                       <OutArgument x:TypeArguments="x:Int32">[idxnum]</OutArgument>
                     </Assign.To>
@@ -117,7 +116,7 @@
                       <InArgument x:TypeArguments="x:Int32">[idxnum+1]</InArgument>
                     </Assign.Value>
                   </Assign>
-                  <ui:UiElementExists DisplayName="Element Exists 'A  https://www.taxnotes...'" Exists="[taxnotes_web]" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="UiElementExists_5">
+                  <ui:UiElementExists DisplayName="Element Exists 'A  https://www.taxnotes...'" Exists="[taxnotes_web]" sap:VirtualizedContainerService.HintSize="333.6,107.2" sap2010:WorkflowViewState.IdRef="UiElementExists_5">
                     <ui:UiElementExists.Target>
                       <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="afa90b6b-df8f-407d-b847-8dcf75564901" InformativeScreenshot="de15360ad5269668c80a7194fc732f40" Selector="&lt;webctrl aaname='Tax Notes' parentid='content-wrap' tag='A' /&gt;" TimeoutMS="2000">
                         <ui:Target.WaitForReady>
@@ -132,8 +131,8 @@
                 <mva:VisualBasicValue x:TypeArguments="x:Boolean" ExpressionText="not taxnotes_web and idxnum&gt;10" sap2010:WorkflowViewState.IdRef="VisualBasicValue`1_1" />
               </ui:InterruptibleWhile.Condition>
             </ui:InterruptibleWhile>
-            <Delay Duration="00:00:05" sap:VirtualizedContainerService.HintSize="599,22" sap2010:WorkflowViewState.IdRef="Delay_3" />
-            <ui:UiElementExists DisplayName="Element Exists 'A  login_s'" Exists="[sign_in]" sap:VirtualizedContainerService.HintSize="599,68" sap2010:WorkflowViewState.IdRef="UiElementExists_1">
+            <Delay Duration="00:00:05" sap:VirtualizedContainerService.HintSize="596,22.4" sap2010:WorkflowViewState.IdRef="Delay_3" />
+            <ui:UiElementExists DisplayName="Element Exists 'A  login_s'" Exists="[sign_in]" sap:VirtualizedContainerService.HintSize="596,68.8" sap2010:WorkflowViewState.IdRef="UiElementExists_1">
               <ui:UiElementExists.Target>
                 <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="4e8b74ea-802c-4161-bafb-f7b67d5b1435" Selector="&lt;html title='Tax News, Tax Articles and Information - Tax Notes' /&gt;&lt;webctrl aaname='Welcome, *' parentid='block-taperformance-welcome-user aquiblock' tag='A' /&gt;" WaitForReady="COMPLETE">
                   <ui:Target.TimeoutMS>
@@ -142,9 +141,9 @@
                 </ui:Target>
               </ui:UiElementExists.Target>
             </ui:UiElementExists>
-            <If Condition="[not sign_in]" sap:VirtualizedContainerService.HintSize="599,1119" sap2010:WorkflowViewState.IdRef="If_1">
+            <If Condition="[not sign_in]" sap:VirtualizedContainerService.HintSize="596,1128.8" sap2010:WorkflowViewState.IdRef="If_1">
               <If.Then>
-                <Sequence sap:VirtualizedContainerService.HintSize="454,971" sap2010:WorkflowViewState.IdRef="Sequence_5">
+                <Sequence sap:VirtualizedContainerService.HintSize="452,979.2" sap2010:WorkflowViewState.IdRef="Sequence_5">
                   <Sequence.Variables>
                     <Variable x:TypeArguments="x:Boolean" Name="welcome" />
                     <Variable x:TypeArguments="x:Int32" Default="1" Name="count" />
@@ -154,7 +153,7 @@
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" ContinueOnError="True" DisplayName="Click 'A  login_s'" sap:VirtualizedContainerService.HintSize="412,106" sap2010:WorkflowViewState.IdRef="Click_2" KeyModifiers="None" MouseButton="BTN_LEFT">
+                  <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" ContinueOnError="True" DisplayName="Click 'A  login_s'" sap:VirtualizedContainerService.HintSize="410.4,107.2" sap2010:WorkflowViewState.IdRef="Click_2" KeyModifiers="None" MouseButton="BTN_LEFT">
                     <ui:Click.CursorPosition>
                       <ui:CursorPosition Position="Center">
                         <ui:CursorPosition.OffsetX>
@@ -176,8 +175,8 @@
                       </ui:Target>
                     </ui:Click.Target>
                   </ui:Click>
-                  <Delay Duration="00:00:05" sap:VirtualizedContainerService.HintSize="412,22" sap2010:WorkflowViewState.IdRef="Delay_1" />
-                  <ui:UiElementExists DisplayName="Element Exists 'A'" Exists="[welcome]" sap:VirtualizedContainerService.HintSize="412,106" sap2010:WorkflowViewState.IdRef="UiElementExists_2">
+                  <Delay Duration="00:00:05" sap:VirtualizedContainerService.HintSize="410.4,22.4" sap2010:WorkflowViewState.IdRef="Delay_1" />
+                  <ui:UiElementExists DisplayName="Element Exists 'A'" Exists="[welcome]" sap:VirtualizedContainerService.HintSize="410.4,107.2" sap2010:WorkflowViewState.IdRef="UiElementExists_2">
                     <ui:UiElementExists.Target>
                       <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="d2e3564e-fe7b-4711-b444-516bd071871f" InformativeScreenshot="0420a88dae578a598cafb36af63c8983" Selector="&lt;html title='Tax News, Tax Articles and Information - Tax Notes' /&gt;&lt;webctrl aaname='Welcome, *' parentid='block-taperformance-welcome-user aquiblock' tag='A' /&gt;" TimeoutMS="2000">
                         <ui:Target.WaitForReady>
@@ -186,15 +185,15 @@
                       </ui:Target>
                     </ui:UiElementExists.Target>
                   </ui:UiElementExists>
-                  <ui:InterruptibleWhile DisplayName="While" sap:VirtualizedContainerService.HintSize="412,525" sap2010:WorkflowViewState.IdRef="InterruptibleWhile_1">
+                  <ui:InterruptibleWhile DisplayName="While" sap:VirtualizedContainerService.HintSize="410.4,529.6" sap2010:WorkflowViewState.IdRef="InterruptibleWhile_1">
                     <ui:InterruptibleWhile.Body>
-                      <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="376,360" sap2010:WorkflowViewState.IdRef="Sequence_4">
+                      <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="375.2,362.4" sap2010:WorkflowViewState.IdRef="Sequence_4">
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
-                        <Assign sap:VirtualizedContainerService.HintSize="334,60" sap2010:WorkflowViewState.IdRef="Assign_1">
+                        <Assign sap:VirtualizedContainerService.HintSize="333.6,60" sap2010:WorkflowViewState.IdRef="Assign_1">
                           <Assign.To>
                             <OutArgument x:TypeArguments="x:Int32">[count]</OutArgument>
                           </Assign.To>
@@ -202,13 +201,10 @@
                             <InArgument x:TypeArguments="x:Int32">[count+1]</InArgument>
                           </Assign.Value>
                         </Assign>
-                        <Delay Duration="00:00:02" sap:VirtualizedContainerService.HintSize="334,22" sap2010:WorkflowViewState.IdRef="Delay_2" />
-                        <ui:UiElementExists DisplayName="Element Exists 'A'" Exists="[welcome]" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="UiElementExists_3">
+                        <Delay Duration="00:00:02" sap:VirtualizedContainerService.HintSize="333.6,22.4" sap2010:WorkflowViewState.IdRef="Delay_2" />
+                        <ui:UiElementExists DisplayName="Element Exists 'A'" Exists="[welcome]" sap:VirtualizedContainerService.HintSize="333.6,107.2" sap2010:WorkflowViewState.IdRef="UiElementExists_3">
                           <ui:UiElementExists.Target>
-                            <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="d2e3564e-fe7b-4711-b444-516bd071871f" InformativeScreenshot="0420a88dae578a598cafb36af63c8983" Selector="&lt;html title='Tax News, Tax Articles and Information - Tax Notes' /&gt;&lt;webctrl aaname='Welcome, *' parentid='block-taperformance-welcome-user aquiblock' tag='A' /&gt;">
-                              <ui:Target.TimeoutMS>
-                                <InArgument x:TypeArguments="x:Int32" />
-                              </ui:Target.TimeoutMS>
+                            <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="d2e3564e-fe7b-4711-b444-516bd071871f" InformativeScreenshot="0420a88dae578a598cafb36af63c8983" Selector="&lt;html title='Tax News, Tax Articles and Information - Tax Notes' /&gt;&lt;webctrl aaname='Welcome, *' parentid='block-taperformance-welcome-user aquiblock' tag='A' /&gt;" TimeoutMS="2000">
                               <ui:Target.WaitForReady>
                                 <InArgument x:TypeArguments="ui:WaitForReady" />
                               </ui:Target.WaitForReady>

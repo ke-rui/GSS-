@@ -7,7 +7,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1150,2082</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1020.8,2268</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>KPMGVATController_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="33">
@@ -47,7 +47,7 @@
     </scg:List>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
-    <scg:List x:TypeArguments="AssemblyReference" Capacity="29">
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="58">
       <AssemblyReference>System.Activities</AssemblyReference>
       <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
       <AssemblyReference>mscorlib</AssemblyReference>
@@ -77,17 +77,14 @@
       <AssemblyReference>UiPath.Web</AssemblyReference>
       <AssemblyReference>UiPath.Web.Activities</AssemblyReference>
       <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="KPMGVATController" sap:VirtualizedContainerService.HintSize="670,1877" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="KPMGVATController" sap:VirtualizedContainerService.HintSize="1031.2,2103.2" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="URL" />
       <Variable x:TypeArguments="x:Boolean" Default="True" Name="downloadSuccess" />
-      <Variable x:TypeArguments="x:Int32" Name="i">
-        <Variable.Default>
-          <Literal x:TypeArguments="x:Int32" Value="1" />
-        </Variable.Default>
-      </Variable>
+      <Variable x:TypeArguments="x:Int32" Default="1" Name="i" />
       <Variable x:TypeArguments="x:Boolean" Name="KPMGExist" />
     </Sequence.Variables>
     <sap:WorkflowViewStateService.ViewState>
@@ -95,29 +92,29 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:InterruptibleDoWhile DisplayName="Do While" sap:VirtualizedContainerService.HintSize="628,849" sap2010:WorkflowViewState.IdRef="InterruptibleDoWhile_1">
+    <ui:InterruptibleDoWhile DisplayName="Do While" sap:VirtualizedContainerService.HintSize="989.6,849.6" sap2010:WorkflowViewState.IdRef="InterruptibleDoWhile_1">
       <ui:InterruptibleDoWhile.Body>
-        <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="486,680" sap2010:WorkflowViewState.IdRef="Sequence_8">
+        <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="484.8,682.4" sap2010:WorkflowViewState.IdRef="Sequence_8">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <ui:KillProcess Process="{x:Null}" ContinueOnError="True" DisplayName="Kill Process" sap:VirtualizedContainerService.HintSize="444,22" sap2010:WorkflowViewState.IdRef="KillProcess_1" ProcessName="iexplore" />
-          <ui:OpenBrowser BrowserType="{x:Null}" CommunicationMethod="{x:Null}" Hidden="{x:Null}" NewSession="{x:Null}" Private="{x:Null}" UiBrowser="{x:Null}" DisplayName="Open Browser" sap:VirtualizedContainerService.HintSize="444,425" sap2010:WorkflowViewState.IdRef="OpenBrowser_2" Url="[in_KPMG_VAT_web]">
+          <ui:KillProcess Process="{x:Null}" ContinueOnError="True" DisplayName="Kill Process" sap:VirtualizedContainerService.HintSize="443.2,22.4" sap2010:WorkflowViewState.IdRef="KillProcess_1" ProcessName="iexplore" />
+          <ui:OpenBrowser BrowserType="{x:Null}" CommunicationMethod="{x:Null}" Hidden="{x:Null}" NewSession="{x:Null}" Private="{x:Null}" UiBrowser="{x:Null}" DisplayName="Open Browser" sap:VirtualizedContainerService.HintSize="443.2,427.2" sap2010:WorkflowViewState.IdRef="OpenBrowser_2" Url="[in_KPMG_VAT_web]">
             <ui:OpenBrowser.Body>
               <ActivityAction x:TypeArguments="x:Object">
                 <ActivityAction.Argument>
                   <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
                 </ActivityAction.Argument>
-                <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="376,322" sap2010:WorkflowViewState.IdRef="Sequence_6">
+                <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="375.2,324.8" sap2010:WorkflowViewState.IdRef="Sequence_6">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <ui:MaximizeWindow Window="{x:Null}" DisplayName="Maximize Window" sap:VirtualizedContainerService.HintSize="334,22" sap2010:WorkflowViewState.IdRef="MaximizeWindow_1" />
-                  <Delay mva:VisualBasic.Settings="{x:Null}" DisplayName="Delay 1 second" Duration="00:00:01" sap:VirtualizedContainerService.HintSize="334,22" sap2010:WorkflowViewState.IdRef="Delay_1">
+                  <ui:MaximizeWindow Window="{x:Null}" DisplayName="Maximize Window" sap:VirtualizedContainerService.HintSize="333.6,22.4" sap2010:WorkflowViewState.IdRef="MaximizeWindow_1" />
+                  <Delay mva:VisualBasic.Settings="{x:Null}" DisplayName="Delay 1 second" Duration="00:00:01" sap:VirtualizedContainerService.HintSize="333.6,22.4" sap2010:WorkflowViewState.IdRef="Delay_1">
                     <TextExpression.Namespaces>
                       <sco:Collection x:TypeArguments="x:String">
                         <x:String>System.Activities</x:String>
@@ -163,12 +160,9 @@
                       </sap2010:ViewStateManager>
                     </sap2010:WorkflowViewState.ViewStateManager>
                   </Delay>
-                  <ui:UiElementExists DisplayName="Element Exists 'SPAN'" Exists="[KPMGExist]" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="UiElementExists_1">
+                  <ui:UiElementExists DisplayName="Element Exists 'SPAN'" Exists="[KPMGExist]" sap:VirtualizedContainerService.HintSize="333.6,107.2" sap2010:WorkflowViewState.IdRef="UiElementExists_1">
                     <ui:UiElementExists.Target>
-                      <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="43370ef4-9999-4063-af79-34cfca5df737" InformativeScreenshot="fdd5aacd494f10632430260cda5f1f6e" Selector="&lt;html title='Inside Indirect Tax' /&gt;&lt;webctrl aaname='Current edition - *' parentid='columnCtrlBgColor' tag='A' /&gt;">
-                        <ui:Target.TimeoutMS>
-                          <InArgument x:TypeArguments="x:Int32" />
-                        </ui:Target.TimeoutMS>
+                      <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="43370ef4-9999-4063-af79-34cfca5df737" InformativeScreenshot="fdd5aacd494f10632430260cda5f1f6e" Selector="&lt;html title='Inside Indirect Tax' /&gt;&lt;webctrl aaname='Current edition - *' parentid='columnCtrlBgColor' tag='A' /&gt;" TimeoutMS="5000">
                         <ui:Target.WaitForReady>
                           <InArgument x:TypeArguments="ui:WaitForReady" />
                         </ui:Target.WaitForReady>
@@ -185,7 +179,7 @@
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
           </ui:OpenBrowser>
-          <Assign sap:VirtualizedContainerService.HintSize="444,61" sap2010:WorkflowViewState.IdRef="Assign_3">
+          <Assign sap:VirtualizedContainerService.HintSize="443.2,60" sap2010:WorkflowViewState.IdRef="Assign_3">
             <Assign.To>
               <OutArgument x:TypeArguments="x:Int32">[i]</OutArgument>
             </Assign.To>
@@ -196,18 +190,18 @@
         </Sequence>
       </ui:InterruptibleDoWhile.Body>
       <ui:InterruptibleDoWhile.Condition>
-        <mva:VisualBasicValue x:TypeArguments="x:Boolean" ExpressionText="not KPMGExist or i&lt;4" />
+        <mva:VisualBasicValue x:TypeArguments="x:Boolean" ExpressionText="not KPMGExist and i&lt;4" sap2010:WorkflowViewState.IdRef="VisualBasicValue`1_1" />
       </ui:InterruptibleDoWhile.Condition>
     </ui:InterruptibleDoWhile>
-    <If Condition="[KPMGExist]" sap:VirtualizedContainerService.HintSize="628,896" sap2010:WorkflowViewState.IdRef="If_1">
+    <If Condition="[KPMGExist]" sap:VirtualizedContainerService.HintSize="989.6,1120.8" sap2010:WorkflowViewState.IdRef="If_1">
       <If.Then>
-        <Sequence sap:VirtualizedContainerService.HintSize="480,743" sap2010:WorkflowViewState.IdRef="Sequence_9">
+        <Sequence sap:VirtualizedContainerService.HintSize="512,971.2" sap2010:WorkflowViewState.IdRef="Sequence_9">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'A '" sap:VirtualizedContainerService.HintSize="438,106" sap2010:WorkflowViewState.IdRef="Click_6" KeyModifiers="None" MouseButton="BTN_LEFT" SimulateClick="True">
+          <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'A '" sap:VirtualizedContainerService.HintSize="470.4,107.2" sap2010:WorkflowViewState.IdRef="Click_6" KeyModifiers="None" MouseButton="BTN_LEFT" SimulateClick="True">
             <ui:Click.CursorPosition>
               <ui:CursorPosition Position="Center">
                 <ui:CursorPosition.OffsetX>
@@ -229,7 +223,7 @@
               </ui:Target>
             </ui:Click.Target>
           </ui:Click>
-          <Delay mva:VisualBasic.Settings="{x:Null}" DisplayName="Delay 3 seconds" Duration="00:00:03" sap:VirtualizedContainerService.HintSize="438,22" sap2010:WorkflowViewState.IdRef="Delay_3">
+          <Delay mva:VisualBasic.Settings="{x:Null}" DisplayName="Delay 3 seconds" Duration="00:00:03" sap:VirtualizedContainerService.HintSize="470.4,22.4" sap2010:WorkflowViewState.IdRef="Delay_3">
             <TextExpression.Namespaces>
               <sco:Collection x:TypeArguments="x:String">
                 <x:String>System.Activities</x:String>
@@ -275,7 +269,7 @@
               </sap2010:ViewStateManager>
             </sap2010:WorkflowViewState.ViewStateManager>
           </Delay>
-          <ui:GetValue ContinueOnError="{x:Null}" DisplayName="Get Text 'AddressDisplay Control'" sap:VirtualizedContainerService.HintSize="438,106" sap2010:WorkflowViewState.IdRef="GetValue_2">
+          <ui:GetValue ContinueOnError="{x:Null}" DisplayName="Get Text 'AddressDisplay Control'" sap:VirtualizedContainerService.HintSize="470.4,107.2" sap2010:WorkflowViewState.IdRef="GetValue_2">
             <ui:GetValue.Target>
               <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="3473ebab-42f5-4fdd-b24c-5f359ed269a1" InformativeScreenshot="de93f31e592b8b2d72dc232dd8c24a2a" Selector="&lt;wnd app='iexplore.exe' cls='IEFrame' omit:title='https://tax.kpmg.us/content/dam/tax/en/taxwatch/pdfs/2019/januar*' idx='*' /&gt;&lt;wnd cls='Address Band Root' title='Address Bar' /&gt;&lt;wnd cls='AddressDisplay Control' /&gt;">
                 <ui:Target.TimeoutMS>
@@ -290,9 +284,9 @@
               <OutArgument x:TypeArguments="x:String">[URL]</OutArgument>
             </ui:GetValue.Value>
           </ui:GetValue>
-          <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="438,297" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+          <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="470.4,521.6" sap2010:WorkflowViewState.IdRef="TryCatch_1">
             <TryCatch.Try>
-              <ui:HttpClient Body="{x:Null}" ConsumerKey="{x:Null}" ConsumerSecret="{x:Null}" ContinueOnError="{x:Null}" OAuth1Token="{x:Null}" OAuth1TokenSecret="{x:Null}" OAuth2Token="{x:Null}" Password="{x:Null}" ResponseHeaders="{x:Null}" Result="{x:Null}" StatusCode="{x:Null}" Username="{x:Null}" AcceptFormat="ANY" BodyFormat="application/xml" ClientCertificate="[Nothing]" ClientCertificatePassword="[Nothing]" DisplayName="HTTP Request" EndPoint="[URL]" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="HttpClient_2" Method="GET" ResourcePath="[in_outputPath+&quot;\KPMG_VAT.pdf&quot;]" TimeoutMS="6000">
+              <ui:HttpClient Body="{x:Null}" ConsumerKey="{x:Null}" ConsumerSecret="{x:Null}" ContinueOnError="{x:Null}" OAuth1Token="{x:Null}" OAuth1TokenSecret="{x:Null}" OAuth2Token="{x:Null}" Password="{x:Null}" ResponseHeaders="{x:Null}" Result="{x:Null}" StatusCode="{x:Null}" Username="{x:Null}" AcceptFormat="ANY" BodyFormat="application/xml" ClientCertificate="[Nothing]" ClientCertificatePassword="[Nothing]" DisplayName="HTTP Request" EndPoint="[URL]" sap:VirtualizedContainerService.HintSize="200,22.4" sap2010:WorkflowViewState.IdRef="HttpClient_2" Method="GET" ResourcePath="[in_outputPath+&quot;\KPMG_VAT.pdf&quot;]" TimeoutMS="6000">
                 <ui:HttpClient.Attachments>
                   <scg:Dictionary x:TypeArguments="x:String, InArgument(x:String)" />
                 </ui:HttpClient.Attachments>
@@ -311,7 +305,7 @@
               </ui:HttpClient>
             </TryCatch.Try>
             <TryCatch.Catches>
-              <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="404,23" sap2010:WorkflowViewState.IdRef="Catch`1_1">
+              <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="436.8,22.4" sap2010:WorkflowViewState.IdRef="Catch`1_1">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -322,7 +316,7 @@
                   <ActivityAction.Argument>
                     <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
                   </ActivityAction.Argument>
-                  <Assign sap:VirtualizedContainerService.HintSize="263,61" sap2010:WorkflowViewState.IdRef="Assign_2">
+                  <Assign sap:VirtualizedContainerService.HintSize="262.4,60" sap2010:WorkflowViewState.IdRef="Assign_2">
                     <Assign.To>
                       <OutArgument x:TypeArguments="x:Boolean">[downloadSuccess]</OutArgument>
                     </Assign.To>
@@ -355,6 +349,25 @@
           </TryCatch>
         </Sequence>
       </If.Then>
+      <If.Else>
+        <ui:ExcelApplicationScope Password="{x:Null}" DisplayName="Excel Application Scope" sap:VirtualizedContainerService.HintSize="433.6,290.4" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_2" InstanceCachePeriod="3000" Visible="False" WorkbookPath="[in_logFilePath]">
+          <ui:ExcelApplicationScope.Body>
+            <ActivityAction x:TypeArguments="ui:WorkbookApplication">
+              <ActivityAction.Argument>
+                <DelegateInArgument x:TypeArguments="ui:WorkbookApplication" Name="ExcelWorkbookScope" />
+              </ActivityAction.Argument>
+              <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="375.2,180.8" sap2010:WorkflowViewState.IdRef="Sequence_10">
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+                <ui:ExcelWriteCell Cell="K4" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="333.6,88" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_2" SheetName="Log" Text="KPMG网站登录失败" />
+              </Sequence>
+            </ActivityAction>
+          </ui:ExcelApplicationScope.Body>
+        </ui:ExcelApplicationScope>
+      </If.Else>
     </If>
   </Sequence>
 </Activity>
