@@ -5,7 +5,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>824,2112</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>824,2209.6</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>SaveAsPDF_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="52">
@@ -68,19 +68,19 @@
       <AssemblyReference>UiPath.Platform</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap:VirtualizedContainerService.HintSize="608.8,1947.2" sap2010:WorkflowViewState.IdRef="Sequence_6">
+  <Sequence sap:VirtualizedContainerService.HintSize="608,2104.8" sap2010:WorkflowViewState.IdRef="Sequence_6">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <Sequence sap:VirtualizedContainerService.HintSize="567.2,1854.4" sap2010:WorkflowViewState.IdRef="Sequence_3">
+    <Sequence sap:VirtualizedContainerService.HintSize="566.4,2012" sap2010:WorkflowViewState.IdRef="Sequence_3">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <Sequence DisplayName="SaveAsPDF" sap:VirtualizedContainerService.HintSize="525.6,1761.6" sap2010:WorkflowViewState.IdRef="Sequence_1">
+      <Sequence DisplayName="SaveAsPDF" sap:VirtualizedContainerService.HintSize="524.8,1919.2" sap2010:WorkflowViewState.IdRef="Sequence_1">
         <Sequence.Variables>
           <Variable x:TypeArguments="x:Boolean" Name="printer_exist" />
           <Variable x:TypeArguments="x:Int32" Default="1" Name="count" />
@@ -91,7 +91,7 @@
             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
-        <Delay mva:VisualBasic.Settings="{x:Null}" DisplayName="Delay 1 second" Duration="00:00:01" sap:VirtualizedContainerService.HintSize="484,22.4" sap2010:WorkflowViewState.IdRef="Delay_1">
+        <Delay mva:VisualBasic.Settings="{x:Null}" DisplayName="Delay 1 second" Duration="00:00:01" sap:VirtualizedContainerService.HintSize="483.2,22.4" sap2010:WorkflowViewState.IdRef="Delay_1">
           <TextExpression.Namespaces>
             <sco:Collection x:TypeArguments="x:String">
               <x:String>System.Activities</x:String>
@@ -137,7 +137,7 @@
             </sap2010:ViewStateManager>
           </sap2010:WorkflowViewState.ViewStateManager>
         </Delay>
-        <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'Button'" sap:VirtualizedContainerService.HintSize="484,107.2" sap2010:WorkflowViewState.IdRef="Click_1" KeyModifiers="None" MouseButton="BTN_LEFT" SimulateClick="True">
+        <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'Button'" sap:VirtualizedContainerService.HintSize="483.2,107.2" sap2010:WorkflowViewState.IdRef="Click_1" KeyModifiers="None" MouseButton="BTN_LEFT" SimulateClick="True">
           <ui:Click.CursorPosition>
             <ui:CursorPosition Position="Center">
               <ui:CursorPosition.OffsetX>
@@ -159,7 +159,7 @@
             </ui:Target>
           </ui:Click.Target>
         </ui:Click>
-        <Delay mva:VisualBasic.Settings="{x:Null}" DisplayName="Delay 1 second" Duration="00:00:01" sap:VirtualizedContainerService.HintSize="484,22.4" sap2010:WorkflowViewState.IdRef="Delay_1">
+        <Delay mva:VisualBasic.Settings="{x:Null}" DisplayName="Delay 1 second" Duration="00:00:01" sap:VirtualizedContainerService.HintSize="483.2,22.4" sap2010:WorkflowViewState.IdRef="Delay_1">
           <TextExpression.Namespaces>
             <sco:Collection x:TypeArguments="x:String">
               <x:String>System.Activities</x:String>
@@ -205,7 +205,7 @@
             </sap2010:ViewStateManager>
           </sap2010:WorkflowViewState.ViewStateManager>
         </Delay>
-        <ui:UiElementExists DisplayName="Element Exists 'Edit'" Exists="[printer_exist]" sap:VirtualizedContainerService.HintSize="484,107.2" sap2010:WorkflowViewState.IdRef="UiElementExists_1">
+        <ui:UiElementExists DisplayName="Element Exists 'Edit'" Exists="[printer_exist]" sap:VirtualizedContainerService.HintSize="483.2,107.2" sap2010:WorkflowViewState.IdRef="UiElementExists_1">
           <ui:UiElementExists.Target>
             <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="c73b7025-5b20-482d-acf3-b833108f76a2" InformativeScreenshot="7d9e9039b156077b167192a8aba5be6b" Selector="&lt;wnd app='splwow64.exe' cls='#32770' title='Save PDF File As' idx='*' /&gt;&lt;wnd aaname='Explorer Pane' cls='DirectUIHWND' /&gt;&lt;wnd aaname='File name:' cls='ComboBox' /&gt;&lt;wnd ctrlid='1001' /&gt;" TimeoutMS="2000">
               <ui:Target.WaitForReady>
@@ -214,15 +214,15 @@
             </ui:Target>
           </ui:UiElementExists.Target>
         </ui:UiElementExists>
-        <If Condition="[printer_exist or count&gt;10]" sap:VirtualizedContainerService.HintSize="484,302.4" sap2010:WorkflowViewState.IdRef="If_1">
+        <If Condition="[printer_exist or count&gt;10]" sap:VirtualizedContainerService.HintSize="483.2,312" sap2010:WorkflowViewState.IdRef="If_1">
           <If.Else>
-            <Sequence sap:VirtualizedContainerService.HintSize="305,153" sap2010:WorkflowViewState.IdRef="Sequence_4">
+            <Sequence sap:VirtualizedContainerService.HintSize="304,152.8" sap2010:WorkflowViewState.IdRef="Sequence_4">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <Assign sap:VirtualizedContainerService.HintSize="263,61" sap2010:WorkflowViewState.IdRef="Assign_1">
+              <Assign sap:VirtualizedContainerService.HintSize="262.4,60" sap2010:WorkflowViewState.IdRef="Assign_1">
                 <Assign.To>
                   <OutArgument x:TypeArguments="x:Int32">[count]</OutArgument>
                 </Assign.To>
@@ -233,7 +233,7 @@
             </Sequence>
           </If.Else>
         </If>
-        <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" SimulateType="{x:Null}" Activate="True" DisplayName="Type Into 'Edit'" EmptyField="True" sap:VirtualizedContainerService.HintSize="484,134" sap2010:WorkflowViewState.IdRef="TypeInto_1" SendWindowMessages="True" Text="[in_path]">
+        <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" SimulateType="{x:Null}" Activate="True" DisplayName="Type Into 'Edit'" EmptyField="True" sap:VirtualizedContainerService.HintSize="483.2,135.2" sap2010:WorkflowViewState.IdRef="TypeInto_1" SendWindowMessages="True" Text="[in_path]">
           <ui:TypeInto.Target>
             <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="14036f27-10e5-4819-a182-1057e4fc0909" InformativeScreenshot="58e1ef3b9d825c7147c1a4139ce547e1" Selector="&lt;wnd app='splwow64.exe' cls='#32770' title='*' /&gt;&lt;wnd aaname='Explorer Pane' cls='DirectUIHWND' /&gt;&lt;wnd aaname='File name:' cls='ComboBox' /&gt;&lt;wnd ctrlid='1001' /&gt;">
               <ui:Target.TimeoutMS>
@@ -245,7 +245,7 @@
             </ui:Target>
           </ui:TypeInto.Target>
         </ui:TypeInto>
-        <Delay mva:VisualBasic.Settings="{x:Null}" DisplayName="Delay 1 second" Duration="00:00:01" sap:VirtualizedContainerService.HintSize="484,22" sap2010:WorkflowViewState.IdRef="Delay_1">
+        <Delay mva:VisualBasic.Settings="{x:Null}" DisplayName="Delay 1 second" Duration="00:00:01" sap:VirtualizedContainerService.HintSize="483.2,22.4" sap2010:WorkflowViewState.IdRef="Delay_1">
           <TextExpression.Namespaces>
             <sco:Collection x:TypeArguments="x:String">
               <x:String>System.Activities</x:String>
@@ -291,7 +291,7 @@
             </sap2010:ViewStateManager>
           </sap2010:WorkflowViewState.ViewStateManager>
         </Delay>
-        <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'Button'" sap:VirtualizedContainerService.HintSize="484,106" sap2010:WorkflowViewState.IdRef="Click_2" KeyModifiers="None" MouseButton="BTN_LEFT" SimulateClick="True">
+        <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'Button'" sap:VirtualizedContainerService.HintSize="483.2,107.2" sap2010:WorkflowViewState.IdRef="Click_2" KeyModifiers="None" MouseButton="BTN_LEFT" SimulateClick="True">
           <ui:Click.CursorPosition>
             <ui:CursorPosition Position="Center">
               <ui:CursorPosition.OffsetX>
@@ -313,7 +313,7 @@
             </ui:Target>
           </ui:Click.Target>
         </ui:Click>
-        <ui:UiElementExists DisplayName="Element Exists 'splwow64.exe Confirm'" Exists="[already_exists]" sap:VirtualizedContainerService.HintSize="484,106" sap2010:WorkflowViewState.IdRef="UiElementExists_2">
+        <ui:UiElementExists DisplayName="Element Exists 'splwow64.exe Confirm'" Exists="[already_exists]" sap:VirtualizedContainerService.HintSize="483.2,107.2" sap2010:WorkflowViewState.IdRef="UiElementExists_2">
           <ui:UiElementExists.Target>
             <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="c9b7abf0-c39a-483f-a68a-4d166c208f28" InformativeScreenshot="b1c70449eea4a887bc93641a6a31597c" Selector="&lt;wnd app='splwow64.exe' cls='#32770' title='Confirm Save As' /&gt;" TimeoutMS="2000">
               <ui:Target.WaitForReady>
@@ -322,9 +322,9 @@
             </ui:Target>
           </ui:UiElementExists.Target>
         </ui:UiElementExists>
-        <If Condition="[already_exists]" sap:VirtualizedContainerService.HintSize="484,254" sap2010:WorkflowViewState.IdRef="If_2">
+        <If Condition="[already_exists]" sap:VirtualizedContainerService.HintSize="483.2,286.4" sap2010:WorkflowViewState.IdRef="If_2">
           <If.Then>
-            <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'Button'" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="Click_3" KeyModifiers="None" MouseButton="BTN_LEFT">
+            <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'Button'" sap:VirtualizedContainerService.HintSize="333.6,107.2" sap2010:WorkflowViewState.IdRef="Click_3" KeyModifiers="None" MouseButton="BTN_LEFT">
               <ui:Click.CursorPosition>
                 <ui:CursorPosition Position="Center">
                   <ui:CursorPosition.OffsetX>
@@ -348,7 +348,7 @@
             </ui:Click>
           </If.Then>
         </If>
-        <Delay mva:VisualBasic.Settings="{x:Null}" DisplayName="Delay 3 seconds" Duration="00:00:03" sap:VirtualizedContainerService.HintSize="484,22" sap2010:WorkflowViewState.IdRef="Delay_1">
+        <Delay mva:VisualBasic.Settings="{x:Null}" DisplayName="Delay 3 seconds" Duration="00:00:03" sap:VirtualizedContainerService.HintSize="483.2,22.4" sap2010:WorkflowViewState.IdRef="Delay_1">
           <TextExpression.Namespaces>
             <sco:Collection x:TypeArguments="x:String">
               <x:String>System.Activities</x:String>
@@ -394,7 +394,7 @@
             </sap2010:ViewStateManager>
           </sap2010:WorkflowViewState.ViewStateManager>
         </Delay>
-        <ui:KillProcess ContinueOnError="{x:Null}" Process="{x:Null}" DisplayName="Kill Process" sap:VirtualizedContainerService.HintSize="484,22" sap2010:WorkflowViewState.IdRef="KillProcess_2" ProcessName="acrobat" />
+        <ui:KillProcess Process="{x:Null}" ContinueOnError="True" DisplayName="Kill Process" sap:VirtualizedContainerService.HintSize="483.2,134.4" sap2010:WorkflowViewState.IdRef="KillProcess_2" ProcessName="acrobat" />
       </Sequence>
     </Sequence>
   </Sequence>
