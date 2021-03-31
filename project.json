@@ -3,7 +3,7 @@
   "description": "Robotic Enterprise Framework",
   "main": "Main.xaml",
   "dependencies": {
-    "TinyPinyin.Core": "[0.1.0]",
+    "TinyPinyin.Net": "[1.0.2]",
     "UiPath.Excel.Activities": "[2.9.5]",
     "UiPath.FormActivityLibrary.Contracts": "[1.1.1]",
     "UiPath.System.Activities": "[20.10.4]",
@@ -52,5 +52,6 @@
   ],
   "isTemplate": false,
   "templateProjectData": {},
-  "publishData": {}
+  "publishData": {},
+  "targetFramework": "Legacy"
 }
