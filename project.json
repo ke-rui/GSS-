@@ -1,23 +1,20 @@
 {
-  "name": "GSS网页抓取器",
+  "name": "Gsss2",
   "description": "Robotic Enterprise Framework",
   "main": "Main.xaml",
   "dependencies": {
-    "BalaReva.Externals.Activities": "[4.0.3]",
-    "Microsoft.AspNet.WebApi.Client": "[5.2.7]",
     "TinyPinyin.Core": "[0.1.0]",
-    "UiPath.Excel.Activities": "[2.9.3]",
-    "UiPath.Form.Activities": "[1.2.1-preview]",
-    "UiPath.Mail.Activities": "[1.4.1]",
-    "UiPath.System.Activities": "[20.4.0]",
-    "UiPath.UIAutomation.Activities": "[20.4.1]",
-    "UiPath.WebAPI.Activities": "[1.6.0]"
+    "UiPath.Excel.Activities": "[2.9.5]",
+    "UiPath.FormActivityLibrary.Contracts": "[1.1.1]",
+    "UiPath.System.Activities": "[20.10.4]",
+    "UiPath.UIAutomation.Activities": "[20.10.9]",
+    "UiPath.WebAPI.Activities": "[1.7.0]"
   },
   "webServices": [],
   "entitiesStores": [],
   "schemaVersion": "4.0",
-  "studioVersion": "20.10.3.0",
-  "projectVersion": "1.0.2",
+  "studioVersion": "20.10.6.0",
+  "projectVersion": "1.0.0",
   "runtimeOptions": {
     "autoDispose": false,
     "isPausable": true,
@@ -48,7 +45,7 @@
   "entryPoints": [
     {
       "filePath": "Main.xaml",
-      "uniqueId": "412c4aad-09b1-43ed-b09b-9ac5e0994194",
+      "uniqueId": "05571883-93f1-418f-a5ef-6f8387d63d7d",
       "input": [],
       "output": []
     }
