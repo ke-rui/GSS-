@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="ProcessIBFDCorporateTax" this:ProcessIBFDCorporateTax.in_IBFDWebBeforeLogin="https://research.ibfd.org/" this:ProcessIBFDCorporateTax.in_IBFDWebAfterLogin="https://research.ibfd.org/#/search?N=3+10+6186&amp;Ne=7487&amp;Nu=global_rollup_key&amp;Np=2&amp;Ns=sort_date_common|1" this:ProcessIBFDCorporateTax.in_NeedProcessContryNameList="[new  list(of string) from {&quot;China&quot;,&quot;ABC&quot;,&quot;Canada&quot;}]" this:ProcessIBFDCorporateTax.in_configFolderPath="C:\RPA\Log_output.xlsx" this:ProcessIBFDCorporateTax.in_TaxType="Individual" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="ProcessIBFDCorporateTax" this:ProcessIBFDCorporateTax.in_IBFDWebBeforeLogin="https://research.ibfd.org/" this:ProcessIBFDCorporateTax.in_IBFDWebAfterLogin="https://research.ibfd.org/#/search?N=3+10+6186&amp;Ne=7487&amp;Nu=global_rollup_key&amp;Np=2&amp;Ns=sort_date_common|1" this:ProcessIBFDCorporateTax.in_NeedProcessContryNameList="[new  list(of string) from {&quot;China&quot;,&quot;ABC&quot;,&quot;Canada&quot;}]" this:ProcessIBFDCorporateTax.in_configFolderPath="C:\RPA\Log_output.xlsx" this:ProcessIBFDCorporateTax.in_TaxType="Corporate" this:ProcessIBFDCorporateTax.in_logFilePath="C:\RPA\Log_output.xlsx" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <x:Members>
     <x:Property Name="in_IBFDWebBeforeLogin" Type="InArgument(x:String)" />
     <x:Property Name="in_IBFDWebAfterLogin" Type="InArgument(x:String)" />
@@ -82,7 +82,6 @@
       <AssemblyReference>UiPath.Platform</AssemblyReference>
       <AssemblyReference>UiPath.CV</AssemblyReference>
       <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
-      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
   <sap:WorkflowViewStateService.ViewState>
@@ -137,15 +136,15 @@
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
             <TryCatch.Try>
-              <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="560.8,3864" sap2010:WorkflowViewState.IdRef="Sequence_27">
+              <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="548,3864" sap2010:WorkflowViewState.IdRef="Sequence_27">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     <x:Boolean x:Key="IsPinned">False</x:Boolean>
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
-                <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="519.2,92.8" sap2010:WorkflowViewState.IdRef="LogMessage_13" Level="Info" Message="[countryName+&quot;Process ............&quot;]" />
-                <Assign sap:VirtualizedContainerService.HintSize="519.2,60" sap2010:WorkflowViewState.IdRef="Assign_18">
+                <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="506.4,92.8" sap2010:WorkflowViewState.IdRef="LogMessage_13" Level="Info" Message="[countryName+&quot;Process ............&quot;]" />
+                <Assign sap:VirtualizedContainerService.HintSize="506.4,60" sap2010:WorkflowViewState.IdRef="Assign_18">
                   <Assign.To>
                     <OutArgument x:TypeArguments="x:Boolean">[downloadSuccess]</OutArgument>
                   </Assign.To>
@@ -153,7 +152,7 @@
                     <InArgument x:TypeArguments="x:Boolean">True</InArgument>
                   </Assign.Value>
                 </Assign>
-                <Delay mva:VisualBasic.Settings="{x:Null}" DisplayName="Delay 3 seconds" Duration="00:00:03" sap:VirtualizedContainerService.HintSize="519.2,22.4" sap2010:WorkflowViewState.IdRef="Delay_2">
+                <Delay mva:VisualBasic.Settings="{x:Null}" DisplayName="Delay 3 seconds" Duration="00:00:03" sap:VirtualizedContainerService.HintSize="506.4,22.4" sap2010:WorkflowViewState.IdRef="Delay_2">
                   <TextExpression.Namespaces>
                     <sco:Collection x:TypeArguments="x:String">
                       <x:String>System.Activities</x:String>
@@ -199,7 +198,7 @@
                     </sap2010:ViewStateManager>
                   </sap2010:WorkflowViewState.ViewStateManager>
                 </Delay>
-                <Assign sap:VirtualizedContainerService.HintSize="519.2,60" sap2010:WorkflowViewState.IdRef="Assign_13">
+                <Assign sap:VirtualizedContainerService.HintSize="506.4,60" sap2010:WorkflowViewState.IdRef="Assign_13">
                   <Assign.To>
                     <OutArgument x:TypeArguments="scg:List(x:Int32)">[rowIndexList]</OutArgument>
                   </Assign.To>
@@ -207,7 +206,7 @@
                     <InArgument x:TypeArguments="scg:List(x:Int32)">[new list(of Int32)]</InArgument>
                   </Assign.Value>
                 </Assign>
-                <ui:NavigateTo sap2010:Annotation.AnnotationText="Nav to process page&#xA;" Browser="[IBDF_UiBrowserObj]" DisplayName="Navigate To" sap:VirtualizedContainerService.HintSize="519.2,104" sap2010:WorkflowViewState.IdRef="NavigateTo_3" Url="[in_IBFDWebAfterLogin]">
+                <ui:NavigateTo sap2010:Annotation.AnnotationText="Nav to process page&#xA;" Browser="[IBDF_UiBrowserObj]" DisplayName="Navigate To" sap:VirtualizedContainerService.HintSize="506.4,104" sap2010:WorkflowViewState.IdRef="NavigateTo_3" Url="[in_IBFDWebAfterLogin]">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsPinned">False</x:Boolean>
@@ -215,7 +214,7 @@
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
                 </ui:NavigateTo>
-                <Delay mva:VisualBasic.Settings="{x:Null}" DisplayName="Delay 3 seconds" Duration="00:00:03" sap:VirtualizedContainerService.HintSize="519.2,22.4" sap2010:WorkflowViewState.IdRef="Delay_5">
+                <Delay mva:VisualBasic.Settings="{x:Null}" DisplayName="Delay 3 seconds" Duration="00:00:03" sap:VirtualizedContainerService.HintSize="506.4,22.4" sap2010:WorkflowViewState.IdRef="Delay_5">
                   <TextExpression.Namespaces>
                     <sco:Collection x:TypeArguments="x:String">
                       <x:String>System.Activities</x:String>
@@ -261,12 +260,12 @@
                     </sap2010:ViewStateManager>
                   </sap2010:WorkflowViewState.ViewStateManager>
                 </Delay>
-                <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke Workflow File" sap:VirtualizedContainerService.HintSize="519.2,113.6" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_14" UnSafe="False" WorkflowFileName="ExeProgram\IBFDCorporateTax\ClearTab.xaml">
+                <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke Workflow File" sap:VirtualizedContainerService.HintSize="506.4,113.6" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_14" UnSafe="False" WorkflowFileName="ExeProgram\IBFDCorporateTax\ClearTab.xaml">
                   <ui:InvokeWorkflowFile.Arguments>
                     <scg:Dictionary x:TypeArguments="x:String, Argument" />
                   </ui:InvokeWorkflowFile.Arguments>
                 </ui:InvokeWorkflowFile>
-                <Delay mva:VisualBasic.Settings="{x:Null}" DisplayName="Delay 3 seconds" Duration="00:00:03" sap:VirtualizedContainerService.HintSize="519.2,22.4" sap2010:WorkflowViewState.IdRef="Delay_6">
+                <Delay mva:VisualBasic.Settings="{x:Null}" DisplayName="Delay 3 seconds" Duration="00:00:03" sap:VirtualizedContainerService.HintSize="506.4,22.4" sap2010:WorkflowViewState.IdRef="Delay_6">
                   <TextExpression.Namespaces>
                     <sco:Collection x:TypeArguments="x:String">
                       <x:String>System.Activities</x:String>
@@ -312,7 +311,7 @@
                     </sap2010:ViewStateManager>
                   </sap2010:WorkflowViewState.ViewStateManager>
                 </Delay>
-                <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" sap2010:Annotation.AnnotationText="type contry name" DisplayName="Invoke Workflow File" sap:VirtualizedContainerService.HintSize="519.2,144.8" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_7" UnSafe="False" WorkflowFileName="ExeProgram\IBFDCorporateTax\TypeContryName.xaml">
+                <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" sap2010:Annotation.AnnotationText="type contry name" DisplayName="Invoke Workflow File" sap:VirtualizedContainerService.HintSize="506.4,144.8" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_7" UnSafe="False" WorkflowFileName="ExeProgram\IBFDCorporateTax\TypeContryName.xaml">
                   <ui:InvokeWorkflowFile.Arguments>
                     <InArgument x:TypeArguments="x:String" x:Key="in_COUNTRY_NAME">[countryName]</InArgument>
                     <OutArgument x:TypeArguments="x:Boolean" x:Key="out_SearchRes">[searchRes]</OutArgument>
@@ -323,7 +322,7 @@
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
                 </ui:InvokeWorkflowFile>
-                <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'A  col_tab_country_tax_...'" sap:VirtualizedContainerService.HintSize="519.2,107.2" sap2010:WorkflowViewState.IdRef="Click_13" KeyModifiers="None" MouseButton="BTN_LEFT" SimulateClick="True">
+                <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'A  col_tab_country_tax_...'" sap:VirtualizedContainerService.HintSize="506.4,107.2" sap2010:WorkflowViewState.IdRef="Click_13" KeyModifiers="None" MouseButton="BTN_LEFT" SimulateClick="True">
                   <ui:Click.CursorPosition>
                     <ui:CursorPosition Position="Center">
                       <ui:CursorPosition.OffsetX>
@@ -345,7 +344,7 @@
                     </ui:Target>
                   </ui:Click.Target>
                 </ui:Click>
-                <If Condition="[searchRes]" sap:VirtualizedContainerService.HintSize="519.2,219.2" sap2010:WorkflowViewState.IdRef="If_3">
+                <If Condition="[searchRes]" sap:VirtualizedContainerService.HintSize="506.4,219.2" sap2010:WorkflowViewState.IdRef="If_3">
                   <If.Then>
                     <Assign sap:VirtualizedContainerService.HintSize="262.4,60" sap2010:WorkflowViewState.IdRef="Assign_12">
                       <Assign.To>
@@ -360,17 +359,17 @@
                     <ui:Continue sap:VirtualizedContainerService.HintSize="200,22.4" sap2010:WorkflowViewState.IdRef="Continue_2" />
                   </If.Else>
                 </If>
-                <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke Workflow File" sap:VirtualizedContainerService.HintSize="519.2,113.6" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_8" UnSafe="False" WorkflowFileName="ExeProgram\IBFDCorporateTax\SetFilterArgument.xaml">
+                <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke Workflow File" sap:VirtualizedContainerService.HintSize="506.4,113.6" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_8" UnSafe="False" WorkflowFileName="ExeProgram\IBFDCorporateTax\SetFilterArgument.xaml">
                   <ui:InvokeWorkflowFile.Arguments>
                     <scg:Dictionary x:TypeArguments="x:String, Argument" />
                   </ui:InvokeWorkflowFile.Arguments>
                 </ui:InvokeWorkflowFile>
-                <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke Workflow File" sap:VirtualizedContainerService.HintSize="519.2,113.6" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_9" UnSafe="False" WorkflowFileName="ExeProgram\IBFDCorporateTax\ScrapingPageInfo.xaml">
+                <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke Workflow File" sap:VirtualizedContainerService.HintSize="506.4,113.6" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_9" UnSafe="False" WorkflowFileName="ExeProgram\IBFDCorporateTax\ScrapingPageInfo.xaml">
                   <ui:InvokeWorkflowFile.Arguments>
                     <OutArgument x:TypeArguments="sd:DataTable" x:Key="out_ExtractDataTable">[dt_corp_IBFD]</OutArgument>
                   </ui:InvokeWorkflowFile.Arguments>
                 </ui:InvokeWorkflowFile>
-                <If Condition="[in_TaxType = &quot;Individual&quot;]" sap:VirtualizedContainerService.HintSize="519.2,332" sap2010:WorkflowViewState.IdRef="If_5">
+                <If Condition="[in_TaxType = &quot;Individual&quot;]" sap:VirtualizedContainerService.HintSize="506.4,332" sap2010:WorkflowViewState.IdRef="If_5">
                   <If.Then>
                     <Sequence sap:VirtualizedContainerService.HintSize="375.2,152.8" sap2010:WorkflowViewState.IdRef="Sequence_30">
                       <sap:WorkflowViewStateService.ViewState>
@@ -400,7 +399,7 @@
                     </Sequence>
                   </If.Then>
                 </If>
-                <If Condition="[in_TaxType =&quot;Corporate&quot;]" sap:VirtualizedContainerService.HintSize="519.2,332" sap2010:WorkflowViewState.IdRef="If_6">
+                <If Condition="[in_TaxType =&quot;Corporate&quot;]" sap:VirtualizedContainerService.HintSize="506.4,332" sap2010:WorkflowViewState.IdRef="If_6">
                   <If.Then>
                     <Sequence sap:VirtualizedContainerService.HintSize="375.2,152.8" sap2010:WorkflowViewState.IdRef="Sequence_32">
                       <sap:WorkflowViewStateService.ViewState>
@@ -430,7 +429,7 @@
                     </Sequence>
                   </If.Then>
                 </If>
-                <ui:ForEachRow CurrentIndex="{x:Null}" DataTable="[dt_corp_IBFD]" DisplayName="For Each Row" sap:VirtualizedContainerService.HintSize="519.2,1311.2" sap2010:WorkflowViewState.IdRef="ForEachRow_3">
+                <ui:ForEachRow CurrentIndex="{x:Null}" DataTable="[dt_corp_IBFD]" DisplayName="For Each Row" sap:VirtualizedContainerService.HintSize="506.4,1311.2" sap2010:WorkflowViewState.IdRef="ForEachRow_3">
                   <ui:ForEachRow.Body>
                     <ActivityAction x:TypeArguments="sd:DataRow">
                       <ActivityAction.Argument>
@@ -470,12 +469,8 @@
                         </Assign>
                         <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke SaveAsPDF workflow" sap:VirtualizedContainerService.HintSize="377.6,113.6" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_13" UnSafe="False" WorkflowFileName="Util\IEBar_SaveAsPdf.xaml">
                           <ui:InvokeWorkflowFile.Arguments>
-                            <InArgument x:TypeArguments="x:Boolean" x:Key="in_isSimulateType">
-                              <Literal x:TypeArguments="x:Boolean" Value="True" />
-                            </InArgument>
-                            <InArgument x:TypeArguments="x:String" x:Key="in_filePath">
-                              <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="IBFD_corporate_tax_path" />
-                            </InArgument>
+                            <InArgument x:TypeArguments="x:Boolean" x:Key="in_isSimulateType">True</InArgument>
+                            <InArgument x:TypeArguments="x:String" x:Key="in_filePath">[IBFD_corporate_tax_path]</InArgument>
                           </ui:InvokeWorkflowFile.Arguments>
                         </ui:InvokeWorkflowFile>
                         <Delay mva:VisualBasic.Settings="{x:Null}" DisplayName="Delay 3 seconds" Duration="00:00:03" sap:VirtualizedContainerService.HintSize="377.6,22.4" sap2010:WorkflowViewState.IdRef="Delay_3">
