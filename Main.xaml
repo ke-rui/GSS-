@@ -5,7 +5,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>816.8,896.8</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>824,996.8</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>Main2_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="32">
@@ -77,6 +77,7 @@
       <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
       <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
       <AssemblyReference>UiPath.CV</AssemblyReference>
+      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
   <sap:WorkflowViewStateService.ViewState>
@@ -431,9 +432,9 @@
                     <mva:VisualBasicValue x:TypeArguments="x:Boolean" ExpressionText="SystemException IsNot Nothing" sap2010:WorkflowViewState.IdRef="VisualBasicValue`1_3" />
                   </Transition.Condition>
                   <Transition.To>
-                    <State x:Name="__ReferenceID3" sap2010:Annotation.AnnotationText="数据初始化阶段，主要将用户在配置表中配置的进行信息读取到软件运行内存中" DisplayName="Initialization" sap:VirtualizedContainerService.HintSize="692.8,4368.8" sap2010:WorkflowViewState.IdRef="State_2">
+                    <State x:Name="__ReferenceID3" sap2010:Annotation.AnnotationText="数据初始化阶段，主要将用户在配置表中配置的进行信息读取到软件运行内存中" DisplayName="Initialization" sap:VirtualizedContainerService.HintSize="692.8,4177.6" sap2010:WorkflowViewState.IdRef="State_2">
                       <State.Entry>
-                        <TryCatch DisplayName="Try initializing settings and applications" sap:VirtualizedContainerService.HintSize="648,3948.8" sap2010:WorkflowViewState.IdRef="TryCatch_2">
+                        <TryCatch DisplayName="Try initializing settings and applications" sap:VirtualizedContainerService.HintSize="648,3757.6" sap2010:WorkflowViewState.IdRef="TryCatch_2">
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -441,7 +442,7 @@
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
                           <TryCatch.Try>
-                            <Sequence DisplayName="Load configurations and open applications" sap:VirtualizedContainerService.HintSize="611.2,3717.6" sap2010:WorkflowViewState.IdRef="Sequence_4">
+                            <Sequence DisplayName="Load configurations and open applications" sap:VirtualizedContainerService.HintSize="611.2,3526.4" sap2010:WorkflowViewState.IdRef="Sequence_4">
                               <sap:WorkflowViewStateService.ViewState>
                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -463,7 +464,7 @@
                                   <InArgument x:TypeArguments="s:Exception">[Nothing]</InArgument>
                                 </Assign.Value>
                               </Assign>
-                              <If sap2010:Annotation.AnnotationText="An uninitialized Config dictionary indicates that it is the first run of the process." Condition="[Config is Nothing]" DisplayName="If first run, read local configuration file" sap:VirtualizedContainerService.HintSize="569.6,3222.4" sap2010:WorkflowViewState.IdRef="If_1">
+                              <If sap2010:Annotation.AnnotationText="An uninitialized Config dictionary indicates that it is the first run of the process." Condition="[Config is Nothing]" DisplayName="If first run, read local configuration file" sap:VirtualizedContainerService.HintSize="569.6,3031.2" sap2010:WorkflowViewState.IdRef="If_1">
                                 <sap:WorkflowViewStateService.ViewState>
                                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -472,7 +473,7 @@
                                   </scg:Dictionary>
                                 </sap:WorkflowViewStateService.ViewState>
                                 <If.Then>
-                                  <Sequence DisplayName="First run" sap:VirtualizedContainerService.HintSize="425.6,3012" sap2010:WorkflowViewState.IdRef="Sequence_17">
+                                  <Sequence DisplayName="First run" sap:VirtualizedContainerService.HintSize="425.6,2820.8" sap2010:WorkflowViewState.IdRef="Sequence_17">
                                     <Sequence.Variables>
                                       <Variable x:TypeArguments="x:String" Name="keyword" />
                                     </Sequence.Variables>
@@ -554,56 +555,68 @@
                                         </scg:Dictionary>
                                       </sap:WorkflowViewStateService.ViewState>
                                     </ui:BuildDataTable>
-                                    <ui:ForEach x:TypeArguments="x:String" CurrentIndex="{x:Null}" sap2010:Annotation.AnnotationText="{}{&quot;Guidebook_of_Investment&quot;,&quot;Bing_download&quot;,&quot;taxnotes_tax_treaty&quot;,&quot;Guidebook_of_Tax&quot;,&quot;Guidebook_of_Investment&quot;,&quot;KPMG_Mining_tax&quot;,&quot;PwC_Mining_tax&quot;,&quot;EY_Property_tax&quot;,&quot;PwC_Property_tax&quot;,&quot;EY_OilGas_tax&quot;,&quot;EY_RD_incentives&quot;,&quot;KPMG_Digital_tax&quot;,&quot;EY_Capital_and_Fixed_Assets_TAX&quot;,&quot;KPMG_VAT&quot;,&quot;EY_VAT&quot;,&quot;IBFD_individual_tax&quot;,&quot;EY_individual_tax&quot;,&quot;PwC_individual_tax&quot;,&quot;IBFD_corporate_tax&quot;,&quot;KPMG_corporate_tax&quot;,&quot;EY_corporate_tax&quot;,&quot;Deloitte_corporate_tax&quot;,&quot;PwC_corporate_tax&quot;}" DisplayName="公司内网" sap:VirtualizedContainerService.HintSize="384,336.8" sap2010:WorkflowViewState.IdRef="ForEach`1_5" Values="[{&quot;taxnotes_tax_treaty&quot;}]">
-                                      <ui:ForEach.Body>
-                                        <ActivityAction x:TypeArguments="x:String">
-                                          <ActivityAction.Argument>
-                                            <DelegateInArgument x:TypeArguments="x:String" Name="item" />
-                                          </ActivityAction.Argument>
-                                          <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="241.6,115.2" sap2010:WorkflowViewState.IdRef="Sequence_40">
+                                    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="384,52.8" sap2010:WorkflowViewState.IdRef="CommentOut_6">
+                                      <ui:CommentOut.Body>
+                                        <Sequence DisplayName="Ignored Activities" sap2010:WorkflowViewState.IdRef="Sequence_45">
+                                          <ui:ForEach x:TypeArguments="x:String" CurrentIndex="{x:Null}" sap2010:Annotation.AnnotationText="{}{&quot;Guidebook_of_Investment&quot;,&quot;Bing_download&quot;,&quot;taxnotes_tax_treaty&quot;,&quot;Guidebook_of_Tax&quot;,&quot;Guidebook_of_Investment&quot;,&quot;KPMG_Mining_tax&quot;,&quot;PwC_Mining_tax&quot;,&quot;EY_Property_tax&quot;,&quot;PwC_Property_tax&quot;,&quot;EY_OilGas_tax&quot;,&quot;EY_RD_incentives&quot;,&quot;KPMG_Digital_tax&quot;,&quot;EY_Capital_and_Fixed_Assets_TAX&quot;,&quot;KPMG_VAT&quot;,&quot;EY_VAT&quot;,&quot;IBFD_individual_tax&quot;,&quot;EY_individual_tax&quot;,&quot;PwC_individual_tax&quot;,&quot;IBFD_corporate_tax&quot;,&quot;KPMG_corporate_tax&quot;,&quot;EY_corporate_tax&quot;,&quot;Deloitte_corporate_tax&quot;,&quot;PwC_corporate_tax&quot;}" DisplayName="公司内网" sap:VirtualizedContainerService.HintSize="384,336.8" sap2010:WorkflowViewState.IdRef="ForEach`1_5" Values="[{&quot;taxnotes_tax_treaty&quot;}]">
+                                            <ui:ForEach.Body>
+                                              <ActivityAction x:TypeArguments="x:String">
+                                                <ActivityAction.Argument>
+                                                  <DelegateInArgument x:TypeArguments="x:String" Name="item" />
+                                                </ActivityAction.Argument>
+                                                <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="241.6,115.2" sap2010:WorkflowViewState.IdRef="Sequence_40">
+                                                  <sap:WorkflowViewStateService.ViewState>
+                                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                      <x:Boolean x:Key="IsPinned">True</x:Boolean>
+                                                    </scg:Dictionary>
+                                                  </sap:WorkflowViewStateService.ViewState>
+                                                  <ui:AddDataRow DataRow="{x:Null}" ArrayRow="[{item}]" DataTable="[TaskItemDT]" DisplayName="Add Data Row" sap:VirtualizedContainerService.HintSize="200,22.4" sap2010:WorkflowViewState.IdRef="AddDataRow_2" />
+                                                </Sequence>
+                                              </ActivityAction>
+                                            </ui:ForEach.Body>
                                             <sap:WorkflowViewStateService.ViewState>
                                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                                <x:Boolean x:Key="IsPinned">True</x:Boolean>
+                                                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                                <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                                                <x:Boolean x:Key="IsExpanded">False</x:Boolean>
                                               </scg:Dictionary>
                                             </sap:WorkflowViewStateService.ViewState>
-                                            <ui:AddDataRow DataRow="{x:Null}" ArrayRow="[{item}]" DataTable="[TaskItemDT]" DisplayName="Add Data Row" sap:VirtualizedContainerService.HintSize="200,22.4" sap2010:WorkflowViewState.IdRef="AddDataRow_2" />
-                                          </Sequence>
-                                        </ActivityAction>
-                                      </ui:ForEach.Body>
-                                      <sap:WorkflowViewStateService.ViewState>
-                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                                          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
-                                          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-                                        </scg:Dictionary>
-                                      </sap:WorkflowViewStateService.ViewState>
-                                    </ui:ForEach>
-                                    <ui:ForEach x:TypeArguments="x:String" CurrentIndex="{x:Null}" sap2010:Annotation.AnnotationText="{}{&quot;Guidebook_of_Investment&quot;,&quot;Bing_download&quot;,&quot;taxnotes_tax_treaty&quot;,&quot;Guidebook_of_Tax&quot;,&quot;Guidebook_of_Investment&quot;,&quot;KPMG_Mining_tax&quot;,&quot;PwC_Mining_tax&quot;,&quot;EY_Property_tax&quot;,&quot;PwC_Property_tax&quot;,&quot;EY_OilGas_tax&quot;,&quot;EY_RD_incentives&quot;,&quot;KPMG_Digital_tax&quot;,&quot;EY_Capital_and_Fixed_Assets_TAX&quot;,&quot;KPMG_VAT&quot;,&quot;EY_VAT&quot;,&quot;IBFD_individual_tax&quot;,&quot;EY_individual_tax&quot;,&quot;PwC_individual_tax&quot;,&quot;IBFD_corporate_tax&quot;,&quot;KPMG_corporate_tax&quot;,&quot;EY_corporate_tax&quot;,&quot;Deloitte_corporate_tax&quot;,&quot;PwC_corporate_tax&quot;}" DisplayName="公网" sap:VirtualizedContainerService.HintSize="384,336.8" sap2010:WorkflowViewState.IdRef="ForEach`1_6" Values="[{&quot;Guidebook_of_Investment&quot;,&quot;Bing_download&quot;,&quot;taxnotes_tax_treaty&quot;,&quot;Guidebook_of_Tax&quot;,&quot;Guidebook_of_Investment&quot;,&quot;KPMG_Mining_tax&quot;,&quot;PwC_Mining_tax&quot;,&quot;EY_Property_tax&quot;,&quot;PwC_Property_tax&quot;,&quot;EY_OilGas_tax&quot;,&quot;EY_RD_incentives&quot;,&quot;KPMG_Digital_tax&quot;,&quot;EY_Capital_and_Fixed_Assets_TAX&quot;,&quot;KPMG_VAT&quot;,&quot;EY_VAT&quot;,&quot;IBFD_individual_tax&quot;,&quot;EY_individual_tax&quot;,&quot;PwC_individual_tax&quot;,&quot;IBFD_corporate_tax&quot;,&quot;KPMG_corporate_tax&quot;,&quot;EY_corporate_tax&quot;,&quot;Deloitte_corporate_tax&quot;,&quot;PwC_corporate_tax&quot;}]">
-                                      <ui:ForEach.Body>
-                                        <ActivityAction x:TypeArguments="x:String">
-                                          <ActivityAction.Argument>
-                                            <DelegateInArgument x:TypeArguments="x:String" Name="item" />
-                                          </ActivityAction.Argument>
-                                          <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="241.6,115.2" sap2010:WorkflowViewState.IdRef="Sequence_41">
+                                          </ui:ForEach>
+                                        </Sequence>
+                                      </ui:CommentOut.Body>
+                                    </ui:CommentOut>
+                                    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="384,52.8" sap2010:WorkflowViewState.IdRef="CommentOut_7">
+                                      <ui:CommentOut.Body>
+                                        <Sequence DisplayName="Ignored Activities" sap2010:WorkflowViewState.IdRef="Sequence_46">
+                                          <ui:ForEach x:TypeArguments="x:String" CurrentIndex="{x:Null}" sap2010:Annotation.AnnotationText="{}{&quot;Guidebook_of_Investment&quot;,&quot;Bing_download&quot;,&quot;taxnotes_tax_treaty&quot;,&quot;Guidebook_of_Tax&quot;,&quot;Guidebook_of_Investment&quot;,&quot;KPMG_Mining_tax&quot;,&quot;PwC_Mining_tax&quot;,&quot;EY_Property_tax&quot;,&quot;PwC_Property_tax&quot;,&quot;EY_OilGas_tax&quot;,&quot;EY_RD_incentives&quot;,&quot;KPMG_Digital_tax&quot;,&quot;EY_Capital_and_Fixed_Assets_TAX&quot;,&quot;KPMG_VAT&quot;,&quot;EY_VAT&quot;,&quot;IBFD_individual_tax&quot;,&quot;EY_individual_tax&quot;,&quot;PwC_individual_tax&quot;,&quot;IBFD_corporate_tax&quot;,&quot;KPMG_corporate_tax&quot;,&quot;EY_corporate_tax&quot;,&quot;Deloitte_corporate_tax&quot;,&quot;PwC_corporate_tax&quot;}" DisplayName="公网" sap:VirtualizedContainerService.HintSize="384,336.8" sap2010:WorkflowViewState.IdRef="ForEach`1_6" Values="[{&quot;Guidebook_of_Investment&quot;,&quot;Bing_download&quot;,&quot;taxnotes_tax_treaty&quot;,&quot;Guidebook_of_Tax&quot;,&quot;Guidebook_of_Investment&quot;,&quot;KPMG_Mining_tax&quot;,&quot;PwC_Mining_tax&quot;,&quot;EY_Property_tax&quot;,&quot;PwC_Property_tax&quot;,&quot;EY_OilGas_tax&quot;,&quot;EY_RD_incentives&quot;,&quot;KPMG_Digital_tax&quot;,&quot;EY_Capital_and_Fixed_Assets_TAX&quot;,&quot;KPMG_VAT&quot;,&quot;EY_VAT&quot;,&quot;IBFD_individual_tax&quot;,&quot;EY_individual_tax&quot;,&quot;PwC_individual_tax&quot;,&quot;IBFD_corporate_tax&quot;,&quot;KPMG_corporate_tax&quot;,&quot;EY_corporate_tax&quot;,&quot;Deloitte_corporate_tax&quot;,&quot;PwC_corporate_tax&quot;}]">
+                                            <ui:ForEach.Body>
+                                              <ActivityAction x:TypeArguments="x:String">
+                                                <ActivityAction.Argument>
+                                                  <DelegateInArgument x:TypeArguments="x:String" Name="item" />
+                                                </ActivityAction.Argument>
+                                                <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="241.6,115.2" sap2010:WorkflowViewState.IdRef="Sequence_41">
+                                                  <sap:WorkflowViewStateService.ViewState>
+                                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                      <x:Boolean x:Key="IsPinned">True</x:Boolean>
+                                                    </scg:Dictionary>
+                                                  </sap:WorkflowViewStateService.ViewState>
+                                                  <ui:AddDataRow DataRow="{x:Null}" ArrayRow="[{item}]" DataTable="[TaskItemDT]" DisplayName="Add Data Row" sap:VirtualizedContainerService.HintSize="200,22.4" sap2010:WorkflowViewState.IdRef="AddDataRow_3" />
+                                                </Sequence>
+                                              </ActivityAction>
+                                            </ui:ForEach.Body>
                                             <sap:WorkflowViewStateService.ViewState>
                                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                                <x:Boolean x:Key="IsPinned">True</x:Boolean>
+                                                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                                <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                                                <x:Boolean x:Key="IsExpanded">False</x:Boolean>
                                               </scg:Dictionary>
                                             </sap:WorkflowViewStateService.ViewState>
-                                            <ui:AddDataRow DataRow="{x:Null}" ArrayRow="[{item}]" DataTable="[TaskItemDT]" DisplayName="Add Data Row" sap:VirtualizedContainerService.HintSize="200,22.4" sap2010:WorkflowViewState.IdRef="AddDataRow_3" />
-                                          </Sequence>
-                                        </ActivityAction>
-                                      </ui:ForEach.Body>
-                                      <sap:WorkflowViewStateService.ViewState>
-                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                                          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
-                                          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-                                        </scg:Dictionary>
-                                      </sap:WorkflowViewStateService.ViewState>
-                                    </ui:ForEach>
+                                          </ui:ForEach>
+                                        </Sequence>
+                                      </ui:CommentOut.Body>
+                                    </ui:CommentOut>
                                     <ui:CommentOut sap2010:Annotation.AnnotationText="全部 &#xA;" DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="384,96.8" sap2010:WorkflowViewState.IdRef="CommentOut_5">
                                       <ui:CommentOut.Body>
                                         <Sequence DisplayName="Ignored Activities" sap2010:WorkflowViewState.IdRef="Sequence_44">
@@ -640,6 +653,31 @@
                                         </scg:Dictionary>
                                       </sap:WorkflowViewStateService.ViewState>
                                     </ui:CommentOut>
+                                    <ui:ForEach x:TypeArguments="x:String" CurrentIndex="{x:Null}" sap2010:Annotation.AnnotationText="{}{&quot;Guidebook_of_Investment&quot;,&quot;Bing_download&quot;,&quot;taxnotes_tax_treaty&quot;,&quot;Guidebook_of_Tax&quot;,&quot;Guidebook_of_Investment&quot;,&quot;KPMG_Mining_tax&quot;,&quot;PwC_Mining_tax&quot;,&quot;EY_Property_tax&quot;,&quot;PwC_Property_tax&quot;,&quot;EY_OilGas_tax&quot;,&quot;EY_RD_incentives&quot;,&quot;KPMG_Digital_tax&quot;,&quot;EY_Capital_and_Fixed_Assets_TAX&quot;,&quot;KPMG_VAT&quot;,&quot;EY_VAT&quot;,&quot;IBFD_individual_tax&quot;,&quot;EY_individual_tax&quot;,&quot;PwC_individual_tax&quot;,&quot;IBFD_corporate_tax&quot;,&quot;KPMG_corporate_tax&quot;,&quot;EY_corporate_tax&quot;,&quot;Deloitte_corporate_tax&quot;,&quot;PwC_corporate_tax&quot;}" DisplayName="ALL " sap:VirtualizedContainerService.HintSize="306.4,421.6" sap2010:WorkflowViewState.IdRef="ForEach`1_8" Values="[{&quot;KPMG_VAT&quot;}]">
+                                      <ui:ForEach.Body>
+                                        <ActivityAction x:TypeArguments="x:String">
+                                          <ActivityAction.Argument>
+                                            <DelegateInArgument x:TypeArguments="x:String" Name="item" />
+                                          </ActivityAction.Argument>
+                                          <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="241.6,115.2" sap2010:WorkflowViewState.IdRef="Sequence_47">
+                                            <sap:WorkflowViewStateService.ViewState>
+                                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                <x:Boolean x:Key="IsPinned">True</x:Boolean>
+                                              </scg:Dictionary>
+                                            </sap:WorkflowViewStateService.ViewState>
+                                            <ui:AddDataRow DataRow="{x:Null}" ArrayRow="[{item}]" DataTable="[TaskItemDT]" DisplayName="Add Data Row" sap:VirtualizedContainerService.HintSize="200,22.4" sap2010:WorkflowViewState.IdRef="AddDataRow_5" />
+                                          </Sequence>
+                                        </ActivityAction>
+                                      </ui:ForEach.Body>
+                                      <sap:WorkflowViewStateService.ViewState>
+                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                                          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                        </scg:Dictionary>
+                                      </sap:WorkflowViewStateService.ViewState>
+                                    </ui:ForEach>
                                     <Assign sap:VirtualizedContainerService.HintSize="384,60" sap2010:WorkflowViewState.IdRef="Assign_30">
                                       <Assign.To>
                                         <OutArgument x:TypeArguments="x:String">[keyword]</OutArgument>
