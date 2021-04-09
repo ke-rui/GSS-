@@ -15,7 +15,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>906.4,2936.8</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>816.8,3036.8</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>TaxNotesController_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="31">
@@ -144,7 +144,7 @@
         <OutArgument x:TypeArguments="s:String[]">[country2Arr]</OutArgument>
       </Assign.To>
       <Assign.Value>
-        <InArgument x:TypeArguments="s:String[]">[dt.AsEnumerable().Select( Function (a) a.Field(Of String)("Country2").ToString).ToArray]</InArgument>
+        <InArgument x:TypeArguments="s:String[]">[in_Country2Str.Split("-"c)]</InArgument>
       </Assign.Value>
     </Assign>
     <Assign sap:VirtualizedContainerService.HintSize="448,60" sap2010:WorkflowViewState.IdRef="Assign_3">
@@ -152,7 +152,7 @@
         <OutArgument x:TypeArguments="s:String[]">[country3Arr]</OutArgument>
       </Assign.To>
       <Assign.Value>
-        <InArgument x:TypeArguments="s:String[]">[dt.AsEnumerable().Select( Function (a) a.Field(Of String)("Country3").ToString).ToArray]</InArgument>
+        <InArgument x:TypeArguments="s:String[]">[in_Country3Str.Split("-"c)]</InArgument>
       </Assign.Value>
     </Assign>
     <Assign sap:VirtualizedContainerService.HintSize="448,60" sap2010:WorkflowViewState.IdRef="Assign_4">
@@ -160,7 +160,7 @@
         <OutArgument x:TypeArguments="s:String[]">[country4Arr]</OutArgument>
       </Assign.To>
       <Assign.Value>
-        <InArgument x:TypeArguments="s:String[]">[dt.AsEnumerable().Select( Function (a) a.Field(Of String)("Country4").ToString).ToArray]</InArgument>
+        <InArgument x:TypeArguments="s:String[]">[in_Country4Str.Split("-"c)]</InArgument>
       </Assign.Value>
     </Assign>
     <Assign sap:VirtualizedContainerService.HintSize="448,60" sap2010:WorkflowViewState.IdRef="Assign_5">
@@ -168,7 +168,7 @@
         <OutArgument x:TypeArguments="s:String[]">[country5Arr]</OutArgument>
       </Assign.To>
       <Assign.Value>
-        <InArgument x:TypeArguments="s:String[]">[dt.AsEnumerable().Select( Function (a) a.Field(Of String)("Country5").ToString).ToArray]</InArgument>
+        <InArgument x:TypeArguments="s:String[]">[in_Country5Str.Split("-"c)]</InArgument>
       </Assign.Value>
     </Assign>
     <ui:ForEach x:TypeArguments="x:String" CurrentIndex="{x:Null}" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="448,448.8" sap2010:WorkflowViewState.IdRef="ForEach`1_1" Values="[country1Arr]">

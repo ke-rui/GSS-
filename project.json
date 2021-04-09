@@ -6,6 +6,7 @@
     "TinyPinyin.Net": "[1.0.2]",
     "UiPath.Excel.Activities": "[2.9.5]",
     "UiPath.FormActivityLibrary.Contracts": "[1.1.1]",
+    "UiPath.Mail.Activities": "[1.9.5]",
     "UiPath.System.Activities": "[20.10.4]",
     "UiPath.UIAutomation.Activities": "[20.10.9]",
     "UiPath.WebAPI.Activities": "[1.7.0]"
@@ -45,7 +46,7 @@
   "entryPoints": [
     {
       "filePath": "Main.xaml",
-      "uniqueId": "05571883-93f1-418f-a5ef-6f8387d63d7d",
+      "uniqueId": "5e2643f9-b2ec-4fd8-8a35-caac314f26e8",
       "input": [],
       "output": []
     }

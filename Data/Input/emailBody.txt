@@ -1,0 +1,9 @@
+Dear sender,
+Thanks for using ITS e-Downloader. Your download has been completed.
+ 
+Files have been saved into onedrive ( onedriveLink   ) and you may use this link to download them to your PC. For details, Please refer to the attachments (Log_output.xlsx) for your download status. 
+ 
+If you have any questions, please feel free to contact the developer sophie.j.he@cn.pwc.com.
+ 
+Best regards,
+ITS e-Downloader
