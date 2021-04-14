@@ -10,7 +10,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>816.8,1328.8</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>852,1421.6</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>GuideNookofInvestmentController_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="62">
@@ -88,7 +88,7 @@
       <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap:VirtualizedContainerService.HintSize="661.6,1224" sap2010:WorkflowViewState.IdRef="Sequence_16">
+  <Sequence sap:VirtualizedContainerService.HintSize="661.6,1356.8" sap2010:WorkflowViewState.IdRef="Sequence_16">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="cnCountryName" />
       <Variable x:TypeArguments="ui:Browser" Name="browserObj" />
@@ -101,6 +101,7 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="620,92.8" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;开始处理Guide Note Of Investment&quot;]" />
     <ui:ForEach x:TypeArguments="x:String" CurrentIndex="{x:Null}" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="620,1131.2" sap2010:WorkflowViewState.IdRef="ForEach`1_3" Values="[in_NeedProcessContryNameList]">
       <ui:ForEach.Body>
         <ActivityAction x:TypeArguments="x:String">
@@ -163,12 +164,8 @@
                 </Assign>
                 <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke Workflow File" sap:VirtualizedContainerService.HintSize="506.4,113.6" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_7" UnSafe="False" WorkflowFileName="Util\DownLoadPDFFile.xaml">
                   <ui:InvokeWorkflowFile.Arguments>
-                    <InArgument x:TypeArguments="x:String" x:Key="in_URL">
-                      <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="&quot;http://www.mofcom.gov.cn/dl/gbdqzn/upload/&quot;+res.Replace(&quot; &quot;,&quot;&quot;).ToLower+&quot;.pdf&quot;" />
-                    </InArgument>
-                    <InArgument x:TypeArguments="x:String" x:Key="in_FilePath">
-                      <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="in_outputFolderPath+&quot;\商务部对外投资合作指南_&quot;+ cnCountryName+&quot;.pdf&quot;" />
-                    </InArgument>
+                    <InArgument x:TypeArguments="x:String" x:Key="in_URL">["http://www.mofcom.gov.cn/dl/gbdqzn/upload/"+res.Replace(" ","").ToLower+".pdf"]</InArgument>
+                    <InArgument x:TypeArguments="x:String" x:Key="in_FilePath">[in_outputFolderPath+"\商务部对外投资合作指南_"+ cnCountryName+".pdf"]</InArgument>
                   </ui:InvokeWorkflowFile.Arguments>
                 </ui:InvokeWorkflowFile>
               </Sequence>
