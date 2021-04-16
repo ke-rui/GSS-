@@ -9,7 +9,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>852,1425.6</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>816.8,1575.2</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>KPMGCroporateTax_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="31">
@@ -79,10 +79,9 @@
       <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
       <AssemblyReference>UiPath.CV</AssemblyReference>
       <AssemblyReference>UiPath.Platform</AssemblyReference>
-      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="KPMGCroporateTax" sap:VirtualizedContainerService.HintSize="543.2,1360.8" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="KPMGCroporateTax" sap:VirtualizedContainerService.HintSize="543.2,1370.4" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="ui:Browser" Name="browerObj" />
       <Variable x:TypeArguments="x:Boolean" Default="True" Name="downloadSuccess" />
@@ -124,7 +123,7 @@
                     <scg:Dictionary x:TypeArguments="x:String, Argument" />
                   </ui:InvokeWorkflowFile.Arguments>
                 </ui:InvokeWorkflowFile>
-                <ui:UiElementExists DisplayName="Element Exists 'H2'" Exists="[rig_exist]" sap:VirtualizedContainerService.HintSize="359.2,107.2" sap2010:WorkflowViewState.IdRef="UiElementExists_5">
+                <ui:UiElementExists DisplayName="Element Exists 'H2'" Exists="[rig_exist]" sap:VirtualizedContainerService.HintSize="378.4,107.2" sap2010:WorkflowViewState.IdRef="UiElementExists_5">
                   <ui:UiElementExists.Target>
                     <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="323e8cdd-939e-4c16-8114-7c95a299ecf4" InformativeScreenshot="c3bc4fcedae0836e2e0f31548b3ec788" Selector="&lt;html title='Country reports - KPMG Global' /&gt;&lt;webctrl aaname='Register now' tag='BUTTON' type='button' /&gt;" TimeoutMS="2000">
                       <ui:Target.WaitForReady>
@@ -133,7 +132,7 @@
                     </ui:Target>
                   </ui:UiElementExists.Target>
                 </ui:UiElementExists>
-                <Assign sap:VirtualizedContainerService.HintSize="359.2,60" sap2010:WorkflowViewState.IdRef="Assign_7">
+                <Assign sap:VirtualizedContainerService.HintSize="378.4,60" sap2010:WorkflowViewState.IdRef="Assign_7">
                   <Assign.To>
                     <OutArgument x:TypeArguments="x:Int32">[i]</OutArgument>
                   </Assign.To>
@@ -153,7 +152,7 @@
         </ui:OpenBrowser>
       </ui:InterruptibleDoWhile.Body>
     </ui:InterruptibleDoWhile>
-    <If Condition="[rig_exist]" sap:VirtualizedContainerService.HintSize="483.2,209.6" sap2010:WorkflowViewState.IdRef="If_8">
+    <If Condition="[rig_exist]" sap:VirtualizedContainerService.HintSize="501.6,219.2" sap2010:WorkflowViewState.IdRef="If_8">
       <If.Then>
         <ui:ForEach x:TypeArguments="x:String" CurrentIndex="{x:Null}" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="200,52.8" sap2010:WorkflowViewState.IdRef="ForEach`1_2" Values="[in_NeedProcessContryNameList]">
           <ui:ForEach.Body>
@@ -474,6 +473,9 @@
           </sap:WorkflowViewStateService.ViewState>
         </ui:ForEach>
       </If.Then>
+      <If.Else>
+        <Throw Exception="[new System.Exception(&quot;网站未打开&quot;)]" sap:VirtualizedContainerService.HintSize="200,22.4" sap2010:WorkflowViewState.IdRef="Throw_1" />
+      </If.Else>
     </If>
   </Sequence>
 </Activity>

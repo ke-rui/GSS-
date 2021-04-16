@@ -10,7 +10,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>977.6,3954.4</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1186.4,4074.4</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>PwCCorporateTaxController_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="62">
@@ -84,7 +84,7 @@
       <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="PwCCorporateTaxController" sap:VirtualizedContainerService.HintSize="988,3889.6" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="PwCCorporateTaxController" sap:VirtualizedContainerService.HintSize="1196.8,3869.6" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="ui:Browser" Name="browserObj" />
       <Variable x:TypeArguments="x:Boolean" Default="True" Name="downloadSuccess" />
@@ -99,8 +99,8 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="946.4,92.8" sap2010:WorkflowViewState.IdRef="LogMessage_17" Level="Info" Message="[&quot;开始处理PWC Corporatax&quot;]" />
-    <Assign sap:VirtualizedContainerService.HintSize="946.4,60" sap2010:WorkflowViewState.IdRef="Assign_7">
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="1155.2,92.8" sap2010:WorkflowViewState.IdRef="LogMessage_17" Level="Info" Message="[&quot;开始处理PWC Corporatax&quot;]" />
+    <Assign sap:VirtualizedContainerService.HintSize="1155.2,60" sap2010:WorkflowViewState.IdRef="Assign_7">
       <Assign.To>
         <OutArgument x:TypeArguments="x:Int32">[ii]</OutArgument>
       </Assign.To>
@@ -108,7 +108,7 @@
         <InArgument x:TypeArguments="x:Int32">0</InArgument>
       </Assign.Value>
     </Assign>
-    <ui:InterruptibleDoWhile Condition="[not exist and ii &lt; 3]" DisplayName="Do While" sap:VirtualizedContainerService.HintSize="946.4,1709.6" sap2010:WorkflowViewState.IdRef="InterruptibleDoWhile_1">
+    <ui:InterruptibleDoWhile Condition="[not exist and ii &lt; 3]" DisplayName="Do While" sap:VirtualizedContainerService.HintSize="1155.2,1709.6" sap2010:WorkflowViewState.IdRef="InterruptibleDoWhile_1">
       <ui:InterruptibleDoWhile.Body>
         <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="508,1542.4" sap2010:WorkflowViewState.IdRef="Sequence_46">
           <sap:WorkflowViewStateService.ViewState>
@@ -294,7 +294,7 @@
         </Sequence>
       </ui:InterruptibleDoWhile.Body>
     </ui:InterruptibleDoWhile>
-    <If Condition="[exist]" sap:VirtualizedContainerService.HintSize="946.4,1814.4" sap2010:WorkflowViewState.IdRef="If_12">
+    <If Condition="[exist]" sap:VirtualizedContainerService.HintSize="1155.2,1794.4" sap2010:WorkflowViewState.IdRef="If_12">
       <If.Then>
         <ui:ForEach x:TypeArguments="x:String" CurrentIndex="{x:Null}" DisplayName="For Each country name" sap:VirtualizedContainerService.HintSize="911.2,1635.2" sap2010:WorkflowViewState.IdRef="ForEach`1_2" Values="[in_NeedProcessContryNameList]">
           <ui:ForEach.Body>
@@ -518,6 +518,9 @@
           </sap:WorkflowViewStateService.ViewState>
         </ui:ForEach>
       </If.Then>
+      <If.Else>
+        <Throw Exception="[new System.Exception(&quot;网站未打开&quot;)]" sap:VirtualizedContainerService.HintSize="200,22.4" sap2010:WorkflowViewState.IdRef="Throw_1" />
+      </If.Else>
     </If>
   </Sequence>
 </Activity>
