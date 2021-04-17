@@ -10,7 +10,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>931.2,5870.4</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>931.2,5696</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ProcessIBFDCorporateTax_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="64">
@@ -82,7 +82,6 @@
       <AssemblyReference>UiPath.Platform</AssemblyReference>
       <AssemblyReference>UiPath.CV</AssemblyReference>
       <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
-      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
   <sap:WorkflowViewStateService.ViewState>
@@ -91,7 +90,7 @@
       <x:Boolean x:Key="ShouldExpandAll">True</x:Boolean>
     </scg:Dictionary>
   </sap:WorkflowViewStateService.ViewState>
-  <Sequence DisplayName="ProcessIBFDCorporateTax" sap:VirtualizedContainerService.HintSize="941.6,5805.6" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="ProcessIBFDCorporateTax" sap:VirtualizedContainerService.HintSize="941.6,5631.2" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="ui:Browser" Name="IBDF_UiBrowserObj" />
       <Variable x:TypeArguments="x:Int32" Default="1" Name="counter" />
@@ -124,13 +123,13 @@
         <OutArgument x:TypeArguments="ui:Browser" x:Key="out_IBDF_UiBrowserObj">[IBDF_UiBrowserObj]</OutArgument>
       </ui:InvokeWorkflowFile.Arguments>
     </ui:InvokeWorkflowFile>
-    <ui:ForEach x:TypeArguments="x:String" CurrentIndex="{x:Null}" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="900,5152" sap2010:WorkflowViewState.IdRef="ForEach`1_2" Values="[in_NeedProcessContryNameList]">
+    <ui:ForEach x:TypeArguments="x:String" CurrentIndex="{x:Null}" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="900,4977.6" sap2010:WorkflowViewState.IdRef="ForEach`1_2" Values="[in_NeedProcessContryNameList]">
       <ui:ForEach.Body>
         <ActivityAction x:TypeArguments="x:String">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:String" Name="countryName" />
           </ActivityAction.Argument>
-          <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="864.8,5017.6" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+          <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="864.8,4843.2" sap2010:WorkflowViewState.IdRef="TryCatch_1">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -138,7 +137,7 @@
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
             <TryCatch.Try>
-              <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="548,3864" sap2010:WorkflowViewState.IdRef="Sequence_27">
+              <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="548,3689.6" sap2010:WorkflowViewState.IdRef="Sequence_27">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -431,13 +430,13 @@
                     </Sequence>
                   </If.Then>
                 </If>
-                <ui:ForEachRow CurrentIndex="{x:Null}" DataTable="[dt_corp_IBFD]" DisplayName="For Each Row" sap:VirtualizedContainerService.HintSize="506.4,1311.2" sap2010:WorkflowViewState.IdRef="ForEachRow_3">
+                <ui:ForEachRow CurrentIndex="{x:Null}" DataTable="[dt_corp_IBFD]" DisplayName="For Each Row" sap:VirtualizedContainerService.HintSize="506.4,1136.8" sap2010:WorkflowViewState.IdRef="ForEachRow_3">
                   <ui:ForEachRow.Body>
                     <ActivityAction x:TypeArguments="sd:DataRow">
                       <ActivityAction.Argument>
                         <DelegateInArgument x:TypeArguments="sd:DataRow" Name="row" />
                       </ActivityAction.Argument>
-                      <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="419.2,1162.4" sap2010:WorkflowViewState.IdRef="Sequence_19">
+                      <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="419.2,988" sap2010:WorkflowViewState.IdRef="Sequence_19">
                         <Sequence.Variables>
                           <Variable x:TypeArguments="x:String" Name="IBFD_corporate_tax_path" />
                         </Sequence.Variables>
@@ -521,7 +520,6 @@
                             </sap2010:ViewStateManager>
                           </sap2010:WorkflowViewState.ViewStateManager>
                         </Delay>
-                        <ui:KillProcess ContinueOnError="{x:Null}" Process="{x:Null}" DisplayName="Kill Process" sap:VirtualizedContainerService.HintSize="377.6,134.4" sap2010:WorkflowViewState.IdRef="KillProcess_1" ProcessName="acrobat" />
                         <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="377.6,92.8" sap2010:WorkflowViewState.IdRef="LogMessage_12" Level="Info" Message="[&quot;IBFD_Corporate_tax_&quot;+row(&quot;Column1&quot;).tostring+&quot;：已下载”]">
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
